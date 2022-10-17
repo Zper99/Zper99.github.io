@@ -333,6 +333,21 @@
 
 <p>在站点配置文件添加：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 为博客添加emoji表情支持</span></span><br><span class="line"><span class="attr">emoji:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">className:</span> <span class="string">github-emoji</span></span><br><span class="line">  <span class="attr">styles:</span> </span><br><span class="line">  <span class="attr">customEmojis:</span> </span><br></pre></td></tr></table></figure>
+
+<h1 id="第三部分-一些问题"><a href="#第三部分-一些问题" class="headerlink" title="第三部分 一些问题"></a>第三部分 一些问题</h1><h2 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a>中文乱码</h2><p>​       首先，把编辑器全局yaml和主题yaml的Unicode编码设置为UTF-8，</p>
+<p>其次，如果每次用vscode都要给重置为GB编码，则不用vscode打开，用</p>
+<p>记事本打开。</p>
+<hr>
+<h2 id="端口占用"><a href="#端口占用" class="headerlink" title="端口占用"></a>端口占用</h2><p>在全局yaml中加入</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="string">//端口号任改，我改为4001</span></span><br><span class="line">  <span class="attr">compress:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="背景重载"><a href="#背景重载" class="headerlink" title="背景重载"></a>背景重载</h2><p>在配置主题背景的时候，每次提交都会还原删除的图片，则试试把根目录下&#x2F;public&#x2F;images&#x2F;的不用图片和把themes目录下&#x2F;source&#x2F;images&#x2F;不用的图片<code>同时删除</code>！</p>
+<hr>
+<h2 id="连接问题"><a href="#连接问题" class="headerlink" title="连接问题"></a>连接问题</h2><p><img data-src="C:\Users\张皓庭\AppData\Roaming\Typora\typora-user-images\image-20221017204056158.png" alt="image-20221017204056158"></p>
+<p>出现这种情况需要打开或者关闭vpn，不断更换网络试试，只是因为网络的原因，要多试几次。</p>
+<hr>
+<h2 id="工具包重复安装问题"><a href="#工具包重复安装问题" class="headerlink" title="工具包重复安装问题"></a>工具包重复安装问题</h2><p>每次删除blog文件之后，都需要安装对应的工具和依赖，不能少输指令</p>
 ]]></content>
       <categories>
         <category>工具</category>
