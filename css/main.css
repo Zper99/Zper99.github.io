@@ -1193,7 +1193,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #d773d1;
+  background: #a7ac1d;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2722,4 +2722,13 @@ span.exturl:hover {
 }
 blockquote {
   border-left: 4px solid #f27c8d;
+}
+.vpower.txt-right {
+  display: none;
+}
+.markdown {
+  display: none;
+}
+.vempty {
+  display: none !important;
 }
