@@ -1193,7 +1193,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #7c2fff;
+  background: #5c2e96;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2733,7 +2733,7 @@ blockquote {
   display: none !important;
 }
 .site-brand-container {
-  background-image: url("/images/cat.jpg");
+  background-image: url("/images/back.jpg");
   background-size: 100% 100%;
-  opacity: 0.9;
+  opacity: 0.7;
 }
