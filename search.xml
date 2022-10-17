@@ -172,7 +172,7 @@
 <p>_config.yml：站点配置文件</p>
 </blockquote>
 <h3 id="2、更换主题"><a href="#2、更换主题" class="headerlink" title="2、更换主题"></a>2、更换主题</h3><p>Hexo有着自己的开源主题库，我们需要去下载Next主题。</p>
-<p>在集成终端，也就是博客根目录，执行<code>git clone git@github.com:theme-next/hexo-theme-next.git themes/next</code>，下载完成后，删除next文件夹中的&#x3D;&#x3D;.git&#x3D;&#x3D;和&#x3D;&#x3D;.gitigore&#x3D;&#x3D;文件，因为博客文件夹不能有两个git管理。<br>修改站点配置文件：<code>theme: next</code> 执行<code>hexo server</code>，本地的个人博客网站已经更换为Next主题。</p>
+<p>在集成终端，也就是博客根目录，执行<code>git clone git@github.com:theme-next/hexo-theme-next.git themes/next</code>，下载完成后，删除next文件夹中的<code>.git</code>和<code>.gitigore</code>文件，因为博客文件夹不能有两个git管理。<br>修改站点配置文件：<code>theme: next</code> 执行<code>hexo server</code>，本地的个人博客网站已经更换为Next主题。</p>
 <h3 id="3、Next目录构成"><a href="#3、Next目录构成" class="headerlink" title="3、Next目录构成"></a>3、Next目录构成</h3><blockquote>
 <p>languages：语言 [通常保存本网站支持的语言设置和支持]</p>
 <p>layout：布局文件[通常此文件中添加或者删除一些小功能]</p>
@@ -335,8 +335,8 @@
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 为博客添加emoji表情支持</span></span><br><span class="line"><span class="attr">emoji:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">className:</span> <span class="string">github-emoji</span></span><br><span class="line">  <span class="attr">styles:</span> </span><br><span class="line">  <span class="attr">customEmojis:</span> </span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>博客</category>
         <category>工具</category>
+        <category>博客</category>
       </categories>
       <tags>
         <tag>工具</tag>
