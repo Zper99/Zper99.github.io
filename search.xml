@@ -3,13 +3,13 @@
   <entry>
     <title>markdown的基本用法</title>
     <url>/posts/42f0.html</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h1 id="Markdown-学习"><a href="#Markdown-学习" class="headerlink" title="Markdown 学习"></a>Markdown 学习</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"># 这样表示一级标题</span><br><span class="line">## 这样表示二级标题</span><br><span class="line">### 这样表示三级标题</span><br><span class="line">· · · · · ·</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h1 id="Markdown-学习"><a href="#Markdown-学习" class="headerlink" title="Markdown 学习"></a>Markdown 学习</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"># 这样表示一级标题</span><br><span class="line">## 这样表示二级标题</span><br><span class="line">### 这样表示三级标题</span><br><span class="line">· · · · · ·</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p><code>最多支持六级标题</code></p>
 </blockquote>
+<span id="more"></span>
+
 <hr>
 <h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">**这样表示粗体**</span></span><br></pre></td></tr></table></figure>
 
@@ -107,9 +107,9 @@
   <entry>
     <title>博客搭建</title>
     <url>/posts/68d0.html</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<h1 id="第一部分-搭建与发布"><a href="#第一部分-搭建与发布" class="headerlink" title="第一部分 搭建与发布"></a>第一部分 搭建与发布</h1><h2 id="1、安装Git"><a href="#1、安装Git" class="headerlink" title="1、安装Git"></a>1、安装Git</h2><p><code>Git</code>是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。<br>可以到<a href="https://git-scm.com/download/win">Git官网</a>进行下载，Git详细安装教程可以查看<a href="https://blog.csdn.net/qq_43715354/article/details/108638061">Git安装</a>。</p>
+<span id="more"></span>
 
-<h1 id="第一部分-搭建与发布"><a href="#第一部分-搭建与发布" class="headerlink" title="第一部分 搭建与发布"></a>第一部分 搭建与发布</h1><h2 id="1、安装Git"><a href="#1、安装Git" class="headerlink" title="1、安装Git"></a>1、安装Git</h2><p><code>Git</code>是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。<br>可以到<a href="https://git-scm.com/download/win">Git官网</a>进行下载，Git详细安装教程可以查看<a href="https://blog.csdn.net/qq_43715354/article/details/108638061">Git安装</a>。</p>
 <hr>
 <h2 id="2、安装VSCode"><a href="#2、安装VSCode" class="headerlink" title="2、安装VSCode"></a>2、安装VSCode</h2><p><code>VSCode</code> ，是微软出的一款轻量级代码编辑器，免费、开源而且功能强大，一般为前端代码开发IDE。<br>可以到<a href="https://code.visualstudio.com/Download">VSCode官网</a>进行下载，VSCode详细安装教程可以查看<a href="https://zhuanlan.zhihu.com/p/264785441">VSCode安装</a>。</p>
 <hr>
