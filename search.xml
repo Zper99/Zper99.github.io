@@ -238,6 +238,20 @@
       </tags>
   </entry>
   <entry>
+    <title>zht and yp</title>
+    <url>/posts/ea17.html</url>
+    <content><![CDATA[<h1 id="重庆"><a href="#重庆" class="headerlink" title="重庆"></a>重庆</h1><h1 id="成都"><a href="#成都" class="headerlink" title="成都"></a>成都</h1><h1 id="石家庄"><a href="#石家庄" class="headerlink" title="石家庄"></a>石家庄</h1><h1 id="南充"><a href="#南充" class="headerlink" title="南充"></a>南充</h1>]]></content>
+      <categories>
+        <category>个人</category>
+        <category>照片</category>
+      </categories>
+      <tags>
+        <tag>yp</tag>
+        <tag>照片</tag>
+        <tag>个人</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博客搭建</title>
     <url>/posts/68d0.html</url>
     <content><![CDATA[<h1 id="第一部分-搭建与发布"><a href="#第一部分-搭建与发布" class="headerlink" title="第一部分 搭建与发布"></a>第一部分 搭建与发布</h1><h2 id="1、安装Git"><a href="#1、安装Git" class="headerlink" title="1、安装Git"></a>1、安装Git</h2><p><code>Git</code>是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。<br>可以到<a href="https://git-scm.com/download/win">Git官网</a>进行下载，Git详细安装教程可以查看<a href="https://blog.csdn.net/qq_43715354/article/details/108638061">Git安装</a>。</p>
@@ -500,20 +514,6 @@
         <tag>more</tag>
         <tag>blog</tag>
         <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>zht and yp</title>
-    <url>/posts/ea17.html</url>
-    <content><![CDATA[<h1 id="重庆"><a href="#重庆" class="headerlink" title="重庆"></a>重庆</h1><h1 id="成都"><a href="#成都" class="headerlink" title="成都"></a>成都</h1><h1 id="石家庄"><a href="#石家庄" class="headerlink" title="石家庄"></a>石家庄</h1><h1 id="南充"><a href="#南充" class="headerlink" title="南充"></a>南充</h1>]]></content>
-      <categories>
-        <category>个人</category>
-        <category>照片</category>
-      </categories>
-      <tags>
-        <tag>yp</tag>
-        <tag>照片</tag>
-        <tag>个人</tag>
       </tags>
   </entry>
 </search>
