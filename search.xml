@@ -4,6 +4,8 @@
     <title>docker</title>
     <url>/posts/c018.html</url>
     <content><![CDATA[<h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><p>​		2010年，几个搞IT的年轻人，在美国旧金山成立了一家名叫“dotCloud”的公司。这家公司主要提供基于PaaS的云计算技术服务。具体来说，是和LXC有关的容器技术。LXC，就是Linux容器虚拟技术（Linux container）后来，dotCloud公司将自己的容器技术进行了简化和标准化，并命名为——<strong>Docker</strong>。</p>
+<span id="more"></span>
+
 <p>​		Docker技术诞生之后，并没有引起行业的关注。而dotCloud公司，作为一家小型创业企业，在激烈的竞争之下，也步履维艰。正当他们快要坚持不下去的时候，脑子里蹦出了“开源”的想法。什么是“开源”？开源，就是开放源代码。也就是将原来内部保密的程序源代码开放给所有人，然后让大家一起参与进来，贡献代码和意见。Open Source，开源有的软件是一开始就开源的。也有的软件，是混不下去，创造者又不想放弃，所以选择开源。</p>
 <p>​		2013年3月，dotCloud公司的创始人之一，Docker之父，28岁的<strong>Solomon Hykes</strong>正式决定，将Docker项目开源。Solomon Hykes（今年刚从Docker离职）不开则已，一开惊人。越来越多的IT工程师发现了Docker的优点，然后蜂拥而至，加入Docker开源社区。Docker的人气迅速攀升，速度之快，令人瞠目结舌。开源当月，Docker 0.1 版本发布。此后的每一个月，Docker都会发布一个版本。到2014年6月9日，Docker 1.0 版本正式发布。此时的Docker，已经成为行业里人气最火爆的开源技术，没有之一。甚至像Google、微软、Amazon、VMware这样的巨头，都对它青睐有加，表示将全力支持。Docker火了之后，dotCloud公司干脆把公司名字也改成了Docker Inc. 。</p>
 <p>参考连接:</p>
