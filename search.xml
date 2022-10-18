@@ -1,113 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>markdown的基本用法</title>
-    <url>/posts/42f0.html</url>
-    <content><![CDATA[<h1 id="Markdown-学习"><a href="#Markdown-学习" class="headerlink" title="Markdown 学习"></a>Markdown 学习</h1><span id="more"></span>
-
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"># 这样表示一级标题</span><br><span class="line">## 这样表示二级标题</span><br><span class="line">### 这样表示三级标题</span><br><span class="line">· · · · · ·</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><code>最多支持六级标题</code></p>
-</blockquote>
-<!--more-->
-
-<hr>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">**这样表示粗体**</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>这样表示粗体</strong></p>
-<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">*这样表示斜体*</span></span><br></pre></td></tr></table></figure>
-
-<p><em>这样表示斜体</em></p>
-<figure class="highlight haml"><table><tr><td class="code"><pre><span class="line">~~这样表示删除线~~</span><br></pre></td></tr></table></figure>
-
-<p><del>这样表示删除线</del></p>
-<hr>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight node-repl"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">&gt;</span> <span class="language-javascript">表示引用</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p> 表示引用</p>
-</blockquote>
-<hr>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>—或者***表示分割线</p>
-<hr>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><figure class="highlight scheme"><table><tr><td class="code"><pre><span class="line">[<span class="name">链接的名字</span>](<span class="name">我链接的地址</span>)</span><br></pre></td></tr></table></figure>
-
-<p><a href="Zper99.github.io">链接的名字</a></p>
-<h3 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h3><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="section">&lt;我是自动链接&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><a href="https://zper99.github.io/">https://zper99.github.io/</a></p>
-<hr>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>1. 我是有序列表</p>
-<ol>
-<li>我是有序列表</li>
-<li>我也是有序列表</li>
-</ol>
-<p>- 我是无序列表</p>
-<ul>
-<li>我是无序列表</li>
-<li>我也是无序列表</li>
-</ul>
-<hr>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">|<span class="string">top1</span>|<span class="string">top2</span>|<span class="string">top3</span>|</span><br><span class="line">|<span class="string">-  -</span>|<span class="string">-  -</span>|<span class="string">-  -</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br></pre></td></tr></table></figure>
-
-
-
-<table>
-<thead>
-<tr>
-<th>top1</th>
-<th>top2</th>
-<th>top3</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>word</td>
-<td>word</td>
-<td>word</td>
-</tr>
-<tr>
-<td>word</td>
-<td>word</td>
-<td>word</td>
-</tr>
-<tr>
-<td>word</td>
-<td>word</td>
-<td>word</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">```表示代码</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">表示代码</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;span <span class="built_in">id</span>=<span class="string">&quot;tag1&quot;</span>&gt;我是指定位置&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">[跳转到指定位置](<span class="comment">#tag1)</span></span><br></pre></td></tr></table></figure>
-
-<p><span id="tag1">我是指定位置</span></p>
-<p><a href="#tag1">跳转到指定位置</a></p>
-<hr>
-<h2 id="隐藏"><a href="#隐藏" class="headerlink" title="隐藏"></a>隐藏</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">summary</span>&gt;</span>你的问题?<span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">你的答案:</span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><details>
-<summary>你的问题?</summary>
-你的答案:
-</details></li>
-</ul>
-]]></content>
-      <categories>
-        <category>工具</category>
-        <category>markdown文本编辑器</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-        <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>docker</title>
+    <title>Docker</title>
     <url>/posts/c018.html</url>
     <content><![CDATA[<h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><span id="more"></span>
 
@@ -234,9 +128,261 @@
         <category>docker</category>
       </categories>
       <tags>
-        <tag>工具</tag>
         <tag>docker</tag>
         <tag>容器</tag>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux学习笔记</title>
+    <url>/posts/86b7.html</url>
+    <content><![CDATA[<h1 id="Linux常用命令学习"><a href="#Linux常用命令学习" class="headerlink" title="Linux常用命令学习"></a>Linux常用命令学习</h1><span id="more"></span>
+
+<h2 id="1、列出文件————ls"><a href="#1、列出文件————ls" class="headerlink" title="1、列出文件————ls"></a>1、列出文件————ls</h2><ul>
+<li>-a 列出全部文件</li>
+<li>-t 按时间列出文件</li>
+<li>-l列出文件全部信息</li>
+<li>-S按文件大小信息</li>
+</ul>
+<hr>
+<h2 id="2、进入文件————cd"><a href="#2、进入文件————cd" class="headerlink" title="2、进入文件————cd"></a>2、进入文件————cd</h2><ul>
+<li>&#x2F;进入主目录</li>
+<li>~进入根目录</li>
+<li>-进入上次路径</li>
+<li>..进入上级目录</li>
+<li>&#x2F;xxx&#x2F;xxx 绝对路径进入</li>
+<li>.&#x2F;xxx相对路径进入</li>
+</ul>
+<hr>
+<h2 id="3、查看当前路径——-pwd"><a href="#3、查看当前路径——-pwd" class="headerlink" title="3、查看当前路径——-pwd"></a>3、查看当前路径——-pwd</h2><ul>
+<li>-p查看软连接的实际路径</li>
+</ul>
+<hr>
+<h2 id="4、创建文件夹———mkdir"><a href="#4、创建文件夹———mkdir" class="headerlink" title="4、创建文件夹———mkdir"></a>4、创建文件夹———mkdir</h2><ul>
+<li>-p &#x2F;xxx&#x2F;xxx  若路径中的某些目录尚不存在,加上此选项后，系统将自动建立好那些尚不在的目录，即一次可以建立多个目录</li>
+</ul>
+<hr>
+<h2 id="5、删除文件夹———rmdir"><a href="#5、删除文件夹———rmdir" class="headerlink" title="5、删除文件夹———rmdir"></a>5、删除文件夹———rmdir</h2><ul>
+<li>-p  xxx&#x2F;xxx  删除文件夹后如果为空则全删除</li>
+</ul>
+<hr>
+<h2 id="6、删除文件————rm"><a href="#6、删除文件————rm" class="headerlink" title="6、删除文件————rm"></a>6、删除文件————rm</h2><ul>
+<li>-rf   xxx 删除目录和所有文件并且不询问</li>
+<li>-i    xxx删除前询问</li>
+</ul>
+<hr>
+<h2 id="7、重命名和移动——-mv"><a href="#7、重命名和移动——-mv" class="headerlink" title="7、重命名和移动——-mv"></a>7、重命名和移动——-mv</h2><ul>
+<li>mv file1 file2 把file1命名为file2</li>
+<li>mv file1 file2 file3 &#x2F;dir 把文件123移动到dir中</li>
+<li>mv   *   ..&#x2F;     把当前所有文件上移一级</li>
+</ul>
+<hr>
+<h2 id="8、复制文件————cp"><a href="#8、复制文件————cp" class="headerlink" title="8、复制文件————cp"></a>8、复制文件————cp</h2><ul>
+<li>cp file dir   复制文件到目录</li>
+<li>-r 复制目录及其文件到目标目录</li>
+<li>-s  x.txt  link_x.txt  创建快捷方式</li>
+</ul>
+<hr>
+<h2 id="9、显示创建合并文件–cat"><a href="#9、显示创建合并文件–cat" class="headerlink" title="9、显示创建合并文件–cat"></a>9、显示创建合并文件–cat</h2><ul>
+<li>cat file 显示文件内容</li>
+<li>cat &gt; filename 创建一个文件</li>
+<li>cat dir1 dir2 &gt; dir3合并dir12为dir3</li>
+</ul>
+<hr>
+<h2 id="10、查找"><a href="#10、查找" class="headerlink" title="10、查找"></a>10、查找</h2><h3 id="whereis"><a href="#whereis" class="headerlink" title="whereis"></a>whereis</h3><ul>
+<li>该指令只能用于查找二进制文件、源代码文件和man手册页</li>
+</ul>
+<h3 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h3><ul>
+<li>用于一般文件的定位</li>
+<li>-l num 显示多少行信息</li>
+<li>xx&#x2F;xx 查找xx目录下信息</li>
+</ul>
+<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><ul>
+<li>遍历硬盘查找文件</li>
+<li>&#x2F;dir xxx 指定目录下查找文件</li>
+</ul>
+<hr>
+<h2 id="11、权限修改———–chmod"><a href="#11、权限修改———–chmod" class="headerlink" title="11、权限修改———–chmod"></a>11、权限修改———–chmod</h2><ul>
+<li>chmod r file增加读权限</li>
+<li>chmod w file增加写权限</li>
+<li>chmod x file增加</li>
+<li>chmod -x file</li>
+</ul>
+<hr>
+<h2 id="12、显示磁盘空间——df"><a href="#12、显示磁盘空间——df" class="headerlink" title="12、显示磁盘空间——df"></a>12、显示磁盘空间——df</h2><ul>
+<li>-a全部文件</li>
+<li>-h便于阅读的形式比如KB、MB</li>
+</ul>
+<hr>
+<h2 id="13、显示文件大小——du"><a href="#13、显示文件大小——du" class="headerlink" title="13、显示文件大小——du"></a>13、显示文件大小——du</h2><ul>
+<li>-a 全部文件</li>
+<li>-h以易于读的方式显示</li>
+</ul>
+<hr>
+<h2 id="14、查看进程———–ps"><a href="#14、查看进程———–ps" class="headerlink" title="14、查看进程———–ps"></a>14、查看进程———–ps</h2><ul>
+<li>a显示所有进程</li>
+</ul>
+<hr>
+<h2 id="15、中止进程———–kill"><a href="#15、中止进程———–kill" class="headerlink" title="15、中止进程———–kill"></a>15、中止进程———–kill</h2><hr>
+<h2 id="16、创建文件———–touch"><a href="#16、创建文件———–touch" class="headerlink" title="16、创建文件———–touch"></a>16、创建文件———–touch</h2><hr>
+<h2 id="17、下载"><a href="#17、下载" class="headerlink" title="17、下载"></a>17、下载</h2><h3 id="yum"><a href="#yum" class="headerlink" title="yum"></a>yum</h3><ul>
+<li>install      centos下的下载指令</li>
+</ul>
+<h3 id="apt"><a href="#apt" class="headerlink" title="apt"></a>apt</h3><ul>
+<li>install      ubuntu下的下载指令</li>
+</ul>
+<hr>
+<h2 id="18、其他指令"><a href="#18、其他指令" class="headerlink" title="18、其他指令"></a>18、其他指令</h2><ul>
+<li><p>history查看历史命令</p>
+</li>
+<li><p>注释命令（方便回查）</p>
+</li>
+<li><p>\+entry 换行继续输入指令</p>
+</li>
+<li><p>cat &#x2F;etc&#x2F;centos-release 查看版本号</p>
+</li>
+<li><p>curl localhost:xxx   访问主机xxx端口</p>
+</li>
+<li><p>dir&#x2F;*      dir下所有文件     </p>
+</li>
+<li><p>sudo passwd 设置初始root密码</p>
+</li>
+<li><p>su  进入root账户</p>
+</li>
+</ul>
+<hr>
+<h2 id="19、linux快捷键"><a href="#19、linux快捷键" class="headerlink" title="19、linux快捷键"></a>19、linux快捷键</h2><ul>
+<li><p>ctrl-u 清空光标前输入</p>
+</li>
+<li><p>ctrl-k清空光标后输入</p>
+</li>
+<li><p>ctrl-a移动光标到首行</p>
+</li>
+<li><p>ctrl-e移动光标到尾行</p>
+</li>
+<li><p>ctrl-l清屏</p>
+</li>
+<li><p>ctrl+insert 复制</p>
+</li>
+<li><p>shift+insert粘贴</p>
+</li>
+<li><p>↑↓回滚指令</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown的基本用法</title>
+    <url>/posts/42f0.html</url>
+    <content><![CDATA[<h1 id="Markdown-学习"><a href="#Markdown-学习" class="headerlink" title="Markdown 学习"></a>Markdown 学习</h1><span id="more"></span>
+
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"># 这样表示一级标题</span><br><span class="line">## 这样表示二级标题</span><br><span class="line">### 这样表示三级标题</span><br><span class="line">· · · · · ·</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>最多支持六级标题</code></p>
+</blockquote>
+<!--more-->
+
+<hr>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">**这样表示粗体**</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>这样表示粗体</strong></p>
+<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">*这样表示斜体*</span></span><br></pre></td></tr></table></figure>
+
+<p><em>这样表示斜体</em></p>
+<figure class="highlight haml"><table><tr><td class="code"><pre><span class="line">~~这样表示删除线~~</span><br></pre></td></tr></table></figure>
+
+<p><del>这样表示删除线</del></p>
+<hr>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight node-repl"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">&gt;</span> <span class="language-javascript">表示引用</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 表示引用</p>
+</blockquote>
+<hr>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>—或者***表示分割线</p>
+<hr>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><figure class="highlight scheme"><table><tr><td class="code"><pre><span class="line">[<span class="name">链接的名字</span>](<span class="name">我链接的地址</span>)</span><br></pre></td></tr></table></figure>
+
+<p><a href="Zper99.github.io">链接的名字</a></p>
+<h3 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h3><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="section">&lt;我是自动链接&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://zper99.github.io/">https://zper99.github.io/</a></p>
+<hr>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>1. 我是有序列表</p>
+<ol>
+<li>我是有序列表</li>
+<li>我也是有序列表</li>
+</ol>
+<p>- 我是无序列表</p>
+<ul>
+<li>我是无序列表</li>
+<li>我也是无序列表</li>
+</ul>
+<hr>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">|<span class="string">top1</span>|<span class="string">top2</span>|<span class="string">top3</span>|</span><br><span class="line">|<span class="string">-  -</span>|<span class="string">-  -</span>|<span class="string">-  -</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br></pre></td></tr></table></figure>
+
+
+
+<table>
+<thead>
+<tr>
+<th>top1</th>
+<th>top2</th>
+<th>top3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>word</td>
+<td>word</td>
+<td>word</td>
+</tr>
+<tr>
+<td>word</td>
+<td>word</td>
+<td>word</td>
+</tr>
+<tr>
+<td>word</td>
+<td>word</td>
+<td>word</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">```表示代码</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">表示代码</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;span <span class="built_in">id</span>=<span class="string">&quot;tag1&quot;</span>&gt;我是指定位置&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">[跳转到指定位置](<span class="comment">#tag1)</span></span><br></pre></td></tr></table></figure>
+
+<p><span id="tag1">我是指定位置</span></p>
+<p><a href="#tag1">跳转到指定位置</a></p>
+<hr>
+<h2 id="隐藏"><a href="#隐藏" class="headerlink" title="隐藏"></a>隐藏</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">summary</span>&gt;</span>你的问题?<span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">你的答案:</span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><details>
+<summary>你的问题?</summary>
+你的答案:
+</details></li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>markdown文本编辑器</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
