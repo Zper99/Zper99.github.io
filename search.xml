@@ -107,6 +107,164 @@
       </tags>
   </entry>
   <entry>
+    <title>docker</title>
+    <url>/posts/c018.html</url>
+    <content><![CDATA[<h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><span id="more"></span>
+
+<h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><p>​		2010年，几个搞IT的年轻人，在美国旧金山成立了一家名叫“dotCloud”的公司。这家公司主要提供基于PaaS的云计算技术服务。具体来说，是和LXC有关的容器技术。LXC，就是Linux容器虚拟技术（Linux container）后来，dotCloud公司将自己的容器技术进行了简化和标准化，并命名为——<strong>Docker</strong>。</p>
+<p>​		Docker技术诞生之后，并没有引起行业的关注。而dotCloud公司，作为一家小型创业企业，在激烈的竞争之下，也步履维艰。正当他们快要坚持不下去的时候，脑子里蹦出了“开源”的想法。什么是“开源”？开源，就是开放源代码。也就是将原来内部保密的程序源代码开放给所有人，然后让大家一起参与进来，贡献代码和意见。Open Source，开源有的软件是一开始就开源的。也有的软件，是混不下去，创造者又不想放弃，所以选择开源。</p>
+<p>​		2013年3月，dotCloud公司的创始人之一，Docker之父，28岁的<strong>Solomon Hykes</strong>正式决定，将Docker项目开源。Solomon Hykes（今年刚从Docker离职）不开则已，一开惊人。越来越多的IT工程师发现了Docker的优点，然后蜂拥而至，加入Docker开源社区。Docker的人气迅速攀升，速度之快，令人瞠目结舌。开源当月，Docker 0.1 版本发布。此后的每一个月，Docker都会发布一个版本。到2014年6月9日，Docker 1.0 版本正式发布。此时的Docker，已经成为行业里人气最火爆的开源技术，没有之一。甚至像Google、微软、Amazon、VMware这样的巨头，都对它青睐有加，表示将全力支持。Docker火了之后，dotCloud公司干脆把公司名字也改成了Docker Inc. 。</p>
+<p>参考连接:</p>
+<ul>
+<li><p><a href="https://zhuanlan.zhihu.com/p/105331409">Docker的历史与发展 - 知乎 (zhihu.com)</a></p>
+</li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/53260098">10分钟看懂Docker和K8S - 知乎 (zhihu.com)</a></p>
+</li>
+</ul>
+<hr>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
+<li>CentOS系统</li>
+</ul>
+<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">curl -fsSL <span class="keyword">https</span>://<span class="built_in">get</span>.docker.com | bash -s docker <span class="comment">--mirror Aliyun</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Dbantu系统</li>
+</ul>
+<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">curl -fsSL <span class="keyword">https</span>://<span class="built_in">get</span>.docker.com | bash -s docker <span class="comment">--mirror Aliyun</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Debian系统</li>
+</ul>
+<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">curl -fsSL <span class="keyword">https</span>://<span class="built_in">get</span>.docker.com | bash -s docker <span class="comment">--mirror Aliyun</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="加速器"><a href="#加速器" class="headerlink" title="加速器"></a>加速器</h2><ul>
+<li>我的加速地址</li>
+</ul>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p <span class="regexp">/etc/</span>docker</span><br><span class="line">sudo tee <span class="regexp">/etc/</span>docker/daemon.json &lt;&lt;-<span class="string">&#x27;EOF&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;registry-mirrors&quot;</span>: [<span class="string">&quot;https://2mttmns2.mirror.aliyuncs.com&quot;</span>]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Docker命令"><a href="#Docker命令" class="headerlink" title="Docker命令"></a>Docker命令</h2><h3 id="服务指令"><a href="#服务指令" class="headerlink" title="服务指令"></a>服务指令</h3><ul>
+<li>启动</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>停止</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl stop docker</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>重启</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl status docker</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>自启动</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl enable docker</span><br></pre></td></tr></table></figure>
+
+<h3 id="镜像指令"><a href="#镜像指令" class="headerlink" title="镜像指令"></a>镜像指令</h3><ul>
+<li>查看镜像</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在镜像仓库搜索</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker search xxx:tag//版本号</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在镜像仓库下载</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker pull xxx:tag</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除镜像</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker rmi xxx:tag</span><br><span class="line">docker rmi ID</span><br><span class="line">//删除单个镜像</span><br><span class="line">docker rmi `docker images -aq`</span><br><span class="line">//删除所有镜像</span><br></pre></td></tr></table></figure>
+
+<h3 id="容器指令"><a href="#容器指令" class="headerlink" title="容器指令"></a>容器指令</h3><ul>
+<li>查看</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker ps -a -q</span><br><span class="line">//-a查看所有容器，-q仅查看版本号</span><br><span class="line">docker stats </span><br><span class="line">//查看每个容器占的内存</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>运行</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -it --name=xxx images:tag [-p xx:xx] /bin/bash</span><br><span class="line">//创建并且进入容器</span><br><span class="line">//-p指主机端口和容器端口的映射</span><br><span class="line">docker run -d --name=xxx images:tag /bin/bash</span><br><span class="line">//创建并且后台运行容器</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>进入</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec -it xxx /bin/bash</span><br><span class="line">//xxx为容器名字</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker start xxx</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>停止</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker stop xxx</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker rm [-f] xxx</span><br><span class="line">//-f强制删除</span><br><span class="line">docker rm ID</span><br><span class="line">//删除单个容器</span><br><span class="line">docker rm `dcoekr ps -aq`</span><br><span class="line">//删除所有容器</span><br></pre></td></tr></table></figure>
+
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>拷贝容器内文件到主机</li>
+</ul>
+<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">docker</span> <span class="meta">cp</span> id:内路径 外路径</span><br><span class="line"><span class="comment">//容器外运行指令</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="数据卷"><a href="#数据卷" class="headerlink" title="数据卷"></a>数据卷</h2><hr>
+<h2 id="Dokcerfile文件"><a href="#Dokcerfile文件" class="headerlink" title="Dokcerfile文件"></a>Dokcerfile文件</h2><hr>
+<h2 id="制作镜像"><a href="#制作镜像" class="headerlink" title="制作镜像"></a>制作镜像</h2><hr>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>docker</tag>
+        <tag>容器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>zht and yp</title>
+    <url>/posts/ea17.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="531f424637a01316137f8800094068cd1d9e4c10d17f36856845c98f5aeece16">031d3b5b4d592184d46d63e8ce614d5552b6986bb991c00793a4f65860501ca274747561794dcdafad5cf90809fde0744d4f8b61a219d83d0bfe19b69787c45f003780f10908612a18c25d076b95dc2792623141094bd4ffecf71f5585560f601ad087b8b284eb4ded987e42b8cfdecca459aa46a721fb863387bd98690e4b49b331b9eeb7fb10c7bb7590c69d21f24f618b772954c3c6f80e311a857eed7b653fa7948064f7ddf5dfba3e91a9b7254499c5e4b373e8ea6893c93500ab6f21492984de8fb7d8104274e0999cbbb945f2fb240f65e6a724704cf668b4e37cd4bb0c381d003bcfd44fad374899906996a67129462d0ae35443860ec86edf794f782c076d99a361e308186fbc5d282e5c9649e19b5f4e7317c013e5ed8dd6ce2dfab4a1d4b925e6b0c8afd85deeeb79fc0dc836c08ecddbe57876498eff352a5fb6afc490bedf86578af6e7aa691be36b2c87fc21274b534a269004ce8ec89865af6fe06cd3161f5035bdd38fd77f9066abd8a95c4934559c3cc894034ff3e2ad4fba9f670a62f3dbf720b27ed539f3c4acc940d0f1c158babfe3433d7cb0dda4fe0992e7f420b2b5aff3e0f2e53073467fe7d950ad9699f8a0846ce18f6886f5342f7f689790e2d202d21c3431764810e9217c01252385d197c2f0c91f5c0b232847c95d8ee0e67b28cc6c0ba0c85477fefaf7aa2d0745c1b5074500eec27c45c274a806794857a519e5b1c63818f31d7de066f80ead4851e862fb8444270968678612ba44e1a593f70fa7fd3b3565868994302eb5202f787c4d7426792ef6e23c877411981cde3c718d052b1d9d7a4186c2211d645108d67646d3e104c013dcd071a1779bf3afcc0b90faaab4fcf5a4556085d12a194a77e34945979dc5e127b618e395915d6da6d0bc25714e78873ee72d2d0cf026884131120f6a6bd87ccebe342b9cf656ed63a3b64106badc9174c5aaea316c254d53a14e5f8b89f897bf38bc114b79d71d6833f99ef3076163850c30eea290b4252bef9a44c2f52a73d0f3ba1eaf36d665855bb30f3a8c23a9ebf9</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>个人</category>
+        <category>照片</category>
+      </categories>
+      <tags>
+        <tag>yp</tag>
+        <tag>照片</tag>
+        <tag>个人</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博客搭建</title>
     <url>/posts/68d0.html</url>
     <content><![CDATA[<h1 id="第一部分-搭建与发布"><a href="#第一部分-搭建与发布" class="headerlink" title="第一部分 搭建与发布"></a>第一部分 搭建与发布</h1><h2 id="1、安装Git"><a href="#1、安装Git" class="headerlink" title="1、安装Git"></a>1、安装Git</h2><p><code>Git</code>是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。<br>可以到<a href="https://git-scm.com/download/win">Git官网</a>进行下载，Git详细安装教程可以查看<a href="https://blog.csdn.net/qq_43715354/article/details/108638061">Git安装</a>。</p>
@@ -369,164 +527,6 @@
         <tag>more</tag>
         <tag>blog</tag>
         <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>zht and yp</title>
-    <url>/posts/ea17.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="531f424637a01316137f8800094068cd1d9e4c10d17f36856845c98f5aeece16">031d3b5b4d592184d46d63e8ce614d5552b6986bb991c00793a4f65860501ca274747561794dcdafad5cf90809fde0744d4f8b61a219d83d0bfe19b69787c45f003780f10908612a18c25d076b95dc2792623141094bd4ffecf71f5585560f601ad087b8b284eb4ded987e42b8cfdecca459aa46a721fb863387bd98690e4b49b331b9eeb7fb10c7bb7590c69d21f24f618b772954c3c6f80e311a857eed7b653fa7948064f7ddf5dfba3e91a9b7254499c5e4b373e8ea6893c93500ab6f21492984de8fb7d8104274e0999cbbb945f2fb240f65e6a724704cf668b4e37cd4bb0c381d003bcfd44fad374899906996a67129462d0ae35443860ec86edf794f782c076d99a361e308186fbc5d282e5c9649e19b5f4e7317c013e5ed8dd6ce2dfab4a1d4b925e6b0c8afd85deeeb79fc0dc836c08ecddbe57876498eff352a5fb6afc490bedf86578af6e7aa691be36b2c87fc21274b534a269004ce8ec89865af6fe06cd3161f5035bdd38fd77f9066abd8a95c4934559c3cc894034ff3e2ad4fba9f670a62f3dbf720b27ed539f3c4acc940d0f1c158babfe3433d7cb0dda4fe0992e7f420b2b5aff3e0f2e53073467fe7d950ad9699f8a0846ce18f6886f5342f7f689790e2d202d21c3431764810e9217c01252385d197c2f0c91f5c0b232847c95d8ee0e67b28cc6c0ba0c85477fefaf7aa2d0745c1b5074500eec27c45c274a806794857a519e5b1c63818f31d7de066f80ead4851e862fb8444270968678612ba44e1a593f70fa7fd3b3565868994302eb5202f787c4d7426792ef6e23c877411981cde3c718d052b1d9d7a4186c2211d645108d67646d3e104c013dcd071a1779bf3afcc0b90faaab4fcf5a4556085d12a194a77e34945979dc5e127b618e395915d6da6d0bc25714e78873ee72d2d0cf026884131120f6a6bd87ccebe342b9cf656ed63a3b64106badc9174c5aaea316c254d53a14e5f8b89f897bf38bc114b79d71d6833f99ef3076163850c30eea290b4252bef9a44c2f52a73d0f3ba1eaf36d665855bb30f3a8c23a9ebf9</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>个人</category>
-        <category>照片</category>
-      </categories>
-      <tags>
-        <tag>yp</tag>
-        <tag>照片</tag>
-        <tag>个人</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>docker</title>
-    <url>/posts/c018.html</url>
-    <content><![CDATA[<h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><span id="more"></span>
-
-<h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><p>​		2010年，几个搞IT的年轻人，在美国旧金山成立了一家名叫“dotCloud”的公司。这家公司主要提供基于PaaS的云计算技术服务。具体来说，是和LXC有关的容器技术。LXC，就是Linux容器虚拟技术（Linux container）后来，dotCloud公司将自己的容器技术进行了简化和标准化，并命名为——<strong>Docker</strong>。</p>
-<p>​		Docker技术诞生之后，并没有引起行业的关注。而dotCloud公司，作为一家小型创业企业，在激烈的竞争之下，也步履维艰。正当他们快要坚持不下去的时候，脑子里蹦出了“开源”的想法。什么是“开源”？开源，就是开放源代码。也就是将原来内部保密的程序源代码开放给所有人，然后让大家一起参与进来，贡献代码和意见。Open Source，开源有的软件是一开始就开源的。也有的软件，是混不下去，创造者又不想放弃，所以选择开源。</p>
-<p>​		2013年3月，dotCloud公司的创始人之一，Docker之父，28岁的<strong>Solomon Hykes</strong>正式决定，将Docker项目开源。Solomon Hykes（今年刚从Docker离职）不开则已，一开惊人。越来越多的IT工程师发现了Docker的优点，然后蜂拥而至，加入Docker开源社区。Docker的人气迅速攀升，速度之快，令人瞠目结舌。开源当月，Docker 0.1 版本发布。此后的每一个月，Docker都会发布一个版本。到2014年6月9日，Docker 1.0 版本正式发布。此时的Docker，已经成为行业里人气最火爆的开源技术，没有之一。甚至像Google、微软、Amazon、VMware这样的巨头，都对它青睐有加，表示将全力支持。Docker火了之后，dotCloud公司干脆把公司名字也改成了Docker Inc. 。</p>
-<p>参考连接:</p>
-<ul>
-<li><p><a href="https://zhuanlan.zhihu.com/p/105331409">Docker的历史与发展 - 知乎 (zhihu.com)</a></p>
-</li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/53260098">10分钟看懂Docker和K8S - 知乎 (zhihu.com)</a></p>
-</li>
-</ul>
-<hr>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
-<li>CentOS系统</li>
-</ul>
-<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">curl -fsSL <span class="keyword">https</span>://<span class="built_in">get</span>.docker.com | bash -s docker <span class="comment">--mirror Aliyun</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Dbantu系统</li>
-</ul>
-<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">curl -fsSL <span class="keyword">https</span>://<span class="built_in">get</span>.docker.com | bash -s docker <span class="comment">--mirror Aliyun</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Debian系统</li>
-</ul>
-<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">curl -fsSL <span class="keyword">https</span>://<span class="built_in">get</span>.docker.com | bash -s docker <span class="comment">--mirror Aliyun</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="加速器"><a href="#加速器" class="headerlink" title="加速器"></a>加速器</h2><ul>
-<li>我的加速地址</li>
-</ul>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p <span class="regexp">/etc/</span>docker</span><br><span class="line">sudo tee <span class="regexp">/etc/</span>docker/daemon.json &lt;&lt;-<span class="string">&#x27;EOF&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;registry-mirrors&quot;</span>: [<span class="string">&quot;https://2mttmns2.mirror.aliyuncs.com&quot;</span>]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="Docker命令"><a href="#Docker命令" class="headerlink" title="Docker命令"></a>Docker命令</h2><h3 id="服务指令"><a href="#服务指令" class="headerlink" title="服务指令"></a>服务指令</h3><ul>
-<li>启动</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>停止</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl stop docker</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>重启</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>查看</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl status docker</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>自启动</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl enable docker</span><br></pre></td></tr></table></figure>
-
-<h3 id="镜像指令"><a href="#镜像指令" class="headerlink" title="镜像指令"></a>镜像指令</h3><ul>
-<li>查看镜像</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在镜像仓库搜索</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker search xxx:tag//版本号</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在镜像仓库下载</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker pull xxx:tag</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>删除镜像</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker rmi xxx:tag</span><br><span class="line">docker rmi ID</span><br><span class="line">//删除单个镜像</span><br><span class="line">docker rmi `docker images -aq`</span><br><span class="line">//删除所有镜像</span><br></pre></td></tr></table></figure>
-
-<h3 id="容器指令"><a href="#容器指令" class="headerlink" title="容器指令"></a>容器指令</h3><ul>
-<li>查看</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker ps -a -q</span><br><span class="line">//-a查看所有容器，-q仅查看版本号</span><br><span class="line">docker stats </span><br><span class="line">//查看每个容器占的内存</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>运行</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -it --name=xxx images:tag [-p xx:xx] /bin/bash</span><br><span class="line">//创建并且进入容器</span><br><span class="line">//-p指主机端口和容器端口的映射</span><br><span class="line">docker run -d --name=xxx images:tag /bin/bash</span><br><span class="line">//创建并且后台运行容器</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>进入</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec -it xxx /bin/bash</span><br><span class="line">//xxx为容器名字</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>启动</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker start xxx</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>停止</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker stop xxx</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>删除</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker rm [-f] xxx</span><br><span class="line">//-f强制删除</span><br><span class="line">docker rm ID</span><br><span class="line">//删除单个容器</span><br><span class="line">docker rm `dcoekr ps -aq`</span><br><span class="line">//删除所有容器</span><br></pre></td></tr></table></figure>
-
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
-<li>拷贝容器内文件到主机</li>
-</ul>
-<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">docker</span> <span class="meta">cp</span> id:内路径 外路径</span><br><span class="line"><span class="comment">//容器外运行指令</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="数据卷"><a href="#数据卷" class="headerlink" title="数据卷"></a>数据卷</h2><hr>
-<h2 id="Dokcerfile文件"><a href="#Dokcerfile文件" class="headerlink" title="Dokcerfile文件"></a>Dokcerfile文件</h2><hr>
-<h2 id="制作镜像"><a href="#制作镜像" class="headerlink" title="制作镜像"></a>制作镜像</h2><hr>
-]]></content>
-      <categories>
-        <category>工具</category>
-        <category>docker</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>docker</tag>
-        <tag>容器</tag>
       </tags>
   </entry>
 </search>
