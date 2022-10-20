@@ -35,186 +35,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux学习笔记</title>
-    <url>/posts/86b7.html</url>
-    <content><![CDATA[<h1 id="Linux常用命令"><a href="#Linux常用命令" class="headerlink" title="Linux常用命令"></a>Linux常用命令</h1><span id="more"></span>
-
-<h2 id="1、列出文件————ls"><a href="#1、列出文件————ls" class="headerlink" title="1、列出文件————ls"></a>1、列出文件————ls</h2><ul>
-<li>-a 列出全部文件</li>
-<li>-t 按时间列出文件</li>
-<li>-l列出文件全部信息</li>
-<li>-S按文件大小信息</li>
-</ul>
-<hr>
-<h2 id="2、进入文件————cd"><a href="#2、进入文件————cd" class="headerlink" title="2、进入文件————cd"></a>2、进入文件————cd</h2><ul>
-<li>&#x2F;进入主目录</li>
-<li>~进入根目录</li>
-<li>-进入上次路径</li>
-<li>..进入上级目录</li>
-<li>&#x2F;xxx&#x2F;xxx 绝对路径进入</li>
-<li>.&#x2F;xxx相对路径进入</li>
-</ul>
-<hr>
-<h2 id="3、查看当前路径——-pwd"><a href="#3、查看当前路径——-pwd" class="headerlink" title="3、查看当前路径——-pwd"></a>3、查看当前路径——-pwd</h2><ul>
-<li>-p查看软连接的实际路径</li>
-</ul>
-<hr>
-<h2 id="4、创建文件夹———mkdir"><a href="#4、创建文件夹———mkdir" class="headerlink" title="4、创建文件夹———mkdir"></a>4、创建文件夹———mkdir</h2><ul>
-<li>-p &#x2F;xxx&#x2F;xxx  若路径中的某些目录尚不存在,加上此选项后，系统将自动建立好那些尚不在的目录，即一次可以建立多个目录</li>
-</ul>
-<hr>
-<h2 id="5、删除文件夹———rmdir"><a href="#5、删除文件夹———rmdir" class="headerlink" title="5、删除文件夹———rmdir"></a>5、删除文件夹———rmdir</h2><ul>
-<li>-p  xxx&#x2F;xxx  删除文件夹后如果为空则全删除</li>
-</ul>
-<hr>
-<h2 id="6、删除文件————rm"><a href="#6、删除文件————rm" class="headerlink" title="6、删除文件————rm"></a>6、删除文件————rm</h2><ul>
-<li>-rf   xxx 删除目录和所有文件并且不询问</li>
-<li>-i    xxx删除前询问</li>
-</ul>
-<hr>
-<h2 id="7、重命名和移动——-mv"><a href="#7、重命名和移动——-mv" class="headerlink" title="7、重命名和移动——-mv"></a>7、重命名和移动——-mv</h2><ul>
-<li>mv file1 file2 把file1命名为file2</li>
-<li>mv file1 file2 file3 &#x2F;dir 把文件123移动到dir中</li>
-<li>mv   *   ..&#x2F;     把当前所有文件上移一级</li>
-</ul>
-<hr>
-<h2 id="8、复制文件————cp"><a href="#8、复制文件————cp" class="headerlink" title="8、复制文件————cp"></a>8、复制文件————cp</h2><ul>
-<li>cp file dir   复制文件到目录</li>
-<li>-r 复制目录及其文件到目标目录</li>
-<li>-s  x.txt  link_x.txt  创建快捷方式</li>
-</ul>
-<hr>
-<h2 id="9、显示创建合并文件–cat"><a href="#9、显示创建合并文件–cat" class="headerlink" title="9、显示创建合并文件–cat"></a>9、显示创建合并文件–cat</h2><ul>
-<li>cat file 显示文件内容</li>
-<li>cat &gt; filename 创建一个文件</li>
-<li>cat dir1 dir2 &gt; dir3合并dir12为dir3</li>
-</ul>
-<hr>
-<h2 id="10、查找"><a href="#10、查找" class="headerlink" title="10、查找"></a>10、查找</h2><h3 id="whereis"><a href="#whereis" class="headerlink" title="whereis"></a>whereis</h3><ul>
-<li>该指令只能用于查找二进制文件、源代码文件和man手册页</li>
-</ul>
-<h3 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h3><ul>
-<li>用于一般文件的定位</li>
-<li>-l num 显示多少行信息</li>
-<li>xx&#x2F;xx 查找xx目录下信息</li>
-</ul>
-<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><ul>
-<li>遍历硬盘查找文件</li>
-<li>&#x2F;dir xxx 指定目录下查找文件</li>
-</ul>
-<hr>
-<h2 id="11、权限修改———–chmod"><a href="#11、权限修改———–chmod" class="headerlink" title="11、权限修改———–chmod"></a>11、权限修改———–chmod</h2><ul>
-<li>chmod r file增加读权限</li>
-<li>chmod w file增加写权限</li>
-<li>chmod x file增加</li>
-<li>chmod -x file</li>
-</ul>
-<hr>
-<h2 id="12、显示磁盘空间——df"><a href="#12、显示磁盘空间——df" class="headerlink" title="12、显示磁盘空间——df"></a>12、显示磁盘空间——df</h2><ul>
-<li>-a全部文件</li>
-<li>-h便于阅读的形式比如KB、MB</li>
-</ul>
-<hr>
-<h2 id="13、显示文件大小——du"><a href="#13、显示文件大小——du" class="headerlink" title="13、显示文件大小——du"></a>13、显示文件大小——du</h2><ul>
-<li>-a 全部文件</li>
-<li>-h以易于读的方式显示</li>
-</ul>
-<hr>
-<h2 id="14、查看进程———–ps"><a href="#14、查看进程———–ps" class="headerlink" title="14、查看进程———–ps"></a>14、查看进程———–ps</h2><ul>
-<li>a显示所有进程</li>
-</ul>
-<hr>
-<h2 id="15、中止进程———–kill"><a href="#15、中止进程———–kill" class="headerlink" title="15、中止进程———–kill"></a>15、中止进程———–kill</h2><hr>
-<h2 id="16、创建文件———–touch"><a href="#16、创建文件———–touch" class="headerlink" title="16、创建文件———–touch"></a>16、创建文件———–touch</h2><hr>
-<h2 id="17、下载"><a href="#17、下载" class="headerlink" title="17、下载"></a>17、下载</h2><h3 id="yum"><a href="#yum" class="headerlink" title="yum"></a>yum</h3><ul>
-<li>-y install      不需要确认下载，centos下的下载指令</li>
-</ul>
-<h3 id="apt"><a href="#apt" class="headerlink" title="apt"></a>apt</h3><ul>
-<li>-y install      不需要确认下载，ubuntu下的下载指令</li>
-</ul>
-<hr>
-<h2 id="18、书写文件———–vim"><a href="#18、书写文件———–vim" class="headerlink" title="18、书写文件———–vim"></a>18、书写文件———–vim</h2><p>书写模式</p>
-<ul>
-<li>i</li>
-</ul>
-<p>指令模式</p>
-<ul>
-<li><p>: 进入指令模式</p>
-</li>
-<li><p>保存———–wq</p>
-<p>退出不保存—-q!</p>
-</li>
-</ul>
-<p>退出模式</p>
-<ul>
-<li>Esc</li>
-</ul>
-<hr>
-<h2 id="19、其他指令"><a href="#19、其他指令" class="headerlink" title="19、其他指令"></a>19、其他指令</h2><h3 id="查看历史命令"><a href="#查看历史命令" class="headerlink" title="查看历史命令"></a>查看历史命令</h3><ul>
-<li>history</li>
-</ul>
-<h3 id="注释命令（方便回查）"><a href="#注释命令（方便回查）" class="headerlink" title="注释命令（方便回查）"></a>注释命令（方便回查）</h3><ul>
-<li>#</li>
-</ul>
-<h3 id="换行继续输入指令"><a href="#换行继续输入指令" class="headerlink" title="换行继续输入指令"></a>换行继续输入指令</h3><ul>
-<li>\+entry</li>
-</ul>
-<h3 id="并行输入指令"><a href="#并行输入指令" class="headerlink" title="并行输入指令"></a>并行输入指令</h3><ul>
-<li>&amp;&amp;</li>
-</ul>
-<h3 id="查看版本号"><a href="#查看版本号" class="headerlink" title="查看版本号"></a>查看版本号</h3><ul>
-<li>cat &#x2F;etc&#x2F;centos-release</li>
-</ul>
-<h3 id="访问主机xxx端口"><a href="#访问主机xxx端口" class="headerlink" title="访问主机xxx端口"></a>访问主机xxx端口</h3><ul>
-<li>curl localhost:xxx</li>
-</ul>
-<h3 id="下所有文件"><a href="#下所有文件" class="headerlink" title="下所有文件"></a>下所有文件</h3><ul>
-<li>dir&#x2F;*      dir</li>
-</ul>
-<h3 id="设置初始root密码"><a href="#设置初始root密码" class="headerlink" title="设置初始root密码"></a>设置初始root密码</h3><ul>
-<li>sudo passwd</li>
-</ul>
-<h3 id="进入root账户"><a href="#进入root账户" class="headerlink" title="进入root账户"></a>进入root账户</h3><ul>
-<li>su</li>
-</ul>
-<h1 id="Linux快捷键"><a href="#Linux快捷键" class="headerlink" title="Linux快捷键"></a>Linux快捷键</h1><h3 id="自动补全指令"><a href="#自动补全指令" class="headerlink" title="自动补全指令"></a>自动补全指令</h3><ul>
-<li>TAB</li>
-</ul>
-<h3 id="清空光标前输入"><a href="#清空光标前输入" class="headerlink" title="清空光标前输入"></a>清空光标前输入</h3><ul>
-<li>ctrl-u</li>
-</ul>
-<h3 id="清空光标后输入"><a href="#清空光标后输入" class="headerlink" title="清空光标后输入"></a>清空光标后输入</h3><ul>
-<li>ctrl-k</li>
-</ul>
-<h3 id="移动光标到首行"><a href="#移动光标到首行" class="headerlink" title="移动光标到首行"></a>移动光标到首行</h3><ul>
-<li>ctrl-a</li>
-</ul>
-<h3 id="移动光标到尾行"><a href="#移动光标到尾行" class="headerlink" title="移动光标到尾行"></a>移动光标到尾行</h3><ul>
-<li>ctrl-e</li>
-</ul>
-<h3 id="清屏"><a href="#清屏" class="headerlink" title="清屏"></a>清屏</h3><ul>
-<li>ctrl-l</li>
-</ul>
-<h3 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h3><ul>
-<li>ctrl+insert</li>
-</ul>
-<h3 id="粘贴"><a href="#粘贴" class="headerlink" title="粘贴"></a>粘贴</h3><ul>
-<li>shift+insert</li>
-</ul>
-<h3 id="回滚指令"><a href="#回滚指令" class="headerlink" title="回滚指令"></a>回滚指令</h3><ul>
-<li>↑↓</li>
-</ul>
-<h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
-      <categories>
-        <category>操作系统</category>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker</title>
     <url>/posts/c018.html</url>
     <content><![CDATA[<h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><span id="more"></span>
@@ -403,6 +223,186 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux学习笔记</title>
+    <url>/posts/86b7.html</url>
+    <content><![CDATA[<h1 id="Linux常用命令"><a href="#Linux常用命令" class="headerlink" title="Linux常用命令"></a>Linux常用命令</h1><span id="more"></span>
+
+<h2 id="1、列出文件————ls"><a href="#1、列出文件————ls" class="headerlink" title="1、列出文件————ls"></a>1、列出文件————ls</h2><ul>
+<li>-a 列出全部文件</li>
+<li>-t 按时间列出文件</li>
+<li>-l列出文件全部信息</li>
+<li>-S按文件大小信息</li>
+</ul>
+<hr>
+<h2 id="2、进入文件————cd"><a href="#2、进入文件————cd" class="headerlink" title="2、进入文件————cd"></a>2、进入文件————cd</h2><ul>
+<li>&#x2F;进入主目录</li>
+<li>~进入根目录</li>
+<li>-进入上次路径</li>
+<li>..进入上级目录</li>
+<li>&#x2F;xxx&#x2F;xxx 绝对路径进入</li>
+<li>.&#x2F;xxx相对路径进入</li>
+</ul>
+<hr>
+<h2 id="3、查看当前路径——-pwd"><a href="#3、查看当前路径——-pwd" class="headerlink" title="3、查看当前路径——-pwd"></a>3、查看当前路径——-pwd</h2><ul>
+<li>-p查看软连接的实际路径</li>
+</ul>
+<hr>
+<h2 id="4、创建文件夹———mkdir"><a href="#4、创建文件夹———mkdir" class="headerlink" title="4、创建文件夹———mkdir"></a>4、创建文件夹———mkdir</h2><ul>
+<li>-p &#x2F;xxx&#x2F;xxx  若路径中的某些目录尚不存在,加上此选项后，系统将自动建立好那些尚不在的目录，即一次可以建立多个目录</li>
+</ul>
+<hr>
+<h2 id="5、删除文件夹———rmdir"><a href="#5、删除文件夹———rmdir" class="headerlink" title="5、删除文件夹———rmdir"></a>5、删除文件夹———rmdir</h2><ul>
+<li>-p  xxx&#x2F;xxx  删除文件夹后如果为空则全删除</li>
+</ul>
+<hr>
+<h2 id="6、删除文件————rm"><a href="#6、删除文件————rm" class="headerlink" title="6、删除文件————rm"></a>6、删除文件————rm</h2><ul>
+<li>-rf   xxx 删除目录和所有文件并且不询问</li>
+<li>-i    xxx删除前询问</li>
+</ul>
+<hr>
+<h2 id="7、重命名和移动——-mv"><a href="#7、重命名和移动——-mv" class="headerlink" title="7、重命名和移动——-mv"></a>7、重命名和移动——-mv</h2><ul>
+<li>mv file1 file2 把file1命名为file2</li>
+<li>mv file1 file2 file3 &#x2F;dir 把文件123移动到dir中</li>
+<li>mv   *   ..&#x2F;     把当前所有文件上移一级</li>
+</ul>
+<hr>
+<h2 id="8、复制文件————cp"><a href="#8、复制文件————cp" class="headerlink" title="8、复制文件————cp"></a>8、复制文件————cp</h2><ul>
+<li>cp file dir   复制文件到目录</li>
+<li>-r 复制目录及其文件到目标目录</li>
+<li>-s  x.txt  link_x.txt  创建快捷方式</li>
+</ul>
+<hr>
+<h2 id="9、显示创建合并文件–cat"><a href="#9、显示创建合并文件–cat" class="headerlink" title="9、显示创建合并文件–cat"></a>9、显示创建合并文件–cat</h2><ul>
+<li>cat file 显示文件内容</li>
+<li>cat &gt; filename 创建一个文件</li>
+<li>cat dir1 dir2 &gt; dir3合并dir12为dir3</li>
+</ul>
+<hr>
+<h2 id="10、查找"><a href="#10、查找" class="headerlink" title="10、查找"></a>10、查找</h2><h3 id="whereis"><a href="#whereis" class="headerlink" title="whereis"></a>whereis</h3><ul>
+<li>该指令只能用于查找二进制文件、源代码文件和man手册页</li>
+</ul>
+<h3 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h3><ul>
+<li>用于一般文件的定位</li>
+<li>-l num 显示多少行信息</li>
+<li>xx&#x2F;xx 查找xx目录下信息</li>
+</ul>
+<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><ul>
+<li>遍历硬盘查找文件</li>
+<li>&#x2F;dir xxx 指定目录下查找文件</li>
+</ul>
+<hr>
+<h2 id="11、权限修改———–chmod"><a href="#11、权限修改———–chmod" class="headerlink" title="11、权限修改———–chmod"></a>11、权限修改———–chmod</h2><ul>
+<li>chmod r file增加读权限</li>
+<li>chmod w file增加写权限</li>
+<li>chmod x file增加</li>
+<li>chmod -x file</li>
+</ul>
+<hr>
+<h2 id="12、显示磁盘空间——df"><a href="#12、显示磁盘空间——df" class="headerlink" title="12、显示磁盘空间——df"></a>12、显示磁盘空间——df</h2><ul>
+<li>-a全部文件</li>
+<li>-h便于阅读的形式比如KB、MB</li>
+</ul>
+<hr>
+<h2 id="13、显示文件大小——du"><a href="#13、显示文件大小——du" class="headerlink" title="13、显示文件大小——du"></a>13、显示文件大小——du</h2><ul>
+<li>-a 全部文件</li>
+<li>-h以易于读的方式显示</li>
+</ul>
+<hr>
+<h2 id="14、查看进程———–ps"><a href="#14、查看进程———–ps" class="headerlink" title="14、查看进程———–ps"></a>14、查看进程———–ps</h2><ul>
+<li>a显示所有进程</li>
+</ul>
+<hr>
+<h2 id="15、中止进程———–kill"><a href="#15、中止进程———–kill" class="headerlink" title="15、中止进程———–kill"></a>15、中止进程———–kill</h2><hr>
+<h2 id="16、创建文件———–touch"><a href="#16、创建文件———–touch" class="headerlink" title="16、创建文件———–touch"></a>16、创建文件———–touch</h2><hr>
+<h2 id="17、下载"><a href="#17、下载" class="headerlink" title="17、下载"></a>17、下载</h2><h3 id="yum"><a href="#yum" class="headerlink" title="yum"></a>yum</h3><ul>
+<li>-y install      不需要确认下载，centos下的下载指令</li>
+</ul>
+<h3 id="apt"><a href="#apt" class="headerlink" title="apt"></a>apt</h3><ul>
+<li>-y install      不需要确认下载，ubuntu下的下载指令</li>
+</ul>
+<hr>
+<h2 id="18、书写文件———–vim"><a href="#18、书写文件———–vim" class="headerlink" title="18、书写文件———–vim"></a>18、书写文件———–vim</h2><p>书写模式</p>
+<ul>
+<li>i</li>
+</ul>
+<p>指令模式</p>
+<ul>
+<li><p>: 进入指令模式</p>
+</li>
+<li><p>保存———–wq</p>
+<p>退出不保存—-q!</p>
+</li>
+</ul>
+<p>退出模式</p>
+<ul>
+<li>Esc</li>
+</ul>
+<hr>
+<h2 id="19、其他指令"><a href="#19、其他指令" class="headerlink" title="19、其他指令"></a>19、其他指令</h2><h3 id="查看历史命令"><a href="#查看历史命令" class="headerlink" title="查看历史命令"></a>查看历史命令</h3><ul>
+<li>history</li>
+</ul>
+<h3 id="注释命令（方便回查）"><a href="#注释命令（方便回查）" class="headerlink" title="注释命令（方便回查）"></a>注释命令（方便回查）</h3><ul>
+<li>#</li>
+</ul>
+<h3 id="换行继续输入指令"><a href="#换行继续输入指令" class="headerlink" title="换行继续输入指令"></a>换行继续输入指令</h3><ul>
+<li>\+entry</li>
+</ul>
+<h3 id="并行输入指令"><a href="#并行输入指令" class="headerlink" title="并行输入指令"></a>并行输入指令</h3><ul>
+<li>&amp;&amp;</li>
+</ul>
+<h3 id="查看版本号"><a href="#查看版本号" class="headerlink" title="查看版本号"></a>查看版本号</h3><ul>
+<li>cat &#x2F;etc&#x2F;centos-release</li>
+</ul>
+<h3 id="访问主机xxx端口"><a href="#访问主机xxx端口" class="headerlink" title="访问主机xxx端口"></a>访问主机xxx端口</h3><ul>
+<li>curl localhost:xxx</li>
+</ul>
+<h3 id="下所有文件"><a href="#下所有文件" class="headerlink" title="下所有文件"></a>下所有文件</h3><ul>
+<li>dir&#x2F;*      dir</li>
+</ul>
+<h3 id="设置初始root密码"><a href="#设置初始root密码" class="headerlink" title="设置初始root密码"></a>设置初始root密码</h3><ul>
+<li>sudo passwd</li>
+</ul>
+<h3 id="进入root账户"><a href="#进入root账户" class="headerlink" title="进入root账户"></a>进入root账户</h3><ul>
+<li>su</li>
+</ul>
+<h1 id="Linux快捷键"><a href="#Linux快捷键" class="headerlink" title="Linux快捷键"></a>Linux快捷键</h1><h3 id="自动补全指令"><a href="#自动补全指令" class="headerlink" title="自动补全指令"></a>自动补全指令</h3><ul>
+<li>TAB</li>
+</ul>
+<h3 id="清空光标前输入"><a href="#清空光标前输入" class="headerlink" title="清空光标前输入"></a>清空光标前输入</h3><ul>
+<li>ctrl-u</li>
+</ul>
+<h3 id="清空光标后输入"><a href="#清空光标后输入" class="headerlink" title="清空光标后输入"></a>清空光标后输入</h3><ul>
+<li>ctrl-k</li>
+</ul>
+<h3 id="移动光标到首行"><a href="#移动光标到首行" class="headerlink" title="移动光标到首行"></a>移动光标到首行</h3><ul>
+<li>ctrl-a</li>
+</ul>
+<h3 id="移动光标到尾行"><a href="#移动光标到尾行" class="headerlink" title="移动光标到尾行"></a>移动光标到尾行</h3><ul>
+<li>ctrl-e</li>
+</ul>
+<h3 id="清屏"><a href="#清屏" class="headerlink" title="清屏"></a>清屏</h3><ul>
+<li>ctrl-l</li>
+</ul>
+<h3 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h3><ul>
+<li>ctrl+insert</li>
+</ul>
+<h3 id="粘贴"><a href="#粘贴" class="headerlink" title="粘贴"></a>粘贴</h3><ul>
+<li>shift+insert</li>
+</ul>
+<h3 id="回滚指令"><a href="#回滚指令" class="headerlink" title="回滚指令"></a>回滚指令</h3><ul>
+<li>↑↓</li>
+</ul>
+<h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
+      <categories>
+        <category>操作系统</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown的基本用法</title>
     <url>/posts/42f0.html</url>
     <content><![CDATA[<h1 id="Markdown-学习"><a href="#Markdown-学习" class="headerlink" title="Markdown 学习"></a>Markdown 学习</h1><span id="more"></span>
@@ -511,6 +511,97 @@
   <entry>
     <title>Nginx</title>
     <url>/posts/248b.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>快捷键大全</title>
+    <url>/posts/cb7d.html</url>
+    <content><![CDATA[<h1 id="快捷键大全"><a href="#快捷键大全" class="headerlink" title="快捷键大全"></a>快捷键大全</h1><span id="more"></span>
+
+<h1 id="PS快捷键"><a href="#PS快捷键" class="headerlink" title="PS快捷键"></a>PS快捷键</h1><h1 id="Linux快捷键"><a href="#Linux快捷键" class="headerlink" title="Linux快捷键"></a>Linux快捷键</h1><h2 id="自动补全指令"><a href="#自动补全指令" class="headerlink" title="自动补全指令"></a>自动补全指令</h2><ul>
+<li>TAB</li>
+</ul>
+<h2 id="清空光标前输入"><a href="#清空光标前输入" class="headerlink" title="清空光标前输入"></a>清空光标前输入</h2><ul>
+<li>ctrl-u</li>
+</ul>
+<h2 id="清空光标后输入"><a href="#清空光标后输入" class="headerlink" title="清空光标后输入"></a>清空光标后输入</h2><ul>
+<li>ctrl-k</li>
+</ul>
+<h2 id="移动光标到首行"><a href="#移动光标到首行" class="headerlink" title="移动光标到首行"></a>移动光标到首行</h2><ul>
+<li>ctrl-a</li>
+</ul>
+<h2 id="移动光标到尾行"><a href="#移动光标到尾行" class="headerlink" title="移动光标到尾行"></a>移动光标到尾行</h2><ul>
+<li>ctrl-e</li>
+</ul>
+<h2 id="清屏"><a href="#清屏" class="headerlink" title="清屏"></a>清屏</h2><ul>
+<li>ctrl-l</li>
+</ul>
+<h2 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h2><ul>
+<li>ctrl+insert</li>
+</ul>
+<h2 id="粘贴"><a href="#粘贴" class="headerlink" title="粘贴"></a>粘贴</h2><ul>
+<li>shift+insert</li>
+</ul>
+<h2 id="回滚指令"><a href="#回滚指令" class="headerlink" title="回滚指令"></a>回滚指令</h2><ul>
+<li>↑↓</li>
+</ul>
+<h1 id="网页快捷键"><a href="#网页快捷键" class="headerlink" title="网页快捷键"></a>网页快捷键</h1><ul>
+<li>ctrl+T		创建网页</li>
+<li>ctrl+W		关闭网页</li>
+<li>F11         全屏</li>
+</ul>
+<h1 id="vscode快捷键"><a href="#vscode快捷键" class="headerlink" title="vscode快捷键"></a>vscode快捷键</h1><h1 id="MarkDown快捷键"><a href="#MarkDown快捷键" class="headerlink" title="MarkDown快捷键"></a>MarkDown快捷键</h1><h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><ul>
+<li>ctrl+B</li>
+</ul>
+<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><ul>
+<li>ctrl+L</li>
+</ul>
+<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><ul>
+<li>ctrl+U</li>
+</ul>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ul>
+<li>ctrl+shift+&#96;</li>
+</ul>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><ul>
+<li>alt+ctrl+5</li>
+</ul>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><ul>
+<li>ctrl+num</li>
+</ul>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><ul>
+<li>ctrl+shift+K</li>
+</ul>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
+<li>ctrl+shift+[   有序列表</li>
+<li>ctrl+shift+]   无序列表</li>
+</ul>
+<h2 id><a href="#" class="headerlink" title></a></h2><h2 id="-1"><a href="#-1" class="headerlink" title></a></h2><h1 id="通用快捷键"><a href="#通用快捷键" class="headerlink" title="通用快捷键"></a>通用快捷键</h1><h2 id="查找单词"><a href="#查找单词" class="headerlink" title="查找单词"></a>查找单词</h2><ul>
+<li>ctrl+F</li>
+</ul>
+<h2 id="全选文章"><a href="#全选文章" class="headerlink" title="全选文章"></a>全选文章</h2><ul>
+<li>ctrl+A</li>
+</ul>
+<h2 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h2><ul>
+<li>ctrl+Z</li>
+</ul>
+<h2 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h2><ul>
+<li>ctrl+W</li>
+</ul>
+<h2 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h2><ul>
+<li>ctrl+S</li>
+</ul>
+]]></content>
+      <categories>
+        <category>技巧</category>
+      </categories>
+      <tags>
+        <tag>操作</tag>
+        <tag>快捷键</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>概率论</title>
+    <url>/posts/a5e0.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -779,97 +870,5 @@
         <tag>blog</tag>
         <tag>博客</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>快捷键大全</title>
-    <url>/posts/cb7d.html</url>
-    <content><![CDATA[<h1 id="快捷键大全"><a href="#快捷键大全" class="headerlink" title="快捷键大全"></a>快捷键大全</h1><span id="more"></span>
-
-<h1 id="PS快捷键"><a href="#PS快捷键" class="headerlink" title="PS快捷键"></a>PS快捷键</h1><h1 id="Linux快捷键"><a href="#Linux快捷键" class="headerlink" title="Linux快捷键"></a>Linux快捷键</h1><h2 id="自动补全指令"><a href="#自动补全指令" class="headerlink" title="自动补全指令"></a>自动补全指令</h2><ul>
-<li>TAB</li>
-</ul>
-<h2 id="清空光标前输入"><a href="#清空光标前输入" class="headerlink" title="清空光标前输入"></a>清空光标前输入</h2><ul>
-<li>ctrl-u</li>
-</ul>
-<h2 id="清空光标后输入"><a href="#清空光标后输入" class="headerlink" title="清空光标后输入"></a>清空光标后输入</h2><ul>
-<li>ctrl-k</li>
-</ul>
-<h2 id="移动光标到首行"><a href="#移动光标到首行" class="headerlink" title="移动光标到首行"></a>移动光标到首行</h2><ul>
-<li>ctrl-a</li>
-</ul>
-<h2 id="移动光标到尾行"><a href="#移动光标到尾行" class="headerlink" title="移动光标到尾行"></a>移动光标到尾行</h2><ul>
-<li>ctrl-e</li>
-</ul>
-<h2 id="清屏"><a href="#清屏" class="headerlink" title="清屏"></a>清屏</h2><ul>
-<li>ctrl-l</li>
-</ul>
-<h2 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h2><ul>
-<li>ctrl+insert</li>
-</ul>
-<h2 id="粘贴"><a href="#粘贴" class="headerlink" title="粘贴"></a>粘贴</h2><ul>
-<li>shift+insert</li>
-</ul>
-<h2 id="回滚指令"><a href="#回滚指令" class="headerlink" title="回滚指令"></a>回滚指令</h2><ul>
-<li>↑↓</li>
-</ul>
-<h1 id="网页快捷键"><a href="#网页快捷键" class="headerlink" title="网页快捷键"></a>网页快捷键</h1><ul>
-<li>ctrl+T		创建网页</li>
-<li>ctrl+W		关闭网页</li>
-<li>F11         全屏</li>
-</ul>
-<h1 id="vscode快捷键"><a href="#vscode快捷键" class="headerlink" title="vscode快捷键"></a>vscode快捷键</h1><h1 id="MarkDown快捷键"><a href="#MarkDown快捷键" class="headerlink" title="MarkDown快捷键"></a>MarkDown快捷键</h1><h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><ul>
-<li>ctrl+B</li>
-</ul>
-<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><ul>
-<li>ctrl+L</li>
-</ul>
-<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><ul>
-<li>ctrl+U</li>
-</ul>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ul>
-<li>ctrl+shift+&#96;</li>
-</ul>
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><ul>
-<li>alt+ctrl+5</li>
-</ul>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><ul>
-<li>ctrl+num</li>
-</ul>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><ul>
-<li>ctrl+shift+K</li>
-</ul>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
-<li>ctrl+shift+[   有序列表</li>
-<li>ctrl+shift+]   无序列表</li>
-</ul>
-<h2 id><a href="#" class="headerlink" title></a></h2><h2 id="-1"><a href="#-1" class="headerlink" title></a></h2><h1 id="通用快捷键"><a href="#通用快捷键" class="headerlink" title="通用快捷键"></a>通用快捷键</h1><h2 id="查找单词"><a href="#查找单词" class="headerlink" title="查找单词"></a>查找单词</h2><ul>
-<li>ctrl+F</li>
-</ul>
-<h2 id="全选文章"><a href="#全选文章" class="headerlink" title="全选文章"></a>全选文章</h2><ul>
-<li>ctrl+A</li>
-</ul>
-<h2 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h2><ul>
-<li>ctrl+Z</li>
-</ul>
-<h2 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h2><ul>
-<li>ctrl+W</li>
-</ul>
-<h2 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h2><ul>
-<li>ctrl+S</li>
-</ul>
-]]></content>
-      <categories>
-        <category>技巧</category>
-      </categories>
-      <tags>
-        <tag>操作</tag>
-        <tag>快捷键</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>概率论</title>
-    <url>/posts/a5e0.html</url>
-    <content><![CDATA[<p><img data-src="/%E6%A6%82%E7%8E%87%E8%AE%BA/image-20221020093348342.png" alt="image-20221020093348342"></p>
-]]></content>
   </entry>
 </search>
