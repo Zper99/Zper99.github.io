@@ -189,148 +189,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Markdown的基本用法</title>
-    <url>/posts/42f0.html</url>
-    <content><![CDATA[<h1 id="Markdown-学习"><a href="#Markdown-学习" class="headerlink" title="Markdown 学习"></a>Markdown 学习</h1><span id="more"></span>
-
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"># 这样表示一级标题</span><br><span class="line">## 这样表示二级标题</span><br><span class="line">### 这样表示三级标题</span><br><span class="line">· · · · · ·</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><code>最多支持六级标题</code></p>
-</blockquote>
-<!--more-->
-
-<hr>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">**这样表示粗体**</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>这样表示粗体</strong></p>
-<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">*这样表示斜体*</span></span><br></pre></td></tr></table></figure>
-
-<p><em>这样表示斜体</em></p>
-<figure class="highlight haml"><table><tr><td class="code"><pre><span class="line">~~这样表示删除线~~</span><br></pre></td></tr></table></figure>
-
-<p><del>这样表示删除线</del></p>
-<hr>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight node-repl"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">&gt;</span> <span class="language-javascript">表示引用</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p> 表示引用</p>
-</blockquote>
-<hr>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>—或者***表示分割线</p>
-<hr>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><figure class="highlight scheme"><table><tr><td class="code"><pre><span class="line">[<span class="name">链接的名字</span>](<span class="name">我链接的地址</span>)</span><br></pre></td></tr></table></figure>
-
-<p><a href="Zper99.github.io">链接的名字</a></p>
-<h3 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h3><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="section">&lt;我是自动链接&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><a href="https://zper99.github.io/">https://zper99.github.io/</a></p>
-<hr>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>1. 我是有序列表</p>
-<ol>
-<li>我是有序列表</li>
-<li>我也是有序列表</li>
-</ol>
-<p>- 我是无序列表</p>
-<ul>
-<li>我是无序列表</li>
-<li>我也是无序列表</li>
-</ul>
-<hr>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">|<span class="string">top1</span>|<span class="string">top2</span>|<span class="string">top3</span>|</span><br><span class="line">|<span class="string">-  -</span>|<span class="string">-  -</span>|<span class="string">-  -</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br></pre></td></tr></table></figure>
-
-
-
-<table>
-<thead>
-<tr>
-<th>top1</th>
-<th>top2</th>
-<th>top3</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>word</td>
-<td>word</td>
-<td>word</td>
-</tr>
-<tr>
-<td>word</td>
-<td>word</td>
-<td>word</td>
-</tr>
-<tr>
-<td>word</td>
-<td>word</td>
-<td>word</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">```表示代码</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">表示代码</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;span <span class="built_in">id</span>=<span class="string">&quot;tag1&quot;</span>&gt;我是指定位置&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">[跳转到指定位置](<span class="comment">#tag1)</span></span><br></pre></td></tr></table></figure>
-
-<p><span id="tag1">我是指定位置</span></p>
-<p><a href="#tag1">跳转到指定位置</a></p>
-<hr>
-<h2 id="隐藏"><a href="#隐藏" class="headerlink" title="隐藏"></a>隐藏</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">summary</span>&gt;</span>你的问题?<span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">你的答案:</span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><details>
-<summary>你的问题?</summary>
-你的答案:
-</details></li>
-</ul>
-]]></content>
-      <categories>
-        <category>工具</category>
-        <category>markdown文本编辑器</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软工常识</title>
-    <url>/posts/3289.html</url>
-    <content><![CDATA[<h1 id="软件工程常识"><a href="#软件工程常识" class="headerlink" title="软件工程常识"></a>软件工程常识</h1><span id="more"></span>
-
-<h2 id="大常识"><a href="#大常识" class="headerlink" title="大常识"></a>大常识</h2><h3 id="一、环境变量到底是什，为什么要配环境变量？"><a href="#一、环境变量到底是什，为什么要配环境变量？" class="headerlink" title="一、环境变量到底是什，为什么要配环境变量？"></a>一、环境变量到底是什，为什么要配环境变量？</h3><blockquote>
-<p>环境变量包括用户变量和系统变量。</p>
-</blockquote>
-<ul>
-<li><strong>用户变量</strong>是指我们当前登入这台电脑的用户，比如管理员用户，普通用户。在里面配置的环境变量，只对这个用户有效，一旦用户进行了更换，这环境变量将改为新登录用户的环境变量。</li>
-<li><strong>系统变量</strong>是指这这台电脑的配置的环境变量，对所有用户都生效，不管你换哪个用户，都是生效的。</li>
-</ul>
-<blockquote>
-<p>为什么要配置环境变量</p>
-</blockquote>
-<ul>
-<li>windows系统下，假如我们安装了某一款软件，安装结束后，在安装目录会生成一个该软件的.exe文件，双击该文件，我们就能启动软件。但是难道我们每次要运行该软件的时候都要先找到该.exe文件所在的路径，然后双击吗，显然是不可能的，因为安装的软件太多，我们根本不可能记住所有已安装软件的路径，这时候就需要环境变量了。</li>
-</ul>
-<p>参考资料：</p>
-<ul>
-<li><p><a href="https://blog.csdn.net/u013201439/article/details/55657634?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-55657634-blog-119698904.pc_relevant_3mothn_strategy_recovery&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-55657634-blog-119698904.pc_relevant_3mothn_strategy_recovery&utm_relevant_index=1">我们为什么要配置环境变量</a></p>
-</li>
-<li><p><a href="https://blog.csdn.net/adminZSQ/article/details/106396178">为什么要配置环境变量？变量是什么通俗解释</a></p>
-</li>
-</ul>
-<hr>
-<h3 id="二、压缩的原理"><a href="#二、压缩的原理" class="headerlink" title="二、压缩的原理"></a>二、压缩的原理</h3><hr>
-<h2 id="小常识"><a href="#小常识" class="headerlink" title="小常识"></a>小常识</h2><h3 id="UID、PID和PPID"><a href="#UID、PID和PPID" class="headerlink" title="UID、PID和PPID"></a>UID、PID和PPID</h3><p>UID用户ID(user ID)，PID（process ID）：PID是程序被操作系统加载到内存成为进程后动态分配的资源。每次程序执行的时候，操作系统都会重新加载，PID在每次加载的时候都是不同的。PPID（parent process ID）：PPID是程序的父进程号</p>
-<h3 id><a href="#" class="headerlink" title></a></h3>]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>常识</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux学习笔记</title>
     <url>/posts/86b7.html</url>
     <content><![CDATA[<h1 id="Linux常用命令"><a href="#Linux常用命令" class="headerlink" title="Linux常用命令"></a>Linux常用命令</h1><span id="more"></span>
@@ -543,6 +401,42 @@
       <tags>
         <tag>Linux</tag>
         <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软工常识</title>
+    <url>/posts/3289.html</url>
+    <content><![CDATA[<h1 id="软件工程常识"><a href="#软件工程常识" class="headerlink" title="软件工程常识"></a>软件工程常识</h1><span id="more"></span>
+
+<h2 id="大常识"><a href="#大常识" class="headerlink" title="大常识"></a>大常识</h2><h3 id="一、环境变量到底是什，为什么要配环境变量？"><a href="#一、环境变量到底是什，为什么要配环境变量？" class="headerlink" title="一、环境变量到底是什，为什么要配环境变量？"></a>一、环境变量到底是什，为什么要配环境变量？</h3><blockquote>
+<p>环境变量包括用户变量和系统变量。</p>
+</blockquote>
+<ul>
+<li><strong>用户变量</strong>是指我们当前登入这台电脑的用户，比如管理员用户，普通用户。在里面配置的环境变量，只对这个用户有效，一旦用户进行了更换，这环境变量将改为新登录用户的环境变量。</li>
+<li><strong>系统变量</strong>是指这这台电脑的配置的环境变量，对所有用户都生效，不管你换哪个用户，都是生效的。</li>
+</ul>
+<blockquote>
+<p>为什么要配置环境变量</p>
+</blockquote>
+<ul>
+<li>windows系统下，假如我们安装了某一款软件，安装结束后，在安装目录会生成一个该软件的.exe文件，双击该文件，我们就能启动软件。但是难道我们每次要运行该软件的时候都要先找到该.exe文件所在的路径，然后双击吗，显然是不可能的，因为安装的软件太多，我们根本不可能记住所有已安装软件的路径，这时候就需要环境变量了。</li>
+</ul>
+<p>参考资料：</p>
+<ul>
+<li><p><a href="https://blog.csdn.net/u013201439/article/details/55657634?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-55657634-blog-119698904.pc_relevant_3mothn_strategy_recovery&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-55657634-blog-119698904.pc_relevant_3mothn_strategy_recovery&utm_relevant_index=1">我们为什么要配置环境变量</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/adminZSQ/article/details/106396178">为什么要配置环境变量？变量是什么通俗解释</a></p>
+</li>
+</ul>
+<hr>
+<h3 id="二、压缩的原理"><a href="#二、压缩的原理" class="headerlink" title="二、压缩的原理"></a>二、压缩的原理</h3><hr>
+<h2 id="小常识"><a href="#小常识" class="headerlink" title="小常识"></a>小常识</h2><h3 id="UID、PID和PPID"><a href="#UID、PID和PPID" class="headerlink" title="UID、PID和PPID"></a>UID、PID和PPID</h3><p>UID用户ID(user ID)，PID（process ID）：PID是程序被操作系统加载到内存成为进程后动态分配的资源。每次程序执行的时候，操作系统都会重新加载，PID在每次加载的时候都是不同的。PPID（parent process ID）：PPID是程序的父进程号</p>
+<h3 id><a href="#" class="headerlink" title></a></h3>]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>常识</tag>
       </tags>
   </entry>
   <entry>
@@ -764,6 +658,112 @@
   </div>
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>Markdown的基本用法</title>
+    <url>/posts/42f0.html</url>
+    <content><![CDATA[<h1 id="Markdown-学习"><a href="#Markdown-学习" class="headerlink" title="Markdown 学习"></a>Markdown 学习</h1><span id="more"></span>
+
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"># 这样表示一级标题</span><br><span class="line">## 这样表示二级标题</span><br><span class="line">### 这样表示三级标题</span><br><span class="line">· · · · · ·</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>最多支持六级标题</code></p>
+</blockquote>
+<!--more-->
+
+<hr>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">**这样表示粗体**</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>这样表示粗体</strong></p>
+<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">*这样表示斜体*</span></span><br></pre></td></tr></table></figure>
+
+<p><em>这样表示斜体</em></p>
+<figure class="highlight haml"><table><tr><td class="code"><pre><span class="line">~~这样表示删除线~~</span><br></pre></td></tr></table></figure>
+
+<p><del>这样表示删除线</del></p>
+<hr>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight node-repl"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">&gt;</span> <span class="language-javascript">表示引用</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 表示引用</p>
+</blockquote>
+<hr>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>—或者***表示分割线</p>
+<hr>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><figure class="highlight scheme"><table><tr><td class="code"><pre><span class="line">[<span class="name">链接的名字</span>](<span class="name">我链接的地址</span>)</span><br></pre></td></tr></table></figure>
+
+<p><a href="Zper99.github.io">链接的名字</a></p>
+<h3 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h3><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="section">&lt;我是自动链接&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://zper99.github.io/">https://zper99.github.io/</a></p>
+<hr>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>1. 我是有序列表</p>
+<ol>
+<li>我是有序列表</li>
+<li>我也是有序列表</li>
+</ol>
+<p>- 我是无序列表</p>
+<ul>
+<li>我是无序列表</li>
+<li>我也是无序列表</li>
+</ul>
+<hr>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">|<span class="string">top1</span>|<span class="string">top2</span>|<span class="string">top3</span>|</span><br><span class="line">|<span class="string">-  -</span>|<span class="string">-  -</span>|<span class="string">-  -</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br></pre></td></tr></table></figure>
+
+
+
+<table>
+<thead>
+<tr>
+<th>top1</th>
+<th>top2</th>
+<th>top3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>word</td>
+<td>word</td>
+<td>word</td>
+</tr>
+<tr>
+<td>word</td>
+<td>word</td>
+<td>word</td>
+</tr>
+<tr>
+<td>word</td>
+<td>word</td>
+<td>word</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">```表示代码</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">表示代码</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;span <span class="built_in">id</span>=<span class="string">&quot;tag1&quot;</span>&gt;我是指定位置&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">[跳转到指定位置](<span class="comment">#tag1)</span></span><br></pre></td></tr></table></figure>
+
+<p><span id="tag1">我是指定位置</span></p>
+<p><a href="#tag1">跳转到指定位置</a></p>
+<hr>
+<h2 id="隐藏"><a href="#隐藏" class="headerlink" title="隐藏"></a>隐藏</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">summary</span>&gt;</span>你的问题?<span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">你的答案:</span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><details>
+<summary>你的问题?</summary>
+你的答案:
+</details></li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>markdown文本编辑器</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>markdown</tag>
+      </tags>
   </entry>
   <entry>
     <title>快捷键大全</title>
