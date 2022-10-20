@@ -226,10 +226,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-10-20 11:20:24 / 修改时间：22:04:36" itemprop="dateCreated datePublished" datetime="2022-10-20T11:20:24+08:00">2022-10-20</time>
+              <time title="创建时间：2022-10-20 11:20:24" itemprop="dateCreated datePublished" datetime="2022-10-20T11:20:24+08:00">2022-10-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-10-21 07:39:05" itemprop="dateModified" datetime="2022-10-21T07:39:05+08:00">2022-10-21</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -294,191 +300,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h1><!--meore-->
-
-<h2 id="概论"><a href="#概论" class="headerlink" title="概论"></a>概论</h2><ul>
-<li><p>Shell是一个命令行的解释器，接收命令和执行命令。</p>
-<p><img data-src="/posts/9924/image-20221020112932155.png" alt="image-20221020112932155"></p>
-<p>是外部应用程序和linux内核的交流语言。</p>
-<p>同时shell还是一个功能强大的编程语言，灵活性强，主要用于维护服务器。</p>
-</li>
-<li><p>shell脚本程序的后缀是.sh，不加也行但是约定俗成是.sh</p>
-</li>
-<li><p>脚本的第一句应该是#!&#x2F;bin&#x2F;bash指定语言解释器，bash</p>
-</li>
-<li><p>脚本命令的执行相当于是在&#x2F;bin&#x2F;bash下寻找匹配的指令，找到则执行，未找到则返回<img data-src="/posts/9924/image-20221020121721080.png" alt="image-20221020121721080"></p>
-</li>
-</ul>
-<hr>
-<h2 id="执行一个shell程序"><a href="#执行一个shell程序" class="headerlink" title="执行一个shell程序"></a>执行一个shell程序</h2><ol>
-<li>用<code>bash  路径/xxx.sh</code></li>
-<li>给sh脚本添加权限<code>chmod +x xxx.sh</code>， 则可以用绝对路径和相对路径执行，应该注意在当前目录执行则为<code>./xxx.sh</code></li>
-<li>用<code>. xxx.sh/source xxx.sh</code>，相当于把脚本指令拿出来到shell命令行直接执行，其他方式相当于开了一个子shell命令行，然后再执行</li>
-<li>退出一个shell脚本可以用exit，一般用于不满足条件的退出</li>
-</ol>
-<hr>
-<h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><ul>
-<li><p>查看环境变量</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">env</span><br><span class="line">//查看全部环境变量</span><br><span class="line">echo $XXX</span><br><span class="line">//查看某个环境变量</span><br><span class="line">set</span><br><span class="line">//查找所有变量，包括自定义变量</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>全局环境变量可以在所有的bash解释器中生效，而局部环境变量只能在当前bash解释器中生效。</p>
-</li>
-<li><p>将脚本文件路径配置为环境变量则可以把脚本文件按脚本指令执行，比如</p>
-<p><img data-src="/posts/9924/image-20221020124401187.png" alt="image-20221020124401187"></p>
-<p>把hello.sh移动到&#x2F;bin&#x2F;目录下，也可以把脚本文件移动到任何$PATH文件下，最好为&#x2F;root&#x2F;bin下面，而且&#x2F;bin&#x2F;是连接到&#x2F;usr&#x2F;bin下面</p>
-</li>
-</ul>
-<hr>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="变量的定义"><a href="#变量的定义" class="headerlink" title="变量的定义"></a>变量的定义</h3><ol>
-<li>定义变量：<code>xxx=xxx</code></li>
-<li>定义全局变量：<code>export $xxx</code></li>
-<li>撤销变量：<code>unset xxx</code></li>
-<li>静态变量：<code>readonly xxx=xxx</code></li>
-</ol>
-<h3 id="变量定义规则"><a href="#变量定义规则" class="headerlink" title="变量定义规则"></a>变量定义规则</h3><ol>
-<li>变量类型默认为字符串类型</li>
-<li>如果变量中有空格，则用””或者’’括起来，’ ‘原封不动，” “会翻译其中变量</li>
-<li>定义的是局部变量，不会在子shell和父shell中生效</li>
-</ol>
-<h3 id="特殊变量"><a href="#特殊变量" class="headerlink" title="特殊变量"></a>特殊变量</h3><ul>
-<li><p>$num</p>
-<p>输入的参数，1-9直接接用$1~$9,num大于10，则用${10}来表示</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">echo &quot;$0&quot;</span><br><span class="line">echo &quot;$1&quot;</span><br><span class="line">echo &quot;参数个数为：$#&quot;</span><br><span class="line">[root@VM-12-13-centos ~]# ./hello.sh sda</span><br><span class="line">./hello.sh</span><br><span class="line">sda</span><br><span class="line">参数个数为：1</span><br><span class="line"><span class="meta prompt_">//$</span><span class="language-bash">0为脚本本身的名称</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>$#</p>
-<p>获得输入参数的个数，可以用来判断输入参数是否符合要求</p>
-</li>
-<li><p>$*    获得所有参数，并且看作为一个整体</p>
-<p>$@ 获得所有参数，并且看作一个数组</p>
-</li>
-<li><p>$?   获得最后一次执行命令的返回值，0为正常，其他是报错</p>
-</li>
-</ul>
-<hr>
-<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p>基本语法：</p>
-<ul>
-<li><p>$[表达式]</p>
-</li>
-<li><p>$((表达式))</p>
-</li>
-</ul>
-<hr>
-<h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><h3 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h3><ul>
-<li><p>两种方式</p>
-<p>一、</p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">test </span>xxx xxx xxx</span><br><span class="line"><span class="keyword">test </span>$a = 20</span><br><span class="line">echo $?</span><br><span class="line">//相当于输入三个参数判断,真返回0假返回1</span><br></pre></td></tr></table></figure>
-
-<p>二、</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">[ xxx xxx xxx ]</span></span><br><span class="line"><span class="string">[ $a = 20 ]</span></span><br><span class="line">echo $?</span><br><span class="line"><span class="comment">//原理同上，但是[]前后要有空格</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>大小判断比较</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-lt [ 10 -lt 20 ] leessthan</span><br><span class="line">-le [ 10 -le 10 ] lessequal</span><br><span class="line">-gt [ 20 -gt 10 ] greaterthan</span><br><span class="line">-ge [ 20 -ge 20 ] greaterequal</span><br><span class="line">-eq [ 10 -eq 10 ] equal</span><br><span class="line">-ne [ 10 -ne 10 ] notequal</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>权限确认</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-r [ -r xxx ] read权限       文件可读</span><br><span class="line">-x [ -x xxx ] exection权限   文件可执行</span><br><span class="line">-w [ -w xxx ] write权限      文件可写</span><br><span class="line">-e [ -e xxx ] exit          文件存在</span><br><span class="line">-d [ -d xxx ] directory     文件存在并且是目录</span><br><span class="line">-z [ -z xxx ] 字符串是否为空</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>多条件组合判断</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[] &amp;&amp; [] || []</span><br><span class="line">//短路与和短路或来组成多条件判断</span><br><span class="line">//[] &amp;&amp; 指令1 || 指令2，shell的三元判断写法</span><br><span class="line"></span><br><span class="line">[ 条件1 -a 条件2 ]    -a and</span><br><span class="line">[ 条件1 -o 条件2 ]    -o or</span><br><span class="line">//这种也可以进行条件判断</span><br></pre></td></tr></table></figure></li>
-</ul>
-<hr>
-<h3 id="if判断"><a href="#if判断" class="headerlink" title="if判断"></a>if判断</h3><ul>
-<li><p>单分支流程</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if [];then</span><br><span class="line">	order</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if []</span><br><span class="line">then</span><br><span class="line">	order</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>多分支流程</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if [ ]</span><br><span class="line">then</span><br><span class="line">	order</span><br><span class="line">else </span><br><span class="line">	order</span><br><span class="line">fi</span><br><span class="line">//双分支</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">if []</span><br><span class="line">then</span><br><span class="line">	order</span><br><span class="line">elif []</span><br><span class="line">then</span><br><span class="line">	order</span><br><span class="line">else</span><br><span class="line">	order</span><br><span class="line">fi</span><br><span class="line">//多分支</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="case判断"><a href="#case判断" class="headerlink" title="case判断"></a>case判断</h3><ul>
-<li><p>基本语法</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">case $num in</span><br><span class="line">num1)</span><br><span class="line">	order</span><br><span class="line">;;            //break</span><br><span class="line">num2)</span><br><span class="line">	order</span><br><span class="line">;;</span><br><span class="line">......</span><br><span class="line">*)            //default</span><br><span class="line">	order</span><br><span class="line">;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure></li>
-</ul>
-<hr>
-<h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><ul>
-<li><p>语法一</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">for (( 初始值; 条件; 变化 ))</span><br><span class="line">//在这里条件可以用&lt;&gt;=来表示，且可以不空格</span><br><span class="line">do</span><br><span class="line">	order</span><br><span class="line">done</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">num=0</span><br><span class="line">for (( i=1; i&lt;=$1; i=i+1 ))</span><br><span class="line">do</span><br><span class="line">	num=$[ $num + $i ]	</span><br><span class="line">done</span><br><span class="line">echo $num</span><br><span class="line">[root@VM-12-13-centos ~]# ./for_test.sh 6</span><br><span class="line">21</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>语法二</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">for 变量 in 值1 值2 值3</span><br><span class="line">do</span><br><span class="line">	order</span><br><span class="line">done</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">num=0</span><br><span class="line">for a in a b c d e f g</span><br><span class="line">do</span><br><span class="line">	echo $a</span><br><span class="line">done</span><br><span class="line">[root@VM-12-13-centos ~]# ./for_test.sh </span><br><span class="line">a</span><br><span class="line">b</span><br><span class="line">c</span><br><span class="line">d</span><br><span class="line">e</span><br><span class="line">f</span><br><span class="line">g</span><br></pre></td></tr></table></figure></li>
-</ul>
-<hr>
-<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><ul>
-<li><p>语句</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">while [ 条件 ]</span><br><span class="line">do</span><br><span class="line">	order</span><br><span class="line">done</span><br><span class="line">//必须在order里面给出值的变化</span><br></pre></td></tr></table></figure></li>
-</ul>
-<hr>
-<h2 id="读取输入"><a href="#读取输入" class="headerlink" title="读取输入"></a>读取输入</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">read</span> -t num -p <span class="string">&quot;xxxxxxxxxx&quot;</span> var</span><br><span class="line">//-t等待时间</span><br><span class="line">//-p提示文字</span><br><span class="line">//var储存变量</span><br><span class="line"></span><br><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"><span class="built_in">read</span> -t 10 -p <span class="string">&quot;请输入你喜欢的人： &quot;</span> loper</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$loper</span> 是最漂亮的人&quot;</span></span><br><span class="line">[root@VM-12-13-centos ~]<span class="comment"># ./for_test.sh </span></span><br><span class="line">请输入你喜欢的人： yp</span><br><span class="line">yp 是最漂亮的人</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="系统函数"><a href="#系统函数" class="headerlink" title="系统函数"></a>系统函数</h3><ul>
-<li><p>在linux下的所有命令都可以作为函数来使用</p>
-</li>
-<li><p>需要用命令替换来调用$(       )</p>
-</li>
-<li><p>两个常用函数的实例</p>
-</li>
-</ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span>basename</span><br><span class="line">basename <span class="regexp">/xxx/</span>xxx/xxx 后缀</span><br><span class="line"><span class="regexp">//</span>则可以得到不含后缀的文件名称</span><br><span class="line">$(basenaem <span class="variable">$0</span> .sh)</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span>dirname</span><br><span class="line">dirname <span class="regexp">/xxx/</span>xxx/xxx</span><br><span class="line">$(dirname <span class="variable">$0</span>)</span><br><span class="line"><span class="regexp">//</span>获取i相对路径</span><br><span class="line">$(cd $(dirname <span class="variable">$0</span>); pwd)</span><br><span class="line"><span class="regexp">//</span>获取绝对路径</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="自定义函数"><a href="#自定义函数" class="headerlink" title="自定义函数"></a>自定义函数</h3><p>基本语法</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[function] funname()&#123;</span><br><span class="line">	order</span><br><span class="line">	[return xxx]</span><br><span class="line">&#125;</span><br><span class="line">//[代表可以省略]，一般都要省略</span><br><span class="line">//而且一般用echo来返回值</span><br><span class="line"></span><br><span class="line">add()&#123;</span><br><span class="line">	a=$[$1 + $2]</span><br><span class="line">	echo $a</span><br><span class="line">&#125;</span><br><span class="line">read a</span><br><span class="line">read b</span><br><span class="line">c=$(add $a $b)</span><br><span class="line">echo $c</span><br></pre></td></tr></table></figure>
-
-<p>要求</p>
-<ul>
-<li>需要先声明函数，也就是放在前面&#x2F;&#x2F;因为没有编译的过程</li>
-<li>return的值用$?获得，范围为0~255，所有不用这种方法</li>
-</ul>
-<hr>
-<h2 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">crontab -l</span><br><span class="line">//查看所有的定时脚本</span><br><span class="line">crontab -e</span><br><span class="line">//edit,编辑一个定时脚本</span><br><span class="line"></span><br><span class="line">*  *  *  *   *</span><br><span class="line">分 时 天  月 星期</span><br><span class="line">0 2 * * * /root/zper.sh 参数</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="正则表达式-入门"><a href="#正则表达式-入门" class="headerlink" title="正则表达式(入门)"></a>正则表达式(入门)</h2><h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><ul>
-<li>用于匹配复杂的字符，①对目的文件进行模糊的搜索，②对输入的模糊的判断，比如手机号码银行号码是否正确，③对某些文本进行替换</li>
-<li>linux中，grep，sed，awk等支持正则表达式</li>
-</ul>
-<h3 id="常规匹配"><a href="#常规匹配" class="headerlink" title="常规匹配"></a>常规匹配</h3><ul>
-<li><p>直接给出关键字</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /xxx/xxx | grep xxx</span><br><span class="line">//匹配所有含xxx的行</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>常用特殊字符</p>
-</li>
-<li><ol>
-<li><p>^和$</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cat /xxx/xxx | grep ^xxx</span><br><span class="line">//匹配以xxx开头的行</span><br><span class="line">cat /xxx/xxx | grep xxx$</span><br><span class="line">//匹配以xxx结尾的行</span><br><span class="line">cat /xxx/xxx | grep ^xxx$</span><br><span class="line">//匹配为xxx的行</span><br><span class="line">cat /xxx/xxx | grep ^$</span><br><span class="line">//匹配空行</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>.和*</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cat /xxx/xxx | grep x..x</span><br><span class="line">//..代表两个任意字符</span><br><span class="line">cat /xxx/xxx | grep a*b</span><br><span class="line">//*匹配和上个字符一样的字符任意次，ab，aab，aaab</span><br><span class="line">cat /xxx/xxx | grep a.*b</span><br><span class="line">//匹配任意字符a......b</span><br><span class="line">cat /xxx/xxx | grep ^a.*b$</span><br><span class="line">//匹配以a开头以b结尾的行</span><br><span class="line">cat /xxx/xxx | grep ^a.*c.*b$</span><br><span class="line">//匹配以a开头以b结尾之间出现过c的行</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>[]字符区间匹配</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[6,8]6或者8</span><br><span class="line">[1-9]1到9</span><br><span class="line">[1-9]*1到9重复多次</span><br><span class="line">[a-z]a到z</span><br><span class="line">[a-z]*a到z重复多次</span><br><span class="line">[1-4,8-9]1到4，8到9</span><br><span class="line">[a-g,t-z]a到g，t到z</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>\转义匹配</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /xxx/xxx | grep &#x27;\$&#x27;</span><br><span class="line">//匹配有$的行</span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-</ul>
-<hr>
-<h2 id="文本处理工具"><a href="#文本处理工具" class="headerlink" title="文本处理工具"></a>文本处理工具</h2><h3 id="cut"><a href="#cut" class="headerlink" title="cut"></a>cut</h3><ul>
-<li><p>基本用法</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cut [-df] filename</span><br><span class="line"></span><br><span class="line">cut -d <span class="string">&quot; &quot;</span> filename</span><br><span class="line"><span class="regexp">//</span>-d 指定分割符号,以空格分隔</span><br><span class="line">cut -d <span class="string">&quot; &quot;</span> -f <span class="number">2</span>，<span class="number">3</span> filename</span><br><span class="line"><span class="regexp">//</span>-f 指定输出列号</span><br><span class="line"><span class="regexp">//</span>x- 指定输出x行和x行以后的列，-x同理</span><br><span class="line"><span class="regexp">//</span>x-y指定输出x到y列的值</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>管道用法</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat xxx | grep 正则筛选 | cut -d &quot; &quot; -f 3 </span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="awk"><a href="#awk" class="headerlink" title="awk"></a>awk</h3><ul>
-<li><p>可以配合管道使用</p>
-</li>
-<li><p>基本用法</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">awk [-Ffv] &#x27;/正则筛选/&#123;order&#125;&#x27;&#x27;order&#x27;.... filename</span><br><span class="line">//可以有多个order</span><br><span class="line">awk -F &quot; &quot; &#x27;/^root/&#123;print $1&#125;&#x27; filename</span><br><span class="line">//-F切割符号,在root开头的行切割出以&quot; &quot;的第一列</span><br><span class="line">awk -F &quot; &quot; &#x27;/^root/&#123;print $1&quot;,&quot;$7&#125;&#x27; filename</span><br><span class="line">//在第一列和第七列中加“，”</span><br><span class="line">awk -F &quot; &quot; &#x27;BEGIN&#123;print &quot;user:&quot;&#125;&#x27;&#x27;&#123;print $1&#125;&#x27;&#x27;END&#123;print&#125;&#x27; filename</span><br><span class="line">//BEGIN和END指定了order在哪里生效的特殊用法</span><br><span class="line">awk -F &quot; &quot; -v i=2 &#x27;&#123;print $1+i&#125;&#x27; filename</span><br><span class="line">//-v赋值一个用户定义变量，避免对order进行修改</span><br><span class="line">awk -F &quot; &quot; &#x27;&#123;print FILENAME&quot;&quot;$1&quot;&quot;NR&quot;&quot;NF&#125;&#x27; filename</span><br><span class="line">//FILENAME,NR,NF是系统自带的文件名，该行号，列总数</span><br></pre></td></tr></table></figure></li>
-</ul>
-
+          <h1 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/9924.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
