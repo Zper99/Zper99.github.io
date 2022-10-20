@@ -153,7 +153,7 @@
 <li>#表示注释</li>
 <li>从上到下按层构建</li>
 </ol>
-<h3 id="DockerFile命令"><a href="#DockerFile命令" class="headerlink" title="DockerFile命令"></a>DockerFile命令</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span></span><br><span class="line"><span class="comment"># 基于什么构建的镜像</span></span><br><span class="line"><span class="comment"># scratch</span></span><br><span class="line"><span class="keyword">MAINTAINER</span></span><br><span class="line"><span class="comment"># 作者和邮箱</span></span><br><span class="line"><span class="keyword">LABEL</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># </span></span></span><br><span class="line"><span class="keyword">ENV</span> MYPATH=/xxx/xxx/</span><br><span class="line"><span class="comment"># 构建时配置环境变量</span></span><br><span class="line"><span class="comment"># 比如MYPATH=/usr/local</span></span><br><span class="line"><span class="comment"># 之后就可以用$MYPATH来调用所对应的值</span></span><br><span class="line"><span class="comment"># 相当于全局变量或者全局的键值对</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># 构建镜像时运行的命令</span></span></span><br><span class="line"><span class="keyword">ADD</span><span class="language-bash"> xxx.tar /xxx/xxx/路径</span></span><br><span class="line"><span class="comment"># 添加内容，会自动解压</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> file /xxx/xxx/file </span></span><br><span class="line"><span class="comment"># 拷贝文件</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> <span class="variable">$MYPATH</span></span></span><br><span class="line"><span class="comment"># 创建容器后进入的第一个目录</span></span><br><span class="line"><span class="keyword">VOLUME</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># 挂载的目录位置</span></span></span><br><span class="line"><span class="keyword">EXPOSE</span></span><br><span class="line"><span class="comment"># 对外指定端口</span></span><br><span class="line"><span class="keyword">ENTRYPOINT</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># 指定容器运行时运行的命令</span></span></span><br><span class="line"><span class="comment"># 可以追加命令，不被覆盖</span></span><br><span class="line"><span class="comment"># 用--entrypoint覆盖命令</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;指令&quot;</span>,<span class="string">&quot;参数&quot;</span>]</span></span><br><span class="line"><span class="comment"># 指定容器启动时运行的命令，只有最最后一个可以生效</span></span><br><span class="line"><span class="comment"># 用户指定一个可执行程序, 这个可执行程序在容器启动后自动启动</span></span><br><span class="line"><span class="comment"># 不可以追加命令，追加命令会被覆盖</span></span><br><span class="line"><span class="comment">#docker run xximages ls</span></span><br></pre></td></tr></table></figure>
+<h3 id="DockerFile命令"><a href="#DockerFile命令" class="headerlink" title="DockerFile命令"></a>DockerFile命令</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span></span><br><span class="line"><span class="comment"># 基于什么构建的镜像</span></span><br><span class="line"><span class="comment"># scratch</span></span><br><span class="line"><span class="keyword">MAINTAINER</span></span><br><span class="line"><span class="comment"># 作者和邮箱</span></span><br><span class="line"><span class="keyword">LABEL</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># </span></span></span><br><span class="line"><span class="keyword">ENV</span> MYPAT /xxx/xxx/</span><br><span class="line"><span class="comment"># 构建时赋值环境变量</span></span><br><span class="line"><span class="comment"># 比如MYPATH /usr/local</span></span><br><span class="line"><span class="comment"># 之后就可以用$MYPATH来调用所对应的值</span></span><br><span class="line"><span class="comment"># 相当于全局变量或者全局的键值对</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># 构建镜像时运行的命令</span></span></span><br><span class="line"><span class="keyword">ADD</span><span class="language-bash"> xxx.tar.gz /xxx/xxx/路径</span></span><br><span class="line"><span class="comment"># 添加内容，会自动解压</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> file /xxx/xxx/file </span></span><br><span class="line"><span class="comment"># 拷贝文件</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> <span class="variable">$MYPATH</span></span></span><br><span class="line"><span class="comment"># 创建容器后进入的第一个目录</span></span><br><span class="line"><span class="keyword">VOLUME</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># 挂载的目录位置</span></span></span><br><span class="line"><span class="keyword">EXPOSE</span></span><br><span class="line"><span class="comment"># 对外指定端口</span></span><br><span class="line"><span class="keyword">ENTRYPOINT</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># 指定容器运行时运行的命令</span></span></span><br><span class="line"><span class="comment"># 可以追加命令，不被覆盖</span></span><br><span class="line"><span class="comment"># 用--entrypoint覆盖命令</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;指令&quot;</span>,<span class="string">&quot;参数&quot;</span>]</span></span><br><span class="line"><span class="comment"># 指定容器启动时运行的命令，只有最最后一个可以生效</span></span><br><span class="line"><span class="comment"># 用户指定一个可执行程序, 这个可执行程序在容器启动后自动启动</span></span><br><span class="line"><span class="comment"># 不可以追加命令，追加命令会被覆盖</span></span><br><span class="line"><span class="comment">#docker run xximages ls</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>ENTRYPOINT和CMD的区别:<a href="https://zhuanlan.zhihu.com/p/30555962">Dockerfile: ENTRYPOINT和CMD的区别 - 知乎 (zhihu.com)</a></li>
@@ -186,42 +186,6 @@
         <tag>docker</tag>
         <tag>容器</tag>
         <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软工常识</title>
-    <url>/posts/3289.html</url>
-    <content><![CDATA[<h1 id="软件工程常识"><a href="#软件工程常识" class="headerlink" title="软件工程常识"></a>软件工程常识</h1><span id="more"></span>
-
-<h2 id="大常识"><a href="#大常识" class="headerlink" title="大常识"></a>大常识</h2><h3 id="一、环境变量到底是什，为什么要配环境变量？"><a href="#一、环境变量到底是什，为什么要配环境变量？" class="headerlink" title="一、环境变量到底是什，为什么要配环境变量？"></a>一、环境变量到底是什，为什么要配环境变量？</h3><blockquote>
-<p>环境变量包括用户变量和系统变量。</p>
-</blockquote>
-<ul>
-<li><strong>用户变量</strong>是指我们当前登入这台电脑的用户，比如管理员用户，普通用户。在里面配置的环境变量，只对这个用户有效，一旦用户进行了更换，这环境变量将改为新登录用户的环境变量。</li>
-<li><strong>系统变量</strong>是指这这台电脑的配置的环境变量，对所有用户都生效，不管你换哪个用户，都是生效的。</li>
-</ul>
-<blockquote>
-<p>为什么要配置环境变量</p>
-</blockquote>
-<ul>
-<li>windows系统下，假如我们安装了某一款软件，安装结束后，在安装目录会生成一个该软件的.exe文件，双击该文件，我们就能启动软件。但是难道我们每次要运行该软件的时候都要先找到该.exe文件所在的路径，然后双击吗，显然是不可能的，因为安装的软件太多，我们根本不可能记住所有已安装软件的路径，这时候就需要环境变量了。</li>
-</ul>
-<p>参考资料：</p>
-<ul>
-<li><p><a href="https://blog.csdn.net/u013201439/article/details/55657634?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-55657634-blog-119698904.pc_relevant_3mothn_strategy_recovery&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-55657634-blog-119698904.pc_relevant_3mothn_strategy_recovery&utm_relevant_index=1">我们为什么要配置环境变量</a></p>
-</li>
-<li><p><a href="https://blog.csdn.net/adminZSQ/article/details/106396178">为什么要配置环境变量？变量是什么通俗解释</a></p>
-</li>
-</ul>
-<hr>
-<h3 id="二、压缩的原理"><a href="#二、压缩的原理" class="headerlink" title="二、压缩的原理"></a>二、压缩的原理</h3><hr>
-<h2 id="小常识"><a href="#小常识" class="headerlink" title="小常识"></a>小常识</h2><h3 id="UID、PID和PPID"><a href="#UID、PID和PPID" class="headerlink" title="UID、PID和PPID"></a>UID、PID和PPID</h3><p>UID用户ID(user ID)，PID（process ID）：PID是程序被操作系统加载到内存成为进程后动态分配的资源。每次程序执行的时候，操作系统都会重新加载，PID在每次加载的时候都是不同的。PPID（parent process ID）：PPID是程序的父进程号</p>
-<h3 id><a href="#" class="headerlink" title></a></h3>]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>常识</tag>
       </tags>
   </entry>
   <entry>
@@ -438,6 +402,47 @@
         <tag>Linux</tag>
         <tag>操作系统</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>软工常识</title>
+    <url>/posts/3289.html</url>
+    <content><![CDATA[<h1 id="软件工程常识"><a href="#软件工程常识" class="headerlink" title="软件工程常识"></a>软件工程常识</h1><span id="more"></span>
+
+<h2 id="大常识"><a href="#大常识" class="headerlink" title="大常识"></a>大常识</h2><h3 id="一、环境变量到底是什，为什么要配环境变量？"><a href="#一、环境变量到底是什，为什么要配环境变量？" class="headerlink" title="一、环境变量到底是什，为什么要配环境变量？"></a>一、环境变量到底是什，为什么要配环境变量？</h3><blockquote>
+<p>环境变量包括用户变量和系统变量。</p>
+</blockquote>
+<ul>
+<li><strong>用户变量</strong>是指我们当前登入这台电脑的用户，比如管理员用户，普通用户。在里面配置的环境变量，只对这个用户有效，一旦用户进行了更换，这环境变量将改为新登录用户的环境变量。</li>
+<li><strong>系统变量</strong>是指这这台电脑的配置的环境变量，对所有用户都生效，不管你换哪个用户，都是生效的。</li>
+</ul>
+<blockquote>
+<p>为什么要配置环境变量</p>
+</blockquote>
+<ul>
+<li>windows系统下，假如我们安装了某一款软件，安装结束后，在安装目录会生成一个该软件的.exe文件，双击该文件，我们就能启动软件。但是难道我们每次要运行该软件的时候都要先找到该.exe文件所在的路径，然后双击吗，显然是不可能的，因为安装的软件太多，我们根本不可能记住所有已安装软件的路径，这时候就需要环境变量了。</li>
+</ul>
+<p>参考资料：</p>
+<ul>
+<li><p><a href="https://blog.csdn.net/u013201439/article/details/55657634?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-55657634-blog-119698904.pc_relevant_3mothn_strategy_recovery&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-55657634-blog-119698904.pc_relevant_3mothn_strategy_recovery&utm_relevant_index=1">我们为什么要配置环境变量</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/adminZSQ/article/details/106396178">为什么要配置环境变量？变量是什么通俗解释</a></p>
+</li>
+</ul>
+<hr>
+<h3 id="二、压缩的原理"><a href="#二、压缩的原理" class="headerlink" title="二、压缩的原理"></a>二、压缩的原理</h3><hr>
+<h2 id="小常识"><a href="#小常识" class="headerlink" title="小常识"></a>小常识</h2><h3 id="UID、PID和PPID"><a href="#UID、PID和PPID" class="headerlink" title="UID、PID和PPID"></a>UID、PID和PPID</h3><p>UID用户ID(user ID)，PID（process ID）：PID是程序被操作系统加载到内存成为进程后动态分配的资源。每次程序执行的时候，操作系统都会重新加载，PID在每次加载的时候都是不同的。PPID（parent process ID）：PPID是程序的父进程号</p>
+<h3 id><a href="#" class="headerlink" title></a></h3>]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>常识</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nginx</title>
+    <url>/posts/248b.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Markdown的基本用法</title>
@@ -745,11 +750,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Nginx</title>
-    <url>/posts/248b.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>YPYYDS</title>
     <url>/posts/777d.html</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -764,6 +764,103 @@
   </div>
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>快捷键大全</title>
+    <url>/posts/cb7d.html</url>
+    <content><![CDATA[<h1 id="快捷键大全"><a href="#快捷键大全" class="headerlink" title="快捷键大全"></a>快捷键大全</h1><span id="more"></span>
+
+<h1 id="PS快捷键"><a href="#PS快捷键" class="headerlink" title="PS快捷键"></a>PS快捷键</h1><h1 id="Linux快捷键"><a href="#Linux快捷键" class="headerlink" title="Linux快捷键"></a>Linux快捷键</h1><h2 id="自动补全指令"><a href="#自动补全指令" class="headerlink" title="自动补全指令"></a>自动补全指令</h2><ul>
+<li>TAB</li>
+</ul>
+<h2 id="清空光标前输入"><a href="#清空光标前输入" class="headerlink" title="清空光标前输入"></a>清空光标前输入</h2><ul>
+<li>ctrl-u</li>
+</ul>
+<h2 id="清空光标后输入"><a href="#清空光标后输入" class="headerlink" title="清空光标后输入"></a>清空光标后输入</h2><ul>
+<li>ctrl-k</li>
+</ul>
+<h2 id="移动光标到首行"><a href="#移动光标到首行" class="headerlink" title="移动光标到首行"></a>移动光标到首行</h2><ul>
+<li>ctrl-a</li>
+</ul>
+<h2 id="移动光标到尾行"><a href="#移动光标到尾行" class="headerlink" title="移动光标到尾行"></a>移动光标到尾行</h2><ul>
+<li>ctrl-e</li>
+</ul>
+<h2 id="清屏"><a href="#清屏" class="headerlink" title="清屏"></a>清屏</h2><ul>
+<li>ctrl-l</li>
+</ul>
+<h2 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h2><ul>
+<li>ctrl+insert</li>
+</ul>
+<h2 id="粘贴"><a href="#粘贴" class="headerlink" title="粘贴"></a>粘贴</h2><ul>
+<li>shift+insert</li>
+</ul>
+<h2 id="回滚指令"><a href="#回滚指令" class="headerlink" title="回滚指令"></a>回滚指令</h2><ul>
+<li>↑↓</li>
+</ul>
+<h1 id="Bilibili快捷键"><a href="#Bilibili快捷键" class="headerlink" title="Bilibili快捷键"></a>Bilibili快捷键</h1><h2 id="弹幕开关"><a href="#弹幕开关" class="headerlink" title="弹幕开关"></a>弹幕开关</h2><ul>
+<li>D</li>
+</ul>
+<h2 id="全屏"><a href="#全屏" class="headerlink" title="全屏"></a>全屏</h2><ul>
+<li>F</li>
+</ul>
+<h1 id="网页快捷键"><a href="#网页快捷键" class="headerlink" title="网页快捷键"></a>网页快捷键</h1><ul>
+<li>ctrl+T		创建网页</li>
+<li>ctrl+W		关闭网页</li>
+<li>F11         全屏</li>
+</ul>
+<h1 id="vscode快捷键"><a href="#vscode快捷键" class="headerlink" title="vscode快捷键"></a>vscode快捷键</h1><h1 id="MarkDown快捷键"><a href="#MarkDown快捷键" class="headerlink" title="MarkDown快捷键"></a>MarkDown快捷键</h1><h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><ul>
+<li>ctrl+B</li>
+</ul>
+<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><ul>
+<li>ctrl+L</li>
+</ul>
+<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><ul>
+<li>ctrl+U</li>
+</ul>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ul>
+<li>ctrl+shift+&#96;</li>
+</ul>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><ul>
+<li>alt+ctrl+5</li>
+</ul>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><ul>
+<li>ctrl+num</li>
+</ul>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><ul>
+<li>ctrl+shift+K</li>
+</ul>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
+<li>ctrl+shift+[   有序列表</li>
+<li>ctrl+shift+]   无序列表</li>
+</ul>
+<h2 id><a href="#" class="headerlink" title></a></h2><h2 id="-1"><a href="#-1" class="headerlink" title></a></h2><h1 id="通用快捷键"><a href="#通用快捷键" class="headerlink" title="通用快捷键"></a>通用快捷键</h1><h2 id="查找单词"><a href="#查找单词" class="headerlink" title="查找单词"></a>查找单词</h2><ul>
+<li>ctrl+F</li>
+</ul>
+<h2 id="全选文章"><a href="#全选文章" class="headerlink" title="全选文章"></a>全选文章</h2><ul>
+<li>ctrl+A</li>
+</ul>
+<h2 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h2><ul>
+<li>ctrl+Z</li>
+</ul>
+<h2 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h2><ul>
+<li>ctrl+W</li>
+</ul>
+<h2 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h2><ul>
+<li>ctrl+S</li>
+</ul>
+]]></content>
+      <categories>
+        <category>技巧</category>
+      </categories>
+      <tags>
+        <tag>操作</tag>
+        <tag>快捷键</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>概率论</title>
+    <url>/posts/a5e0.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>博客搭建</title>
@@ -1044,102 +1141,5 @@
         <tag>blog</tag>
         <tag>博客</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>快捷键大全</title>
-    <url>/posts/cb7d.html</url>
-    <content><![CDATA[<h1 id="快捷键大全"><a href="#快捷键大全" class="headerlink" title="快捷键大全"></a>快捷键大全</h1><span id="more"></span>
-
-<h1 id="PS快捷键"><a href="#PS快捷键" class="headerlink" title="PS快捷键"></a>PS快捷键</h1><h1 id="Linux快捷键"><a href="#Linux快捷键" class="headerlink" title="Linux快捷键"></a>Linux快捷键</h1><h2 id="自动补全指令"><a href="#自动补全指令" class="headerlink" title="自动补全指令"></a>自动补全指令</h2><ul>
-<li>TAB</li>
-</ul>
-<h2 id="清空光标前输入"><a href="#清空光标前输入" class="headerlink" title="清空光标前输入"></a>清空光标前输入</h2><ul>
-<li>ctrl-u</li>
-</ul>
-<h2 id="清空光标后输入"><a href="#清空光标后输入" class="headerlink" title="清空光标后输入"></a>清空光标后输入</h2><ul>
-<li>ctrl-k</li>
-</ul>
-<h2 id="移动光标到首行"><a href="#移动光标到首行" class="headerlink" title="移动光标到首行"></a>移动光标到首行</h2><ul>
-<li>ctrl-a</li>
-</ul>
-<h2 id="移动光标到尾行"><a href="#移动光标到尾行" class="headerlink" title="移动光标到尾行"></a>移动光标到尾行</h2><ul>
-<li>ctrl-e</li>
-</ul>
-<h2 id="清屏"><a href="#清屏" class="headerlink" title="清屏"></a>清屏</h2><ul>
-<li>ctrl-l</li>
-</ul>
-<h2 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h2><ul>
-<li>ctrl+insert</li>
-</ul>
-<h2 id="粘贴"><a href="#粘贴" class="headerlink" title="粘贴"></a>粘贴</h2><ul>
-<li>shift+insert</li>
-</ul>
-<h2 id="回滚指令"><a href="#回滚指令" class="headerlink" title="回滚指令"></a>回滚指令</h2><ul>
-<li>↑↓</li>
-</ul>
-<h1 id="Bilibili快捷键"><a href="#Bilibili快捷键" class="headerlink" title="Bilibili快捷键"></a>Bilibili快捷键</h1><h2 id="弹幕开关"><a href="#弹幕开关" class="headerlink" title="弹幕开关"></a>弹幕开关</h2><ul>
-<li>D</li>
-</ul>
-<h2 id="全屏"><a href="#全屏" class="headerlink" title="全屏"></a>全屏</h2><ul>
-<li>F</li>
-</ul>
-<h1 id="网页快捷键"><a href="#网页快捷键" class="headerlink" title="网页快捷键"></a>网页快捷键</h1><ul>
-<li>ctrl+T		创建网页</li>
-<li>ctrl+W		关闭网页</li>
-<li>F11         全屏</li>
-</ul>
-<h1 id="vscode快捷键"><a href="#vscode快捷键" class="headerlink" title="vscode快捷键"></a>vscode快捷键</h1><h1 id="MarkDown快捷键"><a href="#MarkDown快捷键" class="headerlink" title="MarkDown快捷键"></a>MarkDown快捷键</h1><h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><ul>
-<li>ctrl+B</li>
-</ul>
-<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><ul>
-<li>ctrl+L</li>
-</ul>
-<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><ul>
-<li>ctrl+U</li>
-</ul>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ul>
-<li>ctrl+shift+&#96;</li>
-</ul>
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><ul>
-<li>alt+ctrl+5</li>
-</ul>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><ul>
-<li>ctrl+num</li>
-</ul>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><ul>
-<li>ctrl+shift+K</li>
-</ul>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
-<li>ctrl+shift+[   有序列表</li>
-<li>ctrl+shift+]   无序列表</li>
-</ul>
-<h2 id><a href="#" class="headerlink" title></a></h2><h2 id="-1"><a href="#-1" class="headerlink" title></a></h2><h1 id="通用快捷键"><a href="#通用快捷键" class="headerlink" title="通用快捷键"></a>通用快捷键</h1><h2 id="查找单词"><a href="#查找单词" class="headerlink" title="查找单词"></a>查找单词</h2><ul>
-<li>ctrl+F</li>
-</ul>
-<h2 id="全选文章"><a href="#全选文章" class="headerlink" title="全选文章"></a>全选文章</h2><ul>
-<li>ctrl+A</li>
-</ul>
-<h2 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h2><ul>
-<li>ctrl+Z</li>
-</ul>
-<h2 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h2><ul>
-<li>ctrl+W</li>
-</ul>
-<h2 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h2><ul>
-<li>ctrl+S</li>
-</ul>
-]]></content>
-      <categories>
-        <category>技巧</category>
-      </categories>
-      <tags>
-        <tag>操作</tag>
-        <tag>快捷键</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>概率论</title>
-    <url>/posts/a5e0.html</url>
-    <content><![CDATA[]]></content>
   </entry>
 </search>
