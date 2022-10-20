@@ -1,40 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>软工常识</title>
-    <url>/posts/3289.html</url>
-    <content><![CDATA[<h1 id="软件工程常识"><a href="#软件工程常识" class="headerlink" title="软件工程常识"></a>软件工程常识</h1><span id="more"></span>
-
-<h2 id="一、环境变量到底是什，为什么要配环境变量？"><a href="#一、环境变量到底是什，为什么要配环境变量？" class="headerlink" title="一、环境变量到底是什，为什么要配环境变量？"></a>一、环境变量到底是什，为什么要配环境变量？</h2><blockquote>
-<p>环境变量包括用户变量和系统变量。</p>
-</blockquote>
-<ul>
-<li><strong>用户变量</strong>是指我们当前登入这台电脑的用户，比如管理员用户，普通用户。在里面配置的环境变量，只对这个用户有效，一旦用户进行了更换，这环境变量将改为新登录用户的环境变量。</li>
-<li><strong>系统变量</strong>是指这这台电脑的配置的环境变量，对所有用户都生效，不管你换哪个用户，都是生效的。</li>
-</ul>
-<blockquote>
-<p>为什么要配置环境变量</p>
-</blockquote>
-<ul>
-<li>windows系统下，假如我们安装了某一款软件，安装结束后，在安装目录会生成一个该软件的.exe文件，双击该文件，我们就能启动软件。但是难道我们每次要运行该软件的时候都要先找到该.exe文件所在的路径，然后双击吗，显然是不可能的，因为安装的软件太多，我们根本不可能记住所有已安装软件的路径，这时候就需要环境变量了。</li>
-</ul>
-<p>参考资料：</p>
-<ul>
-<li><p><a href="https://blog.csdn.net/u013201439/article/details/55657634?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-55657634-blog-119698904.pc_relevant_3mothn_strategy_recovery&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-55657634-blog-119698904.pc_relevant_3mothn_strategy_recovery&utm_relevant_index=1">我们为什么要配置环境变量</a></p>
-</li>
-<li><p><a href="https://blog.csdn.net/adminZSQ/article/details/106396178">为什么要配置环境变量？变量是什么通俗解释</a></p>
-</li>
-</ul>
-<hr>
-<h2 id="二、压缩的原理"><a href="#二、压缩的原理" class="headerlink" title="二、压缩的原理"></a>二、压缩的原理</h2>]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>常识</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker</title>
     <url>/posts/c018.html</url>
     <content><![CDATA[<h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><span id="more"></span>
@@ -403,6 +369,40 @@
       </tags>
   </entry>
   <entry>
+    <title>软工常识</title>
+    <url>/posts/3289.html</url>
+    <content><![CDATA[<h1 id="软件工程常识"><a href="#软件工程常识" class="headerlink" title="软件工程常识"></a>软件工程常识</h1><span id="more"></span>
+
+<h2 id="一、环境变量到底是什，为什么要配环境变量？"><a href="#一、环境变量到底是什，为什么要配环境变量？" class="headerlink" title="一、环境变量到底是什，为什么要配环境变量？"></a>一、环境变量到底是什，为什么要配环境变量？</h2><blockquote>
+<p>环境变量包括用户变量和系统变量。</p>
+</blockquote>
+<ul>
+<li><strong>用户变量</strong>是指我们当前登入这台电脑的用户，比如管理员用户，普通用户。在里面配置的环境变量，只对这个用户有效，一旦用户进行了更换，这环境变量将改为新登录用户的环境变量。</li>
+<li><strong>系统变量</strong>是指这这台电脑的配置的环境变量，对所有用户都生效，不管你换哪个用户，都是生效的。</li>
+</ul>
+<blockquote>
+<p>为什么要配置环境变量</p>
+</blockquote>
+<ul>
+<li>windows系统下，假如我们安装了某一款软件，安装结束后，在安装目录会生成一个该软件的.exe文件，双击该文件，我们就能启动软件。但是难道我们每次要运行该软件的时候都要先找到该.exe文件所在的路径，然后双击吗，显然是不可能的，因为安装的软件太多，我们根本不可能记住所有已安装软件的路径，这时候就需要环境变量了。</li>
+</ul>
+<p>参考资料：</p>
+<ul>
+<li><p><a href="https://blog.csdn.net/u013201439/article/details/55657634?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-55657634-blog-119698904.pc_relevant_3mothn_strategy_recovery&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-55657634-blog-119698904.pc_relevant_3mothn_strategy_recovery&utm_relevant_index=1">我们为什么要配置环境变量</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/adminZSQ/article/details/106396178">为什么要配置环境变量？变量是什么通俗解释</a></p>
+</li>
+</ul>
+<hr>
+<h2 id="二、压缩的原理"><a href="#二、压缩的原理" class="headerlink" title="二、压缩的原理"></a>二、压缩的原理</h2>]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>常识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown的基本用法</title>
     <url>/posts/42f0.html</url>
     <content><![CDATA[<h1 id="Markdown-学习"><a href="#Markdown-学习" class="headerlink" title="Markdown 学习"></a>Markdown 学习</h1><span id="more"></span>
@@ -514,6 +514,12 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>概率论</title>
+    <url>/posts/a5e0.html</url>
+    <content><![CDATA[<p><img data-src="/posts/a5e0/image-20221020095434077.png" alt="image-20221020095434077"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>快捷键大全</title>
     <url>/posts/cb7d.html</url>
     <content><![CDATA[<h1 id="快捷键大全"><a href="#快捷键大全" class="headerlink" title="快捷键大全"></a>快捷键大全</h1><span id="more"></span>
@@ -598,11 +604,6 @@
         <tag>操作</tag>
         <tag>快捷键</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>概率论</title>
-    <url>/posts/a5e0.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>博客搭建</title>
