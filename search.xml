@@ -197,42 +197,6 @@
       </tags>
   </entry>
   <entry>
-    <title>软工常识</title>
-    <url>/posts/3289.html</url>
-    <content><![CDATA[<h1 id="软件工程常识"><a href="#软件工程常识" class="headerlink" title="软件工程常识"></a>软件工程常识</h1><span id="more"></span>
-
-<h2 id="大常识"><a href="#大常识" class="headerlink" title="大常识"></a>大常识</h2><h3 id="一、环境变量到底是什，为什么要配环境变量？"><a href="#一、环境变量到底是什，为什么要配环境变量？" class="headerlink" title="一、环境变量到底是什，为什么要配环境变量？"></a>一、环境变量到底是什，为什么要配环境变量？</h3><blockquote>
-<p>环境变量包括用户变量和系统变量。</p>
-</blockquote>
-<ul>
-<li><strong>用户变量</strong>是指我们当前登入这台电脑的用户，比如管理员用户，普通用户。在里面配置的环境变量，只对这个用户有效，一旦用户进行了更换，这环境变量将改为新登录用户的环境变量。</li>
-<li><strong>系统变量</strong>是指这这台电脑的配置的环境变量，对所有用户都生效，不管你换哪个用户，都是生效的。</li>
-</ul>
-<blockquote>
-<p>为什么要配置环境变量</p>
-</blockquote>
-<ul>
-<li>windows系统下，假如我们安装了某一款软件，安装结束后，在安装目录会生成一个该软件的.exe文件，双击该文件，我们就能启动软件。但是难道我们每次要运行该软件的时候都要先找到该.exe文件所在的路径，然后双击吗，显然是不可能的，因为安装的软件太多，我们根本不可能记住所有已安装软件的路径，这时候就需要环境变量了。</li>
-</ul>
-<p>参考资料：</p>
-<ul>
-<li><p><a href="https://blog.csdn.net/u013201439/article/details/55657634?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-55657634-blog-119698904.pc_relevant_3mothn_strategy_recovery&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-55657634-blog-119698904.pc_relevant_3mothn_strategy_recovery&utm_relevant_index=1">我们为什么要配置环境变量</a></p>
-</li>
-<li><p><a href="https://blog.csdn.net/adminZSQ/article/details/106396178">为什么要配置环境变量？变量是什么通俗解释</a></p>
-</li>
-</ul>
-<hr>
-<h3 id="二、压缩的原理"><a href="#二、压缩的原理" class="headerlink" title="二、压缩的原理"></a>二、压缩的原理</h3><hr>
-<h2 id="小常识"><a href="#小常识" class="headerlink" title="小常识"></a>小常识</h2><h3 id="UID、PID和PPID"><a href="#UID、PID和PPID" class="headerlink" title="UID、PID和PPID"></a>UID、PID和PPID</h3><p>UID用户ID(user ID)，PID（process ID）：PID是程序被操作系统加载到内存成为进程后动态分配的资源。每次程序执行的时候，操作系统都会重新加载，PID在每次加载的时候都是不同的。PPID（parent process ID）：PPID是程序的父进程号</p>
-<h3 id><a href="#" class="headerlink" title></a></h3>]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>常识</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java学习</title>
     <url>/posts/14da.html</url>
     <content><![CDATA[<h1 id="Java学习"><a href="#Java学习" class="headerlink" title="Java学习"></a>Java学习</h1><span id="more"></span>
@@ -249,7 +213,7 @@
 <li>规范<ul>
 <li>项目名：单词全小写，用-隔开aa, aa-bb</li>
 <li>包名：单词全部小写aa, aabbcc</li>
-<li><img data-src="/posts/undefined/image-20221024103226504.png" alt="image-20221024103226504"></li>
+<li><img data-src="/posts/14da/image-20221024103226504.png" alt="image-20221024103226504"></li>
 <li>类名：单词首字母全部大写Aa,AaBbCc</li>
 <li>方法和变量：一个单词全小写, 多个单词首单词全小写，其余单词首字母大写aa, aaBbCc</li>
 </ul>
@@ -301,7 +265,7 @@
 </ul>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*   <span class="doctag">@tag</span>1</span></span><br><span class="line"><span class="comment">*   <span class="doctag">@tag</span>2</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">//@用来生成自己API文档</span></span><br><span class="line"><span class="comment">//编辑命令：javadoc -d 路径 -tag1 -tag2 xxx.java    </span></span><br></pre></td></tr></table></figure>
 
-<p><img data-src="/posts/undefined/image-20221022164612229.png" alt="image-20221022164612229"></p>
+<p><img data-src="/posts/14da/image-20221022164612229.png" alt="image-20221022164612229"></p>
 <h3 id="DOS指令（cmd）"><a href="#DOS指令（cmd）" class="headerlink" title="DOS指令（cmd）"></a>DOS指令（cmd）</h3><ul>
 <li>md 可一次多个目录</li>
 <li>rd 可一次多个目录</li>
@@ -404,7 +368,7 @@
 <li>由大到小转换, 书写byte x &#x3D; (byte)y ,  y为int类型</li>
 <li>有大到小会造成精度损失</li>
 <li>将基本数据类型转String类型，x+” “,基本数据类型+空格</li>
-<li>将String类型转换为基本数据类型，调用parse方法。<img data-src="/posts/undefined/image-20221022200142423.png" alt="image-20221022200142423"></li>
+<li>将String类型转换为基本数据类型，调用parse方法。<img data-src="/posts/14da/image-20221022200142423.png" alt="image-20221022200142423"></li>
 </ol>
 <h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
 <li>long、float数据类型要加上l&#x2F;L、f&#x2F;F</li>
@@ -466,7 +430,7 @@
 </ul>
 <h2 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h2><p>条件表达式？表达式1:表达式2</p>
 <p>为真则1，为假则2</p>
-<h2 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h2><p><img data-src="/posts/undefined/image-20221023083013698.png" alt="image-20221023083013698"></p>
+<h2 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h2><p><img data-src="/posts/14da/image-20221023083013698.png" alt="image-20221023083013698"></p>
 <h1 id="控制结构"><a href="#控制结构" class="headerlink" title="控制结构"></a>控制结构</h1><h2 id="分支控制"><a href="#分支控制" class="headerlink" title="分支控制"></a>分支控制</h2><h3 id="单分支"><a href="#单分支" class="headerlink" title="单分支"></a>单分支</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()&#123;</span><br><span class="line">    orders;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="双分支"><a href="#双分支" class="headerlink" title="双分支"></a>双分支</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()&#123;</span><br><span class="line">    orders;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">    orders;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -510,7 +474,7 @@
 
 <h3 id="length"><a href="#length" class="headerlink" title="length"></a>length</h3><p>a.length是二位数组的元素个数也就是行数。</p>
 <p>a[x].length是x-1行的元素个数，也就是那行的列数。</p>
-<h3 id="内存中-1"><a href="#内存中-1" class="headerlink" title="内存中"></a>内存中</h3><p><img data-src="/posts/undefined/image-20221023145102452.png" alt="image-20221023145102452"></p>
+<h3 id="内存中-1"><a href="#内存中-1" class="headerlink" title="内存中"></a>内存中</h3><p><img data-src="/posts/14da/image-20221023145102452.png" alt="image-20221023145102452"></p>
 <h2 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h2><ul>
 <li>数组名存放的是数组变量的首地址</li>
 <li>一位数组未赋值则为0，二维数组不会自动赋值</li>
@@ -520,7 +484,7 @@
 
 <h2 id="随机数生成"><a href="#随机数生成" class="headerlink" title="随机数生成"></a>随机数生成</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">x = (<span class="type">int</span>)(Math.random.()*<span class="number">100</span>+<span class="number">1</span>)</span><br><span class="line"><span class="comment">//Math.random（）生成的是0——1的小数*10^k表明随机数范围，int表明取值整，+1表明不取0</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h1><h2 id="对象的内存分布"><a href="#对象的内存分布" class="headerlink" title="对象的内存分布"></a>对象的内存分布</h2><p><img data-src="/posts/undefined/image-20221023153450464.png" alt="image-20221023153450464"></p>
+<h1 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h1><h2 id="对象的内存分布"><a href="#对象的内存分布" class="headerlink" title="对象的内存分布"></a>对象的内存分布</h2><p><img data-src="/posts/14da/image-20221023153450464.png" alt="image-20221023153450464"></p>
 <h2 id="对象成员变量和成员方法"><a href="#对象成员变量和成员方法" class="headerlink" title="对象成员变量和成员方法"></a>对象成员变量和成员方法</h2><ul>
 <li>类里面定义的变量即为属性和成员变量</li>
 <li>类里面定义的方法即为成员方法</li>
@@ -575,11 +539,11 @@
 <blockquote>
 <p>构造时的内存变化</p>
 </blockquote>
-<p><img data-src="/posts/undefined/image-20221024082558565.png" alt="image-20221024082558565"></p>
+<p><img data-src="/posts/14da/image-20221024082558565.png" alt="image-20221024082558565"></p>
 <h2 id="this关键字"><a href="#this关键字" class="headerlink" title="this关键字"></a>this关键字</h2><ul>
 <li>虚拟机会为每个对象分配一个this变量，他指向当前对象在堆中的地址，可以调用该对象的方法和变量</li>
 </ul>
-<p><img data-src="/posts/undefined/image-20221024083156912.png" alt="image-20221024083156912"></p>
+<p><img data-src="/posts/14da/image-20221024083156912.png" alt="image-20221024083156912"></p>
 <ul>
 <li>在构造器中访问其他构造器必须要在第一条语句，this(参数列表);</li>
 <li>而且必须只能在构造器中访问</li>
@@ -591,7 +555,7 @@
 <li><p>import指令在包的声明下方，可以有多条</p>
 </li>
 </ul>
-<h2 id="包的命名"><a href="#包的命名" class="headerlink" title="包的命名"></a>包的命名</h2><p><img data-src="/posts/undefined/image-20221024103944230.png" alt="image-20221024103944230"></p>
+<h2 id="包的命名"><a href="#包的命名" class="headerlink" title="包的命名"></a>包的命名</h2><p><img data-src="/posts/14da/image-20221024103944230.png" alt="image-20221024103944230"></p>
 <h2 id="常用包"><a href="#常用包" class="headerlink" title="常用包"></a>常用包</h2><ul>
 <li>java.lang</li>
 <li>java.util工具包</li>
@@ -658,7 +622,7 @@
 <li>所有的类都是Object的子类</li>
 <li>父类构造器是先从Object类开始构造直到当前父类</li>
 </ul>
-<h3 id="内存中的生成顺序和注意"><a href="#内存中的生成顺序和注意" class="headerlink" title="内存中的生成顺序和注意"></a>内存中的生成顺序和注意</h3><p><img data-src="/posts/undefined/image-20221024150517047.png" alt="image-20221024150517047"></p>
+<h3 id="内存中的生成顺序和注意"><a href="#内存中的生成顺序和注意" class="headerlink" title="内存中的生成顺序和注意"></a>内存中的生成顺序和注意</h3><p><img data-src="/posts/14da/image-20221024150517047.png" alt="image-20221024150517047"></p>
 <ul>
 <li><strong>访问子类的成员变量时，先访问子类的这个变量，如果没有则向上访问，直到访问到Object或者报错</strong></li>
 </ul>
@@ -668,7 +632,7 @@
 <li><p>super的访问符合就近原则</p>
 </li>
 <li><p>super和this的区别</p>
-<p><img data-src="/posts/undefined/image-20221024151731152.png" alt="image-20221024151731152"></p>
+<p><img data-src="/posts/14da/image-20221024151731152.png" alt="image-20221024151731152"></p>
 </li>
 </ul>
 <h3 id="方法重写"><a href="#方法重写" class="headerlink" title="方法重写"></a>方法重写</h3><ul>
@@ -679,7 +643,7 @@
 <li><p>子类不能缩小父类的访问权限。比如父类a方法为public，子类a方法不能是private。</p>
 </li>
 <li><p>与方法重载的区别</p>
-<p><img data-src="/posts/undefined/image-20221024153046762.png" alt="image-20221024153046762"></p>
+<p><img data-src="/posts/14da/image-20221024153046762.png" alt="image-20221024153046762"></p>
 </li>
 </ul>
 <h3 id="instanceOf"><a href="#instanceOf" class="headerlink" title="instanceOf"></a>instanceOf</h3><ul>
@@ -735,7 +699,7 @@
 30,20
 </details></li>
 </ul>
-<h3 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h3><p><img data-src="/posts/undefined/image-20221024200218149.png" alt="image-20221024200218149"></p>
+<h3 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h3><p><img data-src="/posts/14da/image-20221024200218149.png" alt="image-20221024200218149"></p>
 <details>
 <summary>答案</summary>
 20，20，true，10，20
@@ -985,9 +949,40 @@
       </tags>
   </entry>
   <entry>
-    <title>Nginx</title>
-    <url>/posts/248b.html</url>
-    <content><![CDATA[]]></content>
+    <title>软工常识</title>
+    <url>/posts/3289.html</url>
+    <content><![CDATA[<h1 id="软件工程常识"><a href="#软件工程常识" class="headerlink" title="软件工程常识"></a>软件工程常识</h1><span id="more"></span>
+
+<h2 id="大常识"><a href="#大常识" class="headerlink" title="大常识"></a>大常识</h2><h3 id="一、环境变量到底是什，为什么要配环境变量？"><a href="#一、环境变量到底是什，为什么要配环境变量？" class="headerlink" title="一、环境变量到底是什，为什么要配环境变量？"></a>一、环境变量到底是什，为什么要配环境变量？</h3><blockquote>
+<p>环境变量包括用户变量和系统变量。</p>
+</blockquote>
+<ul>
+<li><strong>用户变量</strong>是指我们当前登入这台电脑的用户，比如管理员用户，普通用户。在里面配置的环境变量，只对这个用户有效，一旦用户进行了更换，这环境变量将改为新登录用户的环境变量。</li>
+<li><strong>系统变量</strong>是指这这台电脑的配置的环境变量，对所有用户都生效，不管你换哪个用户，都是生效的。</li>
+</ul>
+<blockquote>
+<p>为什么要配置环境变量</p>
+</blockquote>
+<ul>
+<li>windows系统下，假如我们安装了某一款软件，安装结束后，在安装目录会生成一个该软件的.exe文件，双击该文件，我们就能启动软件。但是难道我们每次要运行该软件的时候都要先找到该.exe文件所在的路径，然后双击吗，显然是不可能的，因为安装的软件太多，我们根本不可能记住所有已安装软件的路径，这时候就需要环境变量了。</li>
+</ul>
+<p>参考资料：</p>
+<ul>
+<li><p><a href="https://blog.csdn.net/u013201439/article/details/55657634?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-55657634-blog-119698904.pc_relevant_3mothn_strategy_recovery&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-55657634-blog-119698904.pc_relevant_3mothn_strategy_recovery&utm_relevant_index=1">我们为什么要配置环境变量</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/adminZSQ/article/details/106396178">为什么要配置环境变量？变量是什么通俗解释</a></p>
+</li>
+</ul>
+<hr>
+<h3 id="二、压缩的原理"><a href="#二、压缩的原理" class="headerlink" title="二、压缩的原理"></a>二、压缩的原理</h3><hr>
+<h2 id="小常识"><a href="#小常识" class="headerlink" title="小常识"></a>小常识</h2><h3 id="UID、PID和PPID"><a href="#UID、PID和PPID" class="headerlink" title="UID、PID和PPID"></a>UID、PID和PPID</h3><p>UID用户ID(user ID)，PID（process ID）：PID是程序被操作系统加载到内存成为进程后动态分配的资源。每次程序执行的时候，操作系统都会重新加载，PID在每次加载的时候都是不同的。PPID（parent process ID）：PPID是程序的父进程号</p>
+<h3 id><a href="#" class="headerlink" title></a></h3>]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>常识</tag>
+      </tags>
   </entry>
   <entry>
     <title>Markdown的基本用法</title>
@@ -1094,6 +1089,11 @@
         <tag>工具</tag>
         <tag>markdown</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Nginx</title>
+    <url>/posts/248b.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>shell</title>
@@ -1591,6 +1591,11 @@
       </tags>
   </entry>
   <entry>
+    <title>概率论</title>
+    <url>/posts/a5e0.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>快捷键大全</title>
     <url>/posts/cb7d.html</url>
     <content><![CDATA[<h1 id="快捷键大全"><a href="#快捷键大全" class="headerlink" title="快捷键大全"></a>快捷键大全</h1><span id="more"></span>
@@ -1703,10 +1708,5 @@
         <tag>操作</tag>
         <tag>快捷键</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>概率论</title>
-    <url>/posts/a5e0.html</url>
-    <content><![CDATA[]]></content>
   </entry>
 </search>
