@@ -233,110 +233,538 @@
       </tags>
   </entry>
   <entry>
-    <title>Markdown的基本用法</title>
-    <url>/posts/42f0.html</url>
-    <content><![CDATA[<h1 id="Markdown-学习"><a href="#Markdown-学习" class="headerlink" title="Markdown 学习"></a>Markdown 学习</h1><span id="more"></span>
+    <title>Java学习</title>
+    <url>/posts/14da.html</url>
+    <content><![CDATA[<h1 id="Java学习"><a href="#Java学习" class="headerlink" title="Java学习"></a>Java学习</h1><span id="more"></span>
 
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"># 这样表示一级标题</span><br><span class="line">## 这样表示二级标题</span><br><span class="line">### 这样表示三级标题</span><br><span class="line">· · · · · ·</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><code>最多支持六级标题</code></p>
-</blockquote>
-<!--more-->
-
-<hr>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">**这样表示粗体**</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>这样表示粗体</strong></p>
-<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">*这样表示斜体*</span></span><br></pre></td></tr></table></figure>
-
-<p><em>这样表示斜体</em></p>
-<figure class="highlight haml"><table><tr><td class="code"><pre><span class="line">~~这样表示删除线~~</span><br></pre></td></tr></table></figure>
-
-<p><del>这样表示删除线</del></p>
-<hr>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight node-repl"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">&gt;</span> <span class="language-javascript">表示引用</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p> 表示引用</p>
-</blockquote>
-<hr>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>—或者***表示分割线</p>
-<hr>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><figure class="highlight scheme"><table><tr><td class="code"><pre><span class="line">[<span class="name">链接的名字</span>](<span class="name">我链接的地址</span>)</span><br></pre></td></tr></table></figure>
-
-<p><a href="Zper99.github.io">链接的名字</a></p>
-<h3 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h3><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="section">&lt;我是自动链接&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><a href="https://zper99.github.io/">https://zper99.github.io/</a></p>
-<hr>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>1. 我是有序列表</p>
-<ol>
-<li>我是有序列表</li>
-<li>我也是有序列表</li>
+<h2 id="java学习方法"><a href="#java学习方法" class="headerlink" title="java学习方法"></a>java学习方法</h2><ol>
+<li>先学大概语法</li>
+<li>然后快速入门</li>
+<li>最后才扣细节（要不然出不来）</li>
 </ol>
-<p>- 我是无序列表</p>
-<ul>
-<li>我是无序列表</li>
-<li>我也是无序列表</li>
+<h2 id="java规范"><a href="#java规范" class="headerlink" title="java规范*"></a>java规范*</h2><h3 id="java命名规范"><a href="#java命名规范" class="headerlink" title="java命名规范"></a>java命名规范</h3><ol>
+<li>标识符由字母、数字、_和$组成</li>
+<li>数字不能开头</li>
+<li>不能用关键字和保留字</li>
+<li>规范<ul>
+<li>项目名：单词全小写，用-隔开aa, aa-bb</li>
+<li>包名：单词全部小写aa, aabbcc</li>
+<li><img data-src="/posts/undefined/image-20221024103226504.png" alt="image-20221024103226504"></li>
+<li>类名：单词首字母全部大写Aa,AaBbCc</li>
+<li>方法和变量：一个单词全小写, 多个单词首单词全小写，其余单词首字母大写aa, aaBbCc</li>
 </ul>
-<hr>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">|<span class="string">top1</span>|<span class="string">top2</span>|<span class="string">top3</span>|</span><br><span class="line">|<span class="string">-  -</span>|<span class="string">-  -</span>|<span class="string">-  -</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br></pre></td></tr></table></figure>
-
-
-
-<table>
-<thead>
-<tr>
-<th>top1</th>
-<th>top2</th>
-<th>top3</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>word</td>
-<td>word</td>
-<td>word</td>
-</tr>
-<tr>
-<td>word</td>
-<td>word</td>
-<td>word</td>
-</tr>
-<tr>
-<td>word</td>
-<td>word</td>
-<td>word</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">```表示代码</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">表示代码</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;span <span class="built_in">id</span>=<span class="string">&quot;tag1&quot;</span>&gt;我是指定位置&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">[跳转到指定位置](<span class="comment">#tag1)</span></span><br></pre></td></tr></table></figure>
-
-<p><span id="tag1">我是指定位置</span></p>
-<p><a href="#tag1">跳转到指定位置</a></p>
-<hr>
-<h2 id="隐藏"><a href="#隐藏" class="headerlink" title="隐藏"></a>隐藏</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">summary</span>&gt;</span>你的问题?<span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">你的答案:</span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="java书写规范"><a href="#java书写规范" class="headerlink" title="java书写规范"></a>java书写规范</h3><ol>
+<li>运算符和&#x3D;两边要有空格1 * 2 &#x3D; 2</li>
+</ol>
+<h3 id="java注释规范"><a href="#java注释规范" class="headerlink" title="java注释规范"></a>java注释规范</h3><ol>
+<li>类和方法的注释要以javadoc方式来写</li>
+<li>非javadoc注释是给代码维护者看的，要告诉读者，为什么这么写，怎么样修改，注意什么问题。</li>
+<li>源文件用utf-8</li>
+</ol>
+<h2 id="java前置知识"><a href="#java前置知识" class="headerlink" title="java前置知识"></a>java前置知识</h2><h3 id="java转义字符"><a href="#java转义字符" class="headerlink" title="java转义字符"></a>java转义字符</h3><ul>
+<li><p>\t</p>
+<p>一个制表位，实现对齐</p>
+</li>
+<li><p>\n</p>
+<p>换行</p>
+</li>
+<li><p>\\</p>
+<p>输出字符\</p>
+</li>
+<li><p>\‘</p>
+<p>输出字符 ‘ </p>
+</li>
+<li><p>\“</p>
+<p>输出字符”</p>
+</li>
+<li><p>\r</p>
+<p>回车(回城！&#x3D;换行，回车是将光标移动到首行，换行是将光标移动到下行)</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">hello</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;账号的撒\r大大&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">大大的撒</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="java注释"><a href="#java注释" class="headerlink" title="java注释"></a>java注释</h3><p>方便自己回顾和他人阅读</p>
+<ul>
+<li>单行注释</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//这是java注释</span></span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><details>
-<summary>你的问题?</summary>
-你的答案:
+<li>多行注释</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">这是</span></span><br><span class="line"><span class="comment">多行</span></span><br><span class="line"><span class="comment">注释</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>文档注释和文档标签</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*   <span class="doctag">@tag</span>1</span></span><br><span class="line"><span class="comment">*   <span class="doctag">@tag</span>2</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">//@用来生成自己API文档</span></span><br><span class="line"><span class="comment">//编辑命令：javadoc -d 路径 -tag1 -tag2 xxx.java    </span></span><br></pre></td></tr></table></figure>
+
+<p><img data-src="/posts/undefined/image-20221022164612229.png" alt="image-20221022164612229"></p>
+<h3 id="DOS指令（cmd）"><a href="#DOS指令（cmd）" class="headerlink" title="DOS指令（cmd）"></a>DOS指令（cmd）</h3><ul>
+<li>md 可一次多个目录</li>
+<li>rd 可一次多个目录</li>
+<li>cd 进入</li>
+<li>tree 列出文件树</li>
+<li>cls 清屏</li>
+<li>exit 退出</li>
+<li>copy 复制</li>
+<li>del 删除文件</li>
+<li>echo </li>
+<li>type</li>
+<li>move 移动</li>
+</ul>
+<h3 id="JavaAPI文档"><a href="#JavaAPI文档" class="headerlink" title="JavaAPI文档"></a>JavaAPI文档</h3><p>API（application programming interface应用程序编程接口）是java提供的类和接口，该文档告诉使用者如何使用API，链接:<strong><a href="https://www.matools.com/">中文文档</a></strong>,</p>
+<h2 id="IDEA快捷键和模板"><a href="#IDEA快捷键和模板" class="headerlink" title="IDEA快捷键和模板"></a>IDEA快捷键和模板</h2><h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a><strong>快捷键</strong></h3><h4 id="查看继承关系"><a href="#查看继承关系" class="headerlink" title="查看继承关系"></a>查看继承关系</h4><ul>
+<li>ctrl+H</li>
+</ul>
+<h4 id="复制一行"><a href="#复制一行" class="headerlink" title="复制一行"></a>复制一行</h4><ul>
+<li>鼠标下键</li>
+</ul>
+<h4 id="自动布局"><a href="#自动布局" class="headerlink" title="自动布局"></a>自动布局</h4><ul>
+<li>ctrl+Q</li>
+</ul>
+<h4 id="生成构造器"><a href="#生成构造器" class="headerlink" title="生成构造器"></a>生成构造器</h4><ul>
+<li>alt + insert</li>
+</ul>
+<h4 id="生成封装set和get"><a href="#生成封装set和get" class="headerlink" title="生成封装set和get"></a>生成封装set和get</h4><ul>
+<li><p>alt+insert</p>
+<pre><code>  #### 		自定义快捷键
+</code></pre>
+</li>
+<li><p>files-&gt;settings-&gt;keymap</p>
+</li>
+</ul>
+<h3 id="模板"><a href="#模板" class="headerlink" title="模板"></a><strong>模板</strong></h3><h4 id="主方法"><a href="#主方法" class="headerlink" title="主方法"></a>主方法</h4><ul>
+<li>main</li>
+</ul>
+<h4 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h4><ul>
+<li>sp</li>
+</ul>
+<h4 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h4><ul>
+<li>sc</li>
+</ul>
+<h4 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h4><ul>
+<li>fori</li>
+</ul>
+<h4 id="自定义模板"><a href="#自定义模板" class="headerlink" title="自定义模板"></a>自定义模板</h4><ul>
+<li>file-&gt;settings-&gt;editor-&gt;Live templates</li>
+</ul>
+<h1 id="JAVA概述"><a href="#JAVA概述" class="headerlink" title="JAVA概述"></a>JAVA概述</h1><h2 id="java语言特点"><a href="#java语言特点" class="headerlink" title="java语言特点"></a>java语言特点</h2><ul>
+<li>面向对象的</li>
+<li>健壮的(强类型机制、异常处理、垃圾回收)</li>
+<li>跨平台的(JVM虚拟机)</li>
+<li>解释性的(编译后的代码需要解释才可以执行)</li>
+</ul>
+<h2 id="java工具分类"><a href="#java工具分类" class="headerlink" title="java工具分类"></a>java工具分类</h2><ul>
+<li>javaSE    standard     标准版</li>
+<li>javaME   Mirco          微机版—-手机    </li>
+<li>javaEE    Enterprise 企业版—–网络</li>
+</ul>
+<h2 id="JDK-gt-JRM-gt-JVM"><a href="#JDK-gt-JRM-gt-JVM" class="headerlink" title="JDK&gt;JRM&gt;JVM"></a>JDK&gt;JRM&gt;JVM</h2><h3 id="JVM-java-virtual-machine"><a href="#JVM-java-virtual-machine" class="headerlink" title="JVM(java virtual machine)"></a>JVM(java virtual machine)</h3><h4 id="JVM特点"><a href="#JVM特点" class="headerlink" title="JVM特点"></a>JVM特点</h4><ul>
+<li>负责执行指令，管理数据、内存、寄存器</li>
+<li>JVM包含在JDK(java development kit)当中</li>
+<li>不同系统，有不同的虚拟机</li>
+<li>JVM屏蔽了平台的差别，实现一次编译处处运行</li>
+</ul>
+<h4 id="java的运行机制"><a href="#java的运行机制" class="headerlink" title="java的运行机制"></a>java的运行机制</h4><ul>
+<li>Test.java文件被javac编译为Test.class</li>
+<li>Test文件被java运行(不带.class)，运行的是单纯的类</li>
+</ul>
+<h3 id="JDK-java-development-kit"><a href="#JDK-java-development-kit" class="headerlink" title="JDK(java development kit)"></a>JDK(java development kit)</h3><h4 id="JDk基本介绍"><a href="#JDk基本介绍" class="headerlink" title="JDk基本介绍"></a>JDk基本介绍</h4><ul>
+<li>是java的开发工具包，用于开发</li>
+<li>JDK&#x3D;JRE+java开发工具(javac、java、javadoc、javap等)</li>
+<li>java开发工具在&#x2F;bin目录下面</li>
+</ul>
+<h3 id="JRE-java-runtime-environment"><a href="#JRE-java-runtime-environment" class="headerlink" title="JRE(java runtime environment)"></a>JRE(java runtime environment)</h3><h4 id="JRE基本介绍"><a href="#JRE基本介绍" class="headerlink" title="JRE基本介绍"></a>JRE基本介绍</h4><ul>
+<li>是java运行环境，用于运行</li>
+<li>JRE&#x3D;JVM+java的核心内库</li>
+</ul>
+<h2 id="下载jdk和配置相关环境"><a href="#下载jdk和配置相关环境" class="headerlink" title="下载jdk和配置相关环境"></a>下载jdk和配置相关环境</h2><p>参考链接：<a href="https://blog.csdn.net/qq_38436214/article/details/105071088">JDK 安装与环境变量配置</a></p>
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><h4 id="数值型"><a href="#数值型" class="headerlink" title="数值型"></a>数值型</h4><h5 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h5><p>​										byte       1字节</p>
+<p>​										short     2字节</p>
+<p>​										int         4字节</p>
+<p>​										long      8字节    +l</p>
+<h5 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h5><p>​										float      4字节    +f</p>
+<p>​										double  8字节    +d  </p>
+<h5 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h5><p>​										char        2字节</p>
+<h5 id="布尔型"><a href="#布尔型" class="headerlink" title="布尔型"></a>布尔型</h5><p>​										boolean 1字节</p>
+<h3 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h3><ol>
+<li>类（class）<strong>String</strong>:不是基本数据类型，是类！      在常量池 </li>
+<li>接口（interface）   </li>
+<li>数组（[  ]）</li>
+</ol>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><h3 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h3><ol>
+<li>byte-&gt;short-&gt;int-&gt;long-&gt;float-&gt;double</li>
+<li>char-&gt;int-&gt;long-&gt;float-&gt;double</li>
+<li>数值型不能转换为布尔类型，因为char类型的本质是数值类型，所有char可以在其中相互转换</li>
+</ol>
+<h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h3><ol>
+<li>由大到小转换, 书写byte x &#x3D; (byte)y ,  y为int类型</li>
+<li>有大到小会造成精度损失</li>
+<li>将基本数据类型转String类型，x+” “,基本数据类型+空格</li>
+<li>将String类型转换为基本数据类型，调用parse方法。<img data-src="/posts/undefined/image-20221022200142423.png" alt="image-20221022200142423"></li>
+</ol>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<li>long、float数据类型要加上l&#x2F;L、f&#x2F;F</li>
+<li>x.xxex、x.xxE-x:10的x次方、10的负x次方，可以用浮点表示</li>
+<li>一般使用double类型，因为精度更高</li>
+<li>8.1&#x2F;3&#x3D;2.699999999997！&#x3D;2.7，小数运算不能直接比较，需要对两个小数差值在某一范围内进行比较，Math.abs(a-b)&lt;0.001</li>
+<li>字符常量需要用’ ‘引起来</li>
+<li>char的本质是一个整数，可以进行运算</li>
+<li>boolean只能储存true和false，不能储存1&#x2F;0</li>
+<li>short，char，byte进行运算时会自动转换成int类型所以short&#x3D;short+byte   （×）</li>
+<li><strong>byte，short，char的各种混合运算包括赋值运算位运算，都是先默认数值类为int类型运算最后强制转换。</strong></li>
+</ul>
+<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h2 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h2><ul>
+<li>标识符：0b二进制、0八进制、0x十六进制</li>
+</ul>
+<h2 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符*"></a>算数运算符*</h2><p>+、-、*、&#x2F;、%、++、–  </p>
+<ul>
+<li><p><strong>注意</strong>*：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">面试题<span class="number">1</span>：</span><br><span class="line"><span class="type">double</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">10</span> / <span class="number">4</span>;</span><br><span class="line"><span class="comment">//x = 2.0</span></span><br><span class="line"><span class="number">10</span> % <span class="number">3</span> = <span class="number">1</span></span><br><span class="line"><span class="number">10</span> % -<span class="number">3</span> = <span class="number">1</span></span><br><span class="line">-<span class="number">10</span> % <span class="number">3</span> = -<span class="number">1</span></span><br><span class="line"><span class="comment">//a % b = a - a / b * b</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">面试题<span class="number">2</span>：</span><br><span class="line"><span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">i = i++;</span><br><span class="line">System,out,println(i);</span><br><span class="line"><span class="comment">//i = 1;</span></span><br><span class="line"><span class="comment">//temp = i;</span></span><br><span class="line"><span class="comment">//i = i + 1;</span></span><br><span class="line"><span class="comment">//i = temp</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">i = ++i;</span><br><span class="line">System,out,println(i);</span><br><span class="line"><span class="comment">//i = 2</span></span><br><span class="line"><span class="comment">//i = i + 1</span></span><br><span class="line"><span class="comment">//temp = i</span></span><br><span class="line"><span class="comment">//i = temp</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h2><p>&#x3D;&#x3D;、！&#x3D;、&lt;、&gt;、&lt;&#x3D;、&gt;&#x3D;、instanceof</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">instanceof</span>:判断对象是否是类的实例</span><br><span class="line"><span class="string">&quot;xxxxx&quot;</span> <span class="keyword">instanceof</span> String </span><br><span class="line"><span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p>&amp;、&amp;&amp;、|、||、！、^</p>
+<p>&amp;：逻辑与</p>
+<p>|：逻辑或</p>
+<p>&amp;&amp;：短路与</p>
+<p>||：短路或</p>
+<p>！：取反</p>
+<p>^：异或，同为假，异为真</p>
+<h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><p>+&#x3D;、-+、*&#x3D;、&#x2F;&#x3D;</p>
+<p>注意：赋值的时候会进行强制类型转换</p>
+<h2 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h2><h3 id="原码反码补码"><a href="#原码反码补码" class="headerlink" title="原码反码补码"></a>原码反码补码</h3><ul>
+<li>正数三码合一都一样</li>
+<li><strong>负数的符号位不改变</strong></li>
+<li>负数的补码&#x3D;反码+1</li>
+<li>java没有无符号数</li>
+<li><strong>计算时用补码</strong></li>
+<li>显示时用原码</li>
+<li><strong>-128的补码是10000000</strong></li>
+</ul>
+<h3 id="第一种位运算"><a href="#第一种位运算" class="headerlink" title="第一种位运算"></a>第一种位运算</h3><ul>
+<li>按位取反：~，每位相反(符号也会取反)</li>
+<li>按位异或：^，两位相同为0，不同则为1</li>
+<li>按位与：&amp;，两位为1，则为1</li>
+<li>按位或 ：|， 两位有1，则为1</li>
+</ul>
+<h3 id="第二种位运算"><a href="#第二种位运算" class="headerlink" title="第二种位运算"></a>第二种位运算</h3><ul>
+<li>&lt;&lt;算数左移，与符号位无关，全补0</li>
+<li>&gt;&gt;算数右移，与符号位有关，正补0，负补1</li>
+<li>&gt;&gt;&gt;无符号右移，与符号无关，全补0</li>
+<li>注意：位移运算符是对补码的位移，不是原码的位移</li>
+<li>注意：byte和short进行位运算时要先转化成int类型才位移</li>
+<li><strong>思考：byte x &#x3D; (byte)-5&gt;&gt;2; x &#x3D; ?</strong></li>
+</ul>
+<h2 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h2><p>条件表达式？表达式1:表达式2</p>
+<p>为真则1，为假则2</p>
+<h2 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h2><p><img data-src="/posts/undefined/image-20221023083013698.png" alt="image-20221023083013698"></p>
+<h1 id="控制结构"><a href="#控制结构" class="headerlink" title="控制结构"></a>控制结构</h1><h2 id="分支控制"><a href="#分支控制" class="headerlink" title="分支控制"></a>分支控制</h2><h3 id="单分支"><a href="#单分支" class="headerlink" title="单分支"></a>单分支</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()&#123;</span><br><span class="line">    orders;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="双分支"><a href="#双分支" class="headerlink" title="双分支"></a>双分支</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()&#123;</span><br><span class="line">    orders;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">    orders;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="多分支"><a href="#多分支" class="headerlink" title="多分支"></a>多分支</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>()&#123;</span><br><span class="line">    orders;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>()&#123;</span><br><span class="line">    orders;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">    orders;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="switch分支"><a href="#switch分支" class="headerlink" title="switch分支"></a>switch分支</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(表达式)&#123;</span><br><span class="line">    <span class="keyword">case</span> 常量<span class="number">1</span>:</span><br><span class="line">        orders;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> 常量<span class="number">2</span>:</span><br><span class="line">        orders;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> 常量<span class="number">3</span>:</span><br><span class="line">        orders;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        orders;</span><br><span class="line">        <span class="keyword">break</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//表达式对应一个值</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>细节：表达式的值不能是浮点类型，必须是byte、short、int、char、String、enum</li>
+<li>细节：break必须有，否则就会不看匹配直接执行下面的指令。</li>
+</ul>
+<h2 id="循环控制"><a href="#循环控制" class="headerlink" title="循环控制"></a>循环控制</h2><h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(初始化;条件判断;变量变化)&#123;</span><br><span class="line">    orders;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>()&#123;</span><br><span class="line">    orders;</span><br><span class="line">    变量变换;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="do-while循环"><a href="#do-while循环" class="headerlink" title="do-while循环"></a>do-while循环</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">    orders;</span><br><span class="line">    变量变换;</span><br><span class="line">&#125;<span class="keyword">while</span>(判断条件);</span><br><span class="line"><span class="comment">//一定会执行一</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><ul>
+<li>跳出循环</li>
+</ul>
+<h2 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h2><ul>
+<li>跳出本次循环直接进行下次循环</li>
+</ul>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h2><h3 id="创建方法"><a href="#创建方法" class="headerlink" title="创建方法"></a>创建方法</h3><ul>
+<li><p>数组声明</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">int<span class="selector-attr">[]</span> <span class="selector-tag">b</span>;</span><br><span class="line">int <span class="selector-tag">b</span><span class="selector-attr">[]</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有初值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//静态初始化</span></span><br><span class="line"><span class="type">int</span> a[];</span><br><span class="line">a = <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">---</span><br><span class="line"><span class="type">int</span> a[] = <span class="keyword">new</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">---</span><br><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;</span><br><span class="line">---</span><br><span class="line"><span class="type">int</span> a[ ] = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">10</span>];</span><br><span class="line"><span class="comment">//动态初始化</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="内存中"><a href="#内存中" class="headerlink" title="内存中"></a>内存中</h3><h3 id="length属性"><a href="#length属性" class="headerlink" title="length属性"></a>length属性</h3><ul>
+<li><p>表示数组长度</p>
+</li>
+<li><p>用法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[] = <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;</span><br><span class="line"><span class="type">int</span> <span class="variable">size</span> <span class="operator">=</span> a.length;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="二位数组"><a href="#二位数组" class="headerlink" title="二位数组"></a>二位数组</h2><h3 id="数组声明"><a href="#数组声明" class="headerlink" title="数组声明"></a>数组声明</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>[][] a;</span><br><span class="line"><span class="type">int</span> a[][];</span><br></pre></td></tr></table></figure>
+
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">a = <span class="keyword">new</span> <span class="title class_">int</span>[][]&#123;</span><br><span class="line">    &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;,</span><br><span class="line">    &#123;<span class="number">2</span>&#125;,</span><br><span class="line">    &#123;<span class="number">3</span>,<span class="number">4</span>&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//静态</span></span><br><span class="line">a = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">3</span>][<span class="number">3</span>];</span><br><span class="line">a[<span class="number">0</span>] = &#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>&#125;;</span><br><span class="line">a[<span class="number">1</span>] = &#123;<span class="number">1</span>,<span class="number">3</span>&#125;</span><br><span class="line">a[<span class="number">2</span>] = &#123;<span class="number">3</span>&#125;</span><br><span class="line"><span class="comment">//动态</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="length"><a href="#length" class="headerlink" title="length"></a>length</h3><p>a.length是二位数组的元素个数也就是行数。</p>
+<p>a[x].length是x-1行的元素个数，也就是那行的列数。</p>
+<h3 id="内存中-1"><a href="#内存中-1" class="headerlink" title="内存中"></a>内存中</h3><p><img data-src="/posts/undefined/image-20221023145102452.png" alt="image-20221023145102452"></p>
+<h2 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h2><ul>
+<li>数组名存放的是数组变量的首地址</li>
+<li>一位数组未赋值则为0，二维数组不会自动赋值</li>
+<li>二维数组的赋值有, 和 ; 要小心</li>
+</ul>
+<h1 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h1><h2 id="键盘输入"><a href="#键盘输入" class="headerlink" title="键盘输入"></a>键盘输入</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner</span><br><span class="line"><span class="comment">//引入包</span></span><br><span class="line"><span class="type">Scanner</span> <span class="variable">input</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"><span class="comment">//创建Scanner的对象</span></span><br><span class="line"><span class="type">byte</span>   <span class="variable">x</span> <span class="operator">=</span> input.nextByte();</span><br><span class="line"><span class="type">short</span>  <span class="variable">x</span> <span class="operator">=</span> input.nextShort();</span><br><span class="line"><span class="type">int</span>    <span class="variable">x</span> <span class="operator">=</span> input.nextInt();</span><br><span class="line"><span class="type">long</span>   <span class="variable">x</span> <span class="operator">=</span> input.nextLong();</span><br><span class="line"><span class="type">float</span>  <span class="variable">x</span> <span class="operator">=</span> input.nextFloat();</span><br><span class="line"><span class="type">double</span> <span class="variable">x</span> <span class="operator">=</span> input.nextDouble();</span><br><span class="line"><span class="type">String</span> <span class="variable">x</span> <span class="operator">=</span> input.next();</span><br><span class="line"><span class="comment">//调用input的方法来传递值</span></span><br><span class="line"><span class="type">char</span>   <span class="variable">x</span> <span class="operator">=</span> input.next().charAt();</span><br></pre></td></tr></table></figure>
+
+<h2 id="随机数生成"><a href="#随机数生成" class="headerlink" title="随机数生成"></a>随机数生成</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">x = (<span class="type">int</span>)(Math.random.()*<span class="number">100</span>+<span class="number">1</span>)</span><br><span class="line"><span class="comment">//Math.random（）生成的是0——1的小数*10^k表明随机数范围，int表明取值整，+1表明不取0</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h1><h2 id="对象的内存分布"><a href="#对象的内存分布" class="headerlink" title="对象的内存分布"></a>对象的内存分布</h2><p><img data-src="/posts/undefined/image-20221023153450464.png" alt="image-20221023153450464"></p>
+<h2 id="对象成员变量和成员方法"><a href="#对象成员变量和成员方法" class="headerlink" title="对象成员变量和成员方法"></a>对象成员变量和成员方法</h2><ul>
+<li>类里面定义的变量即为属性和成员变量</li>
+<li>类里面定义的方法即为成员方法</li>
+</ul>
+<h2 id="对象的创建"><a href="#对象的创建" class="headerlink" title="对象的创建"></a>对象的创建</h2><ul>
+<li><p>先声明再创建</p>
+<p>Cat cat;</p>
+<p>Cat cat &#x3D; new Cat();</p>
+</li>
+<li><p>直接创建</p>
+<p>Cat cat &#x3D; new Cat( );</p>
+</li>
+</ul>
+<h2 id="对象属性和方法的访问"><a href="#对象属性和方法的访问" class="headerlink" title="对象属性和方法的访问"></a>对象属性和方法的访问</h2><ul>
+<li>xxx.xxx</li>
+<li>xxx.xxx( ) ;</li>
+</ul>
+<h2 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h2><ul>
+<li><p>java允许有同名方法但是参数列表不能一样</p>
+</li>
+<li><p>可变参数的方法重载</p>
+<p>java方法允许传入多个类型相同的参数，特殊的传入,本质是数组，只能放在其他同名方法的后面</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">sum</span><span class="params">(<span class="type">int</span>... nums)</span>&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i &lt; nums.length;i++)&#123;</span><br><span class="line">        res += nums[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="构造器、构造方法"><a href="#构造器、构造方法" class="headerlink" title="构造器、构造方法"></a>构造器、构造方法</h2><blockquote>
+<p><u>作用：完成对对象的初始化</u></p>
+</blockquote>
+<ul>
+<li>修饰符可以默认</li>
+<li>没有返回值，void也没有 </li>
+<li><strong>名字和类名必须相同</strong></li>
+</ul>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>&#123;</span><br><span class="line">	<span class="type">int</span> age;</span><br><span class="line">	<span class="type">String</span> name;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">person</span><span class="params">(<span class="type">int</span> age,<span class="type">String</span> name)</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.age = age;</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">Person xiaoming = <span class="keyword">new</span> <span class="built_in">Person</span>(<span class="number">16</span>,<span class="string">&quot;小明&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>一个类可以有多个构造器</p>
+</blockquote>
+<ul>
+<li>这种方法为构造器的重载</li>
+<li>参数列表要不同</li>
+</ul>
+<blockquote>
+<p>默认构造器</p>
+</blockquote>
+<ul>
+<li><p>如果没有定义构造器，则系统会默认生成一个无参构造器，比如</p>
+<p>public Person(){};</p>
+</li>
+<li><p>如果定义了有参构造器，则无参构造器就不能再使用（即必须给参数来构造对象），除非自己定义一个无参构造器</p>
+</li>
+</ul>
+<blockquote>
+<p>构造时的内存变化</p>
+</blockquote>
+<p><img data-src="/posts/undefined/image-20221024082558565.png" alt="image-20221024082558565"></p>
+<h2 id="this关键字"><a href="#this关键字" class="headerlink" title="this关键字"></a>this关键字</h2><ul>
+<li>虚拟机会为每个对象分配一个this变量，他指向当前对象在堆中的地址，可以调用该对象的方法和变量</li>
+</ul>
+<p><img data-src="/posts/undefined/image-20221024083156912.png" alt="image-20221024083156912"></p>
+<ul>
+<li>在构造器中访问其他构造器必须要在第一条语句，this(参数列表);</li>
+<li>而且必须只能在构造器中访问</li>
+</ul>
+<h1 id="包"><a href="#包" class="headerlink" title="包"></a>包</h1><h2 id="包的声明"><a href="#包的声明" class="headerlink" title="包的声明"></a>包的声明</h2><ul>
+<li><p>放在代码的最上方,有分号</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xxx.xxx;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>import指令在包的声明下方，可以有多条</p>
+</li>
+</ul>
+<h2 id="包的命名"><a href="#包的命名" class="headerlink" title="包的命名"></a>包的命名</h2><p><img data-src="/posts/undefined/image-20221024103944230.png" alt="image-20221024103944230"></p>
+<h2 id="常用包"><a href="#常用包" class="headerlink" title="常用包"></a>常用包</h2><ul>
+<li>java.lang</li>
+<li>java.util工具包</li>
+<li>java.net网络开发</li>
+<li>java.awt 界面开发</li>
+</ul>
+<h2 id="包的引入"><a href="#包的引入" class="headerlink" title="包的引入"></a>包的引入</h2><ul>
+<li><p>import java.util.scanner;</p>
+<p>引入确定的某个类</p>
+</li>
+<li><p>import java.util.*</p>
+<p>&#x2F;&#x2F;引入所有类</p>
+</li>
+</ul>
+<h1 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h1><h2 id="public"><a href="#public" class="headerlink" title="public"></a>public</h2><ul>
+<li>谁都可以访问，其他包要先引入后才能访问</li>
+</ul>
+<h2 id="protected"><a href="#protected" class="headerlink" title="protected"></a>protected</h2><ul>
+<li>同类，同包，子类可以访问，其他包的非子类不能访问，其他包的子类可以访问</li>
+</ul>
+<h2 id="default"><a href="#default" class="headerlink" title="default"></a>default</h2><ul>
+<li>没有加即为默认，同类，同包可以访问</li>
+</ul>
+<h2 id="private"><a href="#private" class="headerlink" title="private"></a>private</h2><ul>
+<li>只有该类可以访问</li>
+</ul>
+<h1 id="封装、继承、多态"><a href="#封装、继承、多态" class="headerlink" title="封装、继承、多态"></a>封装、继承、多态</h1><h2 id="封装encapsulation"><a href="#封装encapsulation" class="headerlink" title="封装encapsulation"></a>封装encapsulation</h2><h3 id="封装特点"><a href="#封装特点" class="headerlink" title="封装特点"></a>封装特点</h3><ul>
+<li>隐藏实现的细节</li>
+<li>对数据进行验证，避免不合理的数据，保证合理与安全</li>
+</ul>
+<h3 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h3><ul>
+<li><p>将属性私有化</p>
+</li>
+<li><p>提供一个公共（set）方法，用于对属性进行<strong>判断</strong>和<strong>赋值</strong></p>
+</li>
+<li><p>提供一个公共（get）方法，用于获得属性的值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(name.length &gt;= <span class="number">2</span> &amp;&amp; name.length &lt;= <span class="number">6</span>)&#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;输入非法，请重新输入&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//在封装的set里面要进行对数据合理性的验证</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">getSalary</span><span class="params">(<span class="type">int</span> nums)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>( nums = password )&#123;</span><br><span class="line">         System.out.println(<span class="string">&quot;密码错误，请重新输入&quot;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> salary;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//在get方法中加入对权限的判断来保证数据的安全</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>避免构造器破解的办法，直接将set方法植入构造器中，以set方法来赋值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="title function_">Person</span><span class="params">(String name)</span>&#123;</span><br><span class="line">    setName(name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<li><p>代码的复用性、扩展性和维护性</p>
+</li>
+<li><p>继承用来解决代码的复用问题，当多个类有相同的属性和方法的时候，我们可以从中抽取出父类，子类不需要重新声明，只需要用extends来继承。</p>
+</li>
+<li><p>父类又被称为超类，基类，子类又被称为派生类</p>
+</li>
+</ul>
+<h3 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h3><ul>
+<li>子类继承的私有属性不能直接访问</li>
+<li>子类必须调用父类的构造器，完成父类的初始化，在子类无参构造器中会默认有super();调用父类的构造器</li>
+<li>创建子类对象的时候不管调用什么构造器都会默认调用父类的无参构造器，如果父类没有无参构造器，则子类构造器中必须用super指明调用父类的哪一个构造器，如果没有编译将不会通过 </li>
+<li>继承只能单继承</li>
+</ul>
+<h3 id="父类构造器的调用"><a href="#父类构造器的调用" class="headerlink" title="父类构造器的调用"></a>父类构造器的调用</h3><ul>
+<li>super、this必须放在子类构造器的第一行</li>
+<li>super只能放在构造器中</li>
+<li>super和this不能同时存在</li>
+</ul>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> 子类构造器(<span class="type">String</span> name,<span class="type">int</span> age)&#123;</span><br><span class="line">	<span class="built_in">super</span>(); </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//调用父类无参构造器</span></span><br><span class="line">或者什么都不写来调用父类无参构造器</span><br><span class="line"><span class="keyword">public</span> 子类构造器(<span class="type">String</span> name,<span class="type">int</span> age)&#123;</span><br><span class="line">	<span class="built_in">super</span>(<span class="string">&quot;xxx&quot;</span>,<span class="number">3</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//调用父类有参构造器</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>所有的类都是Object的子类</li>
+<li>父类构造器是先从Object类开始构造直到当前父类</li>
+</ul>
+<h3 id="内存中的生成顺序和注意"><a href="#内存中的生成顺序和注意" class="headerlink" title="内存中的生成顺序和注意"></a>内存中的生成顺序和注意</h3><p><img data-src="/posts/undefined/image-20221024150517047.png" alt="image-20221024150517047"></p>
+<ul>
+<li><strong>访问子类的成员变量时，先访问子类的这个变量，如果没有则向上访问，直到访问到Object或者报错</strong></li>
+</ul>
+<h3 id="super关键字"><a href="#super关键字" class="headerlink" title="super关键字"></a>super关键字</h3><ul>
+<li><p>表示对父类的引用，用于访问父类的属性、方法和构造器。</p>
+</li>
+<li><p>super的访问符合就近原则</p>
+</li>
+<li><p>super和this的区别</p>
+<p><img data-src="/posts/undefined/image-20221024151731152.png" alt="image-20221024151731152"></p>
+</li>
+</ul>
+<h3 id="方法重写"><a href="#方法重写" class="headerlink" title="方法重写"></a>方法重写</h3><ul>
+<li><p>子类有个方法和父类（包括长辈级）的某个方法，名字、参数和返回值完全一样，那么子类的该方法就覆盖了父类的方法称为方法重写</p>
+</li>
+<li><p>返回值如果是上下级关系也可以进行重写，比如父类返回A类，子类返回B类，B类是A类的子类。或者父类返回Object类，子类返回String也可以。</p>
+</li>
+<li><p>子类不能缩小父类的访问权限。比如父类a方法为public，子类a方法不能是private。</p>
+</li>
+<li><p>与方法重载的区别</p>
+<p><img data-src="/posts/undefined/image-20221024153046762.png" alt="image-20221024153046762"></p>
+</li>
+</ul>
+<h3 id="instanceOf"><a href="#instanceOf" class="headerlink" title="instanceOf"></a>instanceOf</h3><ul>
+<li><p>判断运行类型a是不是b，或者b的子类</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">A instanceOf B;</span><br><span class="line"><span class="regexp">//</span>返回<span class="literal">true</span>或者<span class="literal">false</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><ul>
+<li>方法或者对象具有多种形态。建立在继承和封装之上。</li>
+</ul>
+<h3 id="方法多态（多种形态）"><a href="#方法多态（多种形态）" class="headerlink" title="方法多态（多种形态）"></a>方法多态（多种形态）</h3><ul>
+<li>体现在重写和重载</li>
+</ul>
+<h3 id="对象的多态（多态的核心）"><a href="#对象的多态（多态的核心）" class="headerlink" title="对象的多态（多态的核心）"></a>对象的多态（多态的核心）</h3><ul>
+<li><p>一个对象的编译（声明）类型和运行类型可以不一样</p>
+</li>
+<li><p>属性没有多态重写的说法，属性的值只看编译类型</p>
+</li>
+<li><p>编译（声明）类型不能改变，运行类型可以改变</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Animal</span> <span class="variable">animal</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line"><span class="comment">//此时运行类型为dog，animal指向堆里面的dog，调用animal.say(),即调用dog的say方法，父类和子类都有同样的方法</span></span><br><span class="line">animal = <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line"><span class="comment">//animal为编译（声明）类型，Dog和Cat为运行类型</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可以调用父类的所有成员，不能调用子类的特有成</p>
+</li>
+</ul>
+<h3 id="向上转型"><a href="#向上转型" class="headerlink" title="向上转型"></a>向上转型</h3><ul>
+<li>本质，父类的引用指向子类的对象，多态就是向上转型</li>
+<li>&#x3D;&#x3D;<strong>方法才进行向上转型，变量不进行向上转型，直接就是父类的变量</strong>&#x3D;&#x3D;</li>
+</ul>
+<h3 id="向下转型"><a href="#向下转型" class="headerlink" title="向下转型"></a>向下转型</h3><ul>
+<li><p>只能强制转换父类的引用，不能强制转换父类的对象</p>
+</li>
+<li><p>相当于新建一个该运行对象的引用来指向该的运行对象</p>
+</li>
+<li><p>向下转型后可以访问子类的所有成员</p>
+</li>
+<li><p>语法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Animal</span> <span class="variable">animal</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line"><span class="type">Cat</span> <span class="variable">cat</span> <span class="operator">=</span> (Cat)animal;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>相当于强制类型转换。</p>
+</li>
+<li><p>只能父类向该子类转型，不能向其他子类向下转型</p>
+</li>
+</ul>
+<h3 id="动态绑定机制"><a href="#动态绑定机制" class="headerlink" title="动态绑定机制*******************"></a><strong>动态绑定机制</strong>*******************</h3><ul>
+<li><p>当调用对象方法的时候，该方法名字会和运行对象地址绑定</p>
+</li>
+<li><p>调用对象属性的时候，不会和运行对象绑定</p>
+</li>
+<li><p>简单来说，就是父类声明运行子类对象的时候，子类的所有方法名字都和子类的运行对象绑定，在父类方法中调用该方法也是子类的方法，而属性没有这样的特性</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//代码演示</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">sum</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> getI() + <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">sum1</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num + <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getI</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> <span class="keyword">extends</span> <span class="title class_">A</span>&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> <span class="number">20</span>;</span><br><span class="line"><span class="comment">//    public int sum()&#123;</span></span><br><span class="line"><span class="comment">//       return getI() + 10;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//    public int sum1()&#123;</span></span><br><span class="line"><span class="comment">//        return num + 10;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getI</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">   		<span class="type">A</span> <span class="variable">a</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">B</span>();</span><br><span class="line">  		System.out.println(a.sum());</span><br><span class="line">    	System.out.println(a.sum1());</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<details>
+<summary>答案</summary>
+30,20
 </details></li>
 </ul>
+<h3 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h3><p><img data-src="/posts/undefined/image-20221024200218149.png" alt="image-20221024200218149"></p>
+<details>
+<summary>答案</summary>
+20，20，true，10，20
+</details>
+
+
+
+<h3 id="多态数组"><a href="#多态数组" class="headerlink" title="多态数组"></a>多态数组</h3><ul>
+<li>用父类创建数组来储存父类和各种子类。</li>
+<li>用循环遍历方法，根据动态绑定机制，输出即为该运行对象的方法</li>
+<li>多态数组的向下转型，用到if和instanceOf的组合运用</li>
+</ul>
+<h1 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h1><h2 id="x3D-x3D-和equals的区别"><a href="#x3D-x3D-和equals的区别" class="headerlink" title="&#x3D;&#x3D;和equals的区别"></a>&#x3D;&#x3D;和equals的区别</h2><ul>
+<li>&#x3D;&#x3D;对基本类型判断值是否相等</li>
+<li>&#x3D;&#x3D;对引用类型判断地址是否相等</li>
+<li>equals只能判断引用类型，判断对象指向地址是否相等</li>
+</ul>
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><h2 id="java开发问题"><a href="#java开发问题" class="headerlink" title="java开发问题"></a>java开发问题</h2><ol>
+<li><p>一个源文件最多出现一个public类，每一个类都会生成一个.class文件</p>
+</li>
+<li><p>共有类的文件名必须是public</p>
+</li>
+<li><p>主方法也可以写在非公共类中，一个文件内可以有多个主方法，但是运行的时候要指定方法的入口</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">animals</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">dog</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">cat</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">javac animals.java</span><br><span class="line"><span class="comment">//此时会生成三个.class文件</span></span><br><span class="line">java cat</span><br><span class="line"><span class="comment">//运行cat的class文件，按非public类执行main方法</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="unicode编码问题"><a href="#unicode编码问题" class="headerlink" title="unicode编码问题"></a>unicode编码问题</h2><p>8.1&#x2F;3&#x3D;2.699999999997！&#x3D;2.7，小数运算不能直接比较，需要对两个小数差值在某一范围内进行比较，Math.abs(a-b)&lt;0.001</p>
+<p>x.xxex、x.xxE-x:10的x次方、10的负x次方，可以用浮点表示</p>
+<p>instanceof</p>
 ]]></content>
-      <categories>
-        <category>工具</category>
-        <category>markdown文本编辑器</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>markdown</tag>
-      </tags>
   </entry>
   <entry>
     <title>Linux学习笔记</title>
@@ -562,20 +990,110 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>YPYYDS</title>
-    <url>/posts/777d.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="cb00674ea3752b6531abd65d7a16e5882b50dc2e38b66d0688ea9e418a283369">031d3b5b4d592184d46d63e8ce614d5552b6986bb991c00793a4f65860501ca2e94f87476936a541f2eecf379e5a89d93aaa03a7fdc3ee8d7ac1a9fb70c6e0664f77c9c9588d8ede3c3b567225fa5466a16dddd33e1ba3f5d5d4944d1d591dbe6fb219c6c701ed1ce83d21ee5e130fffb0b763107adebff6e0871b1bddc3948931eb9091bac944e27f36e6a63b7c3fbd0eca3145318e7644e592985b1f3ab182b990434797df51a05905c0c9908789065c0f8a70e7b617daf44c7fdfeb13355bd5f9cf0a71eb6b14d1251efe1386768b6a844e5b95b2bc0199222e7ee1a200853076c46063b0bdfbaa250a0c284050185831c1415441736c7b9a85816fd6d88b2012412ead6eccb54c4a7717e47aa1a5e599bc7b6bc69ac92b20b90a4553a911dea492bcd2216c5df967fd482cab26adef1ffa1225c4d0f8f0270e1eaeb6bf73d443e478c95922b900e67c264e583dee5be4d3eaa5d0630b9144e269db3865051bad0bf4623631c5ee4348460737977e48a0e4a5923a341a87018feb659a9d3a9fd644bfe33f2e0dad85d0387db4fcf64cd2e84cb6790a8167f51f310d23916d72889db6025491fab1a5f950dcdf34bd9308f57ee433b6e0b0df448b2679ef7c56303f6a94a48b92dd4117a1a3ea6eca4bedd4490a74a4637c3f728631a296a5864dafeab181c88076635b007a67d162074995750721a2596ac4e171d5211c4259e09f26dca7c1bc98ceb482fddd3d8fb6fdfb4ea973caabff7e9b8c79d73b9fe80ebe7490bd06aa7454e6dab2292cafa2a93614adc6195b02f457c0f126725b0ffb721b004cf929e12065ae8393f336b6f38e151d107d06c2e72a88f92250f0851138db44e58cdb77a8686cd956310c4ae094ec25ebcb50b833f0423ac3db28c51caa1c6c12dda31816f6ef847d9dbe7922f85174dec4308676ea1f2e7dac1e9829b1ba874206b369ffbee707e2f11fa1fdd0249a5d77c123de6dd7092df5314d5ca1dc537ad2d18635e2fbfe335052596fd3f4ee870c776ecf7c6f6398e8132998029ad6f80159ae9fdbc13c70e850c94654e1d3aa818cf736ba248bf26f11d268876d4ed39f9e12148dcc9fd39976b6910825c3527d43006411631d3d5dad6969dedbf29ea17d8b6f91292d791e74239b6fbbc171b9581acda149b537bc225155a8e54b78fdc476b8c891829027fbc2fb18b7626dda8c0253eff292f25eb17ddadc8e6409aace06d06f12c44f50a042dc5e1dd010a031cd2a06cb0167d793ae4643ec896855399901bbafb27ddc274f56bd70550a47d152690e861a1ede5aa2e7fbd929df78726210379c1a4ce74198bfcf08248bc66d01d0285595e1c773512881da37facb3fc4f65aadd748f1ae9de478d87c4339151f8bd437cd48b11f83821838d92add026f9a7c592e222078b554b8328c928a833300788f021598e2</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <title>Markdown的基本用法</title>
+    <url>/posts/42f0.html</url>
+    <content><![CDATA[<h1 id="Markdown-学习"><a href="#Markdown-学习" class="headerlink" title="Markdown 学习"></a>Markdown 学习</h1><span id="more"></span>
+
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"># 这样表示一级标题</span><br><span class="line">## 这样表示二级标题</span><br><span class="line">### 这样表示三级标题</span><br><span class="line">· · · · · ·</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>最多支持六级标题</code></p>
+</blockquote>
+<!--more-->
+
+<hr>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">**这样表示粗体**</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>这样表示粗体</strong></p>
+<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">*这样表示斜体*</span></span><br></pre></td></tr></table></figure>
+
+<p><em>这样表示斜体</em></p>
+<figure class="highlight haml"><table><tr><td class="code"><pre><span class="line">~~这样表示删除线~~</span><br></pre></td></tr></table></figure>
+
+<p><del>这样表示删除线</del></p>
+<hr>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight node-repl"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">&gt;</span> <span class="language-javascript">表示引用</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 表示引用</p>
+</blockquote>
+<hr>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>—或者***表示分割线</p>
+<hr>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><figure class="highlight scheme"><table><tr><td class="code"><pre><span class="line">[<span class="name">链接的名字</span>](<span class="name">我链接的地址</span>)</span><br></pre></td></tr></table></figure>
+
+<p><a href="Zper99.github.io">链接的名字</a></p>
+<h3 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h3><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="section">&lt;我是自动链接&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://zper99.github.io/">https://zper99.github.io/</a></p>
+<hr>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>1. 我是有序列表</p>
+<ol>
+<li>我是有序列表</li>
+<li>我也是有序列表</li>
+</ol>
+<p>- 我是无序列表</p>
+<ul>
+<li>我是无序列表</li>
+<li>我也是无序列表</li>
+</ul>
+<hr>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">|<span class="string">top1</span>|<span class="string">top2</span>|<span class="string">top3</span>|</span><br><span class="line">|<span class="string">-  -</span>|<span class="string">-  -</span>|<span class="string">-  -</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br><span class="line">|<span class="string">word</span>|<span class="string">word</span>|<span class="string">word</span>|</span><br></pre></td></tr></table></figure>
+
+
+
+<table>
+<thead>
+<tr>
+<th>top1</th>
+<th>top2</th>
+<th>top3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>word</td>
+<td>word</td>
+<td>word</td>
+</tr>
+<tr>
+<td>word</td>
+<td>word</td>
+<td>word</td>
+</tr>
+<tr>
+<td>word</td>
+<td>word</td>
+<td>word</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">```表示代码</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">表示代码</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;span <span class="built_in">id</span>=<span class="string">&quot;tag1&quot;</span>&gt;我是指定位置&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">[跳转到指定位置](<span class="comment">#tag1)</span></span><br></pre></td></tr></table></figure>
+
+<p><span id="tag1">我是指定位置</span></p>
+<p><a href="#tag1">跳转到指定位置</a></p>
+<hr>
+<h2 id="隐藏"><a href="#隐藏" class="headerlink" title="隐藏"></a>隐藏</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">summary</span>&gt;</span>你的问题?<span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">你的答案:</span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><details>
+<summary>你的问题?</summary>
+你的答案:
+</details></li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>markdown文本编辑器</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>markdown</tag>
+      </tags>
   </entry>
   <entry>
     <title>shell</title>
@@ -777,101 +1295,20 @@
       </tags>
   </entry>
   <entry>
-    <title>快捷键大全</title>
-    <url>/posts/cb7d.html</url>
-    <content><![CDATA[<h1 id="快捷键大全"><a href="#快捷键大全" class="headerlink" title="快捷键大全"></a>快捷键大全</h1><span id="more"></span>
-
-<h1 id="PS快捷键"><a href="#PS快捷键" class="headerlink" title="PS快捷键"></a>PS快捷键</h1><h1 id="Linux快捷键"><a href="#Linux快捷键" class="headerlink" title="Linux快捷键"></a>Linux快捷键</h1><h2 id="自动补全指令"><a href="#自动补全指令" class="headerlink" title="自动补全指令"></a>自动补全指令</h2><ul>
-<li>TAB</li>
-</ul>
-<h2 id="清空光标前输入"><a href="#清空光标前输入" class="headerlink" title="清空光标前输入"></a>清空光标前输入</h2><ul>
-<li>ctrl-u</li>
-</ul>
-<h2 id="清空光标后输入"><a href="#清空光标后输入" class="headerlink" title="清空光标后输入"></a>清空光标后输入</h2><ul>
-<li>ctrl-k</li>
-</ul>
-<h2 id="移动光标到首行"><a href="#移动光标到首行" class="headerlink" title="移动光标到首行"></a>移动光标到首行</h2><ul>
-<li>ctrl-a</li>
-</ul>
-<h2 id="移动光标到尾行"><a href="#移动光标到尾行" class="headerlink" title="移动光标到尾行"></a>移动光标到尾行</h2><ul>
-<li>ctrl-e</li>
-</ul>
-<h2 id="清屏"><a href="#清屏" class="headerlink" title="清屏"></a>清屏</h2><ul>
-<li>ctrl-l</li>
-</ul>
-<h2 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h2><ul>
-<li>ctrl+insert</li>
-</ul>
-<h2 id="粘贴"><a href="#粘贴" class="headerlink" title="粘贴"></a>粘贴</h2><ul>
-<li>shift+insert</li>
-</ul>
-<h2 id="回滚指令"><a href="#回滚指令" class="headerlink" title="回滚指令"></a>回滚指令</h2><ul>
-<li>↑↓</li>
-</ul>
-<h1 id="Bilibili快捷键"><a href="#Bilibili快捷键" class="headerlink" title="Bilibili快捷键"></a>Bilibili快捷键</h1><h2 id="弹幕开关"><a href="#弹幕开关" class="headerlink" title="弹幕开关"></a>弹幕开关</h2><ul>
-<li>D</li>
-</ul>
-<h2 id="全屏"><a href="#全屏" class="headerlink" title="全屏"></a>全屏</h2><ul>
-<li>F</li>
-</ul>
-<h1 id="网页快捷键"><a href="#网页快捷键" class="headerlink" title="网页快捷键"></a>网页快捷键</h1><ul>
-<li>ctrl+T		创建网页</li>
-<li>ctrl+W		关闭网页</li>
-<li>F11         全屏</li>
-</ul>
-<h1 id="vscode快捷键"><a href="#vscode快捷键" class="headerlink" title="vscode快捷键"></a>vscode快捷键</h1><h1 id="MarkDown快捷键"><a href="#MarkDown快捷键" class="headerlink" title="MarkDown快捷键"></a>MarkDown快捷键</h1><h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><ul>
-<li>ctrl+B</li>
-</ul>
-<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><ul>
-<li>ctrl+L</li>
-</ul>
-<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><ul>
-<li>ctrl+U</li>
-</ul>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ul>
-<li>ctrl+shift+&#96;</li>
-</ul>
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><ul>
-<li>alt+ctrl+5</li>
-</ul>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><ul>
-<li>ctrl+num</li>
-</ul>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><ul>
-<li>ctrl+shift+K</li>
-</ul>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
-<li>ctrl+shift+[   有序列表</li>
-<li>ctrl+shift+]   无序列表</li>
-</ul>
-<h2 id><a href="#" class="headerlink" title></a></h2><h2 id="-1"><a href="#-1" class="headerlink" title></a></h2><h1 id="通用快捷键"><a href="#通用快捷键" class="headerlink" title="通用快捷键"></a>通用快捷键</h1><h2 id="查找单词"><a href="#查找单词" class="headerlink" title="查找单词"></a>查找单词</h2><ul>
-<li>ctrl+F</li>
-</ul>
-<h2 id="全选文章"><a href="#全选文章" class="headerlink" title="全选文章"></a>全选文章</h2><ul>
-<li>ctrl+A</li>
-</ul>
-<h2 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h2><ul>
-<li>ctrl+Z</li>
-</ul>
-<h2 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h2><ul>
-<li>ctrl+W</li>
-</ul>
-<h2 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h2><ul>
-<li>ctrl+S</li>
-</ul>
-]]></content>
-      <categories>
-        <category>技巧</category>
-      </categories>
-      <tags>
-        <tag>操作</tag>
-        <tag>快捷键</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>概率论</title>
-    <url>/posts/a5e0.html</url>
-    <content><![CDATA[]]></content>
+    <title>YPYYDS</title>
+    <url>/posts/777d.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="cb00674ea3752b6531abd65d7a16e5882b50dc2e38b66d0688ea9e418a283369">031d3b5b4d592184d46d63e8ce614d5552b6986bb991c00793a4f65860501ca2e94f87476936a541f2eecf379e5a89d93aaa03a7fdc3ee8d7ac1a9fb70c6e0664f77c9c9588d8ede3c3b567225fa5466a16dddd33e1ba3f5d5d4944d1d591dbe6fb219c6c701ed1ce83d21ee5e130fffb0b763107adebff6e0871b1bddc3948931eb9091bac944e27f36e6a63b7c3fbd0eca3145318e7644e592985b1f3ab182b990434797df51a05905c0c9908789065c0f8a70e7b617daf44c7fdfeb13355bd5f9cf0a71eb6b14d1251efe1386768b6a844e5b95b2bc0199222e7ee1a200853076c46063b0bdfbaa250a0c284050185831c1415441736c7b9a85816fd6d88b2012412ead6eccb54c4a7717e47aa1a5e599bc7b6bc69ac92b20b90a4553a911dea492bcd2216c5df967fd482cab26adef1ffa1225c4d0f8f0270e1eaeb6bf73d443e478c95922b900e67c264e583dee5be4d3eaa5d0630b9144e269db3865051bad0bf4623631c5ee4348460737977e48a0e4a5923a341a87018feb659a9d3a9fd644bfe33f2e0dad85d0387db4fcf64cd2e84cb6790a8167f51f310d23916d72889db6025491fab1a5f950dcdf34bd9308f57ee433b6e0b0df448b2679ef7c56303f6a94a48b92dd4117a1a3ea6eca4bedd4490a74a4637c3f728631a296a5864dafeab181c88076635b007a67d162074995750721a2596ac4e171d5211c4259e09f26dca7c1bc98ceb482fddd3d8fb6fdfb4ea973caabff7e9b8c79d73b9fe80ebe7490bd06aa7454e6dab2292cafa2a93614adc6195b02f457c0f126725b0ffb721b004cf929e12065ae8393f336b6f38e151d107d06c2e72a88f92250f0851138db44e58cdb77a8686cd956310c4ae094ec25ebcb50b833f0423ac3db28c51caa1c6c12dda31816f6ef847d9dbe7922f85174dec4308676ea1f2e7dac1e9829b1ba874206b369ffbee707e2f11fa1fdd0249a5d77c123de6dd7092df5314d5ca1dc537ad2d18635e2fbfe335052596fd3f4ee870c776ecf7c6f6398e8132998029ad6f80159ae9fdbc13c70e850c94654e1d3aa818cf736ba248bf26f11d268876d4ed39f9e12148dcc9fd39976b6910825c3527d43006411631d3d5dad6969dedbf29ea17d8b6f91292d791e74239b6fbbc171b9581acda149b537bc225155a8e54b78fdc476b8c891829027fbc2fb18b7626dda8c0253eff292f25eb17ddadc8e6409aace06d06f12c44f50a042dc5e1dd010a031cd2a06cb0167d793ae4643ec896855399901bbafb27ddc274f56bd70550a47d152690e861a1ede5aa2e7fbd929df78726210379c1a4ce74198bfcf08248bc66d01d0285595e1c773512881da37facb3fc4f65aadd748f1ae9de478d87c4339151f8bd437cd48b11f83821838d92add026f9a7c592e222078b554b8328c928a833300788f021598e2</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
     <title>博客搭建</title>
@@ -1152,5 +1589,124 @@
         <tag>blog</tag>
         <tag>博客</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>快捷键大全</title>
+    <url>/posts/cb7d.html</url>
+    <content><![CDATA[<h1 id="快捷键大全"><a href="#快捷键大全" class="headerlink" title="快捷键大全"></a>快捷键大全</h1><span id="more"></span>
+
+<h1 id="PS快捷键"><a href="#PS快捷键" class="headerlink" title="PS快捷键"></a>PS快捷键</h1><h1 id="Linux快捷键"><a href="#Linux快捷键" class="headerlink" title="Linux快捷键"></a>Linux快捷键</h1><h2 id="自动补全指令"><a href="#自动补全指令" class="headerlink" title="自动补全指令"></a>自动补全指令</h2><ul>
+<li>TAB</li>
+</ul>
+<h2 id="清空光标前输入"><a href="#清空光标前输入" class="headerlink" title="清空光标前输入"></a>清空光标前输入</h2><ul>
+<li>ctrl-u</li>
+</ul>
+<h2 id="清空光标后输入"><a href="#清空光标后输入" class="headerlink" title="清空光标后输入"></a>清空光标后输入</h2><ul>
+<li>ctrl-k</li>
+</ul>
+<h2 id="移动光标到首行"><a href="#移动光标到首行" class="headerlink" title="移动光标到首行"></a>移动光标到首行</h2><ul>
+<li>ctrl-a</li>
+</ul>
+<h2 id="移动光标到尾行"><a href="#移动光标到尾行" class="headerlink" title="移动光标到尾行"></a>移动光标到尾行</h2><ul>
+<li>ctrl-e</li>
+</ul>
+<h2 id="清屏"><a href="#清屏" class="headerlink" title="清屏"></a>清屏</h2><ul>
+<li>ctrl-l</li>
+</ul>
+<h2 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h2><ul>
+<li>ctrl+insert</li>
+</ul>
+<h2 id="粘贴"><a href="#粘贴" class="headerlink" title="粘贴"></a>粘贴</h2><ul>
+<li>shift+insert</li>
+</ul>
+<h2 id="回滚指令"><a href="#回滚指令" class="headerlink" title="回滚指令"></a>回滚指令</h2><ul>
+<li>↑↓</li>
+</ul>
+<h1 id="Bilibili快捷键"><a href="#Bilibili快捷键" class="headerlink" title="Bilibili快捷键"></a>Bilibili快捷键</h1><h2 id="弹幕开关"><a href="#弹幕开关" class="headerlink" title="弹幕开关"></a>弹幕开关</h2><ul>
+<li>D</li>
+</ul>
+<h2 id="全屏"><a href="#全屏" class="headerlink" title="全屏"></a>全屏</h2><ul>
+<li>F</li>
+</ul>
+<h1 id="网页快捷键"><a href="#网页快捷键" class="headerlink" title="网页快捷键"></a>网页快捷键</h1><ul>
+<li>ctrl+T		创建网页</li>
+<li>ctrl+W		关闭网页</li>
+<li>F11         全屏</li>
+</ul>
+<h1 id="vscode快捷键"><a href="#vscode快捷键" class="headerlink" title="vscode快捷键"></a>vscode快捷键</h1><h1 id="MarkDown快捷键"><a href="#MarkDown快捷键" class="headerlink" title="MarkDown快捷键"></a>MarkDown快捷键</h1><h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><ul>
+<li>ctrl+B</li>
+</ul>
+<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><ul>
+<li>ctrl+L</li>
+</ul>
+<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><ul>
+<li>ctrl+U</li>
+</ul>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ul>
+<li>ctrl+shift+&#96;</li>
+</ul>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><ul>
+<li>alt+ctrl+5</li>
+</ul>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><ul>
+<li>ctrl+num</li>
+</ul>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><ul>
+<li>ctrl+shift+K</li>
+</ul>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
+<li>ctrl+shift+[   有序列表</li>
+<li>ctrl+shift+]   无序列表</li>
+</ul>
+<h1 id="Idea快捷键"><a href="#Idea快捷键" class="headerlink" title="Idea快捷键"></a>Idea快捷键</h1><h2 id="查看继承关系"><a href="#查看继承关系" class="headerlink" title="查看继承关系"></a>查看继承关系</h2><ul>
+<li>ctrl+H</li>
+</ul>
+<h2 id="复制一行"><a href="#复制一行" class="headerlink" title="复制一行"></a>复制一行</h2><ul>
+<li>鼠标下键</li>
+</ul>
+<h2 id="自动布局"><a href="#自动布局" class="headerlink" title="自动布局"></a>自动布局</h2><ul>
+<li>ctrl+Q</li>
+</ul>
+<h2 id="生成构造器"><a href="#生成构造器" class="headerlink" title="生成构造器"></a>生成构造器</h2><ul>
+<li>alt + insert</li>
+</ul>
+<h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><h3 id="主方法"><a href="#主方法" class="headerlink" title="主方法"></a>主方法</h3><ul>
+<li>main</li>
+</ul>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><ul>
+<li>sout</li>
+</ul>
+<p>循环</p>
+<ul>
+<li>fori</li>
+</ul>
+<h1 id="通用快捷键"><a href="#通用快捷键" class="headerlink" title="通用快捷键"></a>通用快捷键</h1><h2 id="查找单词"><a href="#查找单词" class="headerlink" title="查找单词"></a>查找单词</h2><ul>
+<li>ctrl+F</li>
+</ul>
+<h2 id="全选文章"><a href="#全选文章" class="headerlink" title="全选文章"></a>全选文章</h2><ul>
+<li>ctrl+A</li>
+</ul>
+<h2 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h2><ul>
+<li>ctrl+Z</li>
+</ul>
+<h2 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h2><ul>
+<li>ctrl+W</li>
+</ul>
+<h2 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h2><ul>
+<li>ctrl+S</li>
+</ul>
+]]></content>
+      <categories>
+        <category>技巧</category>
+      </categories>
+      <tags>
+        <tag>操作</tag>
+        <tag>快捷键</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>概率论</title>
+    <url>/posts/a5e0.html</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
